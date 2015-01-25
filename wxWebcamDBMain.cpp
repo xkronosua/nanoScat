@@ -2010,8 +2010,7 @@ void wxWebcamDBFrame::OnStepperCOMTimer(wxTimerEvent& WXUNUSED(event))
     }
     else {
        m_stepperCOM_timer.Stop();
-
-    }
+}
 }
 
 
