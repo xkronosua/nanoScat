@@ -34,6 +34,7 @@
 #include "wxWebcam/wxWebcam.h"
 #include "wxthings/spinctld.h"
 #include "wxcustom/wxStatusBarEx.h"
+#include <wx/listimpl.cpp>
 
 #include "wxSubFrame.h"
 #include "wxFactory.h"
@@ -42,6 +43,9 @@
 class wxPort;
 class wxSubFrame;
 class wxMainToolBar;
+
+WX_DECLARE_STRING_HASH_MAP( double,     // type of the values
+                            filtersMap); // name of the class
 
 
 class wxWebcamDBFrame: public wxFrame
@@ -365,7 +369,9 @@ class wxWebcamDBFrame: public wxFrame
       bool isStepperConnected;
       wxTimer     m_stepperCOM_timer;
       wxTimer     m_stepperCapture_timer;
-
+      filtersMap fBaseMap;
+      wxArrayString filtersArray;
+      filtersMap fMap;
 };
 
 

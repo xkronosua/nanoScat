@@ -26,6 +26,7 @@
 #include <wx/dcclient.h>
 #include <wx/dcbuffer.h>
 #include <wx/aboutdlg.h>
+#include <wx/tokenzr.h>
 
 // version.h defines program version number as "MyAppVer" string
 #include "version.h"
@@ -76,6 +77,7 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 #define SPC900NC_ICON 1
 #define CROSS_HAIR_ICON 1
 #include "wxWebcam_icons.h"
+
 
 
 //(*IdInit(wxWebcamDBFrame)
@@ -698,6 +700,11 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 
 
    Init();
+
+
+
+
+
 }
 
 void wxWebcamDBFrame::ReplaceCamera(wxWindow* old_camera, wxCamera* new_camera)
@@ -726,6 +733,29 @@ void wxWebcamDBFrame::ReplaceCamera(wxWindow* old_camera, wxCamera* new_camera)
 
 void wxWebcamDBFrame::Init()
 {
+
+   fBaseMap[_T("OP06")] = 0.251188643150958;
+   fBaseMap[_T("OP09")] = 0.12589254117941673;
+   fBaseMap[_T("OP18")] = 0.015848931924611134;
+
+    filtersArray.Add("OP06, OP09, OP18");
+    filtersArray.Add("OP06, OP09");
+    filtersArray.Add("OP06");
+    filtersArray.Add("1");
+
+for (int i=0; i<filtersArray.size(); i++){
+    double fres = 1;
+
+    wxStringTokenizer tokenizer(filtersArray[i], ", ");
+        while ( tokenizer.HasMoreTokens() )
+        {
+            wxString token = tokenizer.GetNextToken();
+            fres *= fBaseMap[token];
+            }
+
+    fMap[filtersArray[i]] = fres;
+}
+
 
    ResetStepperAngle();
    LE_SpinCtrl1->SetRange(0.001,3600.0);
@@ -1460,7 +1490,7 @@ void wxWebcamDBFrame::StartCapture(bool batch)
                m_gauge1->SetValue(0);
                m_gdir = 1;
 
-               m_gauge_timer.Start(gauge_ms);
+               //m_gauge_timer.Start(gauge_ms);
 
                m_start_capture = wxDateTime::UNow();
             }
@@ -2039,10 +2069,14 @@ else {
 
 void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
 {
-    if(wxWebcamDBFrame::isStepperConnected) {
-       //Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
 
+//wxMessageBox(wxString::Format(_T("pivot:
+
+    if(wxWebcamDBFrame::isStepperConnected ) {
+       //Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
        wxCamera* cam = wxF()->cam();
+        if (cam && !(cam->IsCapturing())){
+
        if (cam){
            if(cam->IsConnected()){
                double angle = SS_AngSpin->GetValue();
@@ -2052,19 +2086,6 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
                bool dir = (SS_CWiceDirection->IsEnabled())? FALSE : TRUE;
 
 
-                                           // init controls
-                       double black_point,white_point, glog;
-                       bool  autoPt = 1;  ///////////////////////////////////////////_O_
-                        double Max = 65534;
-                          // get autoPt from camera
-
-                          cam->ImageProperties(glog, autoPt, black_point, white_point);
-                          if(autoPt) {
-                             // this will compute black_point & white_point, but will not return then
-                             cam->SetImageProperties(glog, autoPt, black_point, white_point);
-                             // Get black_point, white_point
-                             cam->ImageProperties(glog, autoPt, black_point, white_point);
-                          }
 
 
 
@@ -2090,18 +2111,38 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
                     FitsCalibr = wxT(wxString::Format("%f", calibr));
                     wxF()->saveFitsHeaderValue(wxT("STEPPERC"), FitsCalibr);
 
-                    if (white_point >= Max*0.9 ){
-                        wxMessageBox(wxString::Format("White = $f", white_point));
-                    }
+
+ unsigned short pivot, vlow,  vhig,  Max;
+   wxF()->cam()->Histogram().PivotDev(pivot, vlow,  vhig,  Max);
+   double pivot_ = (double)pivot;
+   double vhig_ = (double)vhig;
+   double vlow_ = (double)vlow;
+   double Max_ = (double)Max;
+   wxString captured;
+   captured.Printf(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max));
+
+     if (vhig_ > Max_*0.9){
+    //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
+    Stepper.SMD_SetMoveParam(255, 1, FALSE, FALSE, (LONG32)200);
+    Stepper.SMD_OnSHD(255, 1);
+     }
+
+     if (vhig_ < Max_*0.01){
+    //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
+    Stepper.SMD_SetMoveParam(255, 1, FALSE, TRUE, (LONG32)200);
+    Stepper.SMD_OnSHD(255, 1);
+     }
+
 
 
                     StartCapture(false);
 
+                    m_statusbar->SetStatusText(captured, 1);
                     m_stepperCapture_timer.Start(SS_StepperInterval->GetValue());
                     }
             }
         }
-    }
+    }}
     else {
        m_stepperCapture_timer.Stop();
 
