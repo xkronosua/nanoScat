@@ -17,7 +17,7 @@ static const wxChar* s_kwdString[] = {
    wxT("SIMPLE  "),    wxT("BITPIX  "),    wxT("NAXIS   "),    wxT("NAXIS1  "),    wxT("NAXIS2  "),    wxT("NAXIS3  "),
    wxT("BSCALE  "),    wxT("BZERO   "),    wxT("DATE-OBS"),    wxT("TIMESYS "),    wxT("TELESCOP"),    wxT("INSTRUME"),    wxT("OBSERVER"),
    wxT("OBJECT  "),    wxT("EXPTIME "),    wxT("CCD_TEMP"),    wxT("PSZX    "),    wxT("PSZY    "),    wxT("XBINNING"),    wxT("YBINNING"),
-   wxT("CAMSETUP"),    wxT("EGAIN   "),    wxT("FOCALLEN"),    wxT("APTDIA  "),    wxT("SWCREATE"),    wxT("FILTER  "),
+   wxT("CAMSETUP"),    wxT("EGAIN   "),    wxT("FOCALLEN"),    wxT("APTDIA  "),    wxT("SWCREATE"),    wxT("FILTER  "),    wxT("FILTMAP "),
    wxT("IMAGETYP"),    wxT("OBJCTRA "),    wxT("OBJCTDEC"),    wxT("SITELAT "),    wxT("SITELONG"),    wxT("FRAMENO "),    wxT("COMMENT "),
    wxT("HISTORY "),    wxT("ANGLE   "),    wxT("POWER   "),    wxT("STEPPERC"),    wxT("DISTANCE"),    wxT("WAVELANG"),    wxT("END     "),
 };
@@ -247,6 +247,11 @@ void wxFitsKeywordEx::PixelSizeKwdY(float yPix_um)
 void wxFitsKeywordEx::FilterDescriptionKwd(const wxString& filter)
 {
    SetKeyword(wxFitsKeyword::EF_FILTER, filter);
+}
+
+void wxFitsKeywordEx::FilterMapDescriptionKwd(const wxString& filtMap)
+{
+   SetKeyword(wxFitsKeyword::EF_FILTMAP, filtMap);
 }
 
 void wxFitsKeywordEx::StepperAngleKwd(float angle)

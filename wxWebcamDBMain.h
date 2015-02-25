@@ -140,6 +140,7 @@ class wxWebcamDBFrame: public wxFrame
         double GetStepperAngle(){return StepperAngle;}
         double UpdateStepperAngle(double ang){StepperAngle+=ang; SS_CurrentAngle->SetLabel(wxString::Format("%f", StepperAngle)); return StepperAngle;};
         double ResetStepperAngle(){StepperAngle = 0;  SS_CurrentAngle->SetLabel(wxString::Format("%f", StepperAngle)); return StepperAngle;};
+        void UpdateFWheelString();
 
 		int Contains(wxArrayString& cameras,const wxString& substr);
 
@@ -367,6 +368,10 @@ class wxWebcamDBFrame: public wxFrame
       int steps;// = 0;
       double StepperAngle;
       bool isStepperConnected;
+      double fWheelCalibration;// = 360/4;
+      int currentFilterIndex;// = 0;
+      bool fWheelDirection;// = 0;
+      wxString fWheelString;
       wxTimer     m_stepperCOM_timer;
       wxTimer     m_stepperCapture_timer;
       filtersMap fBaseMap;

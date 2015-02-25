@@ -734,14 +734,25 @@ void wxWebcamDBFrame::ReplaceCamera(wxWindow* old_camera, wxCamera* new_camera)
 void wxWebcamDBFrame::Init()
 {
 
+fWheelCalibration = 0.5;
+
+fWheelDirection = 0;
+
    fBaseMap[_T("OP06")] = 0.251188643150958;
    fBaseMap[_T("OP09")] = 0.12589254117941673;
    fBaseMap[_T("OP18")] = 0.015848931924611134;
 
-    filtersArray.Add("OP06, OP09, OP18");
-    filtersArray.Add("OP06, OP09");
-    filtersArray.Add("OP06");
-    filtersArray.Add("1");
+
+wxF()->getFitsHeaderValue(wxT("FILTMAP"), fWheelString);
+
+   wxStringTokenizer tokenizer(fWheelString, ";");
+        while ( tokenizer.HasMoreTokens() )
+        {
+            wxString token = tokenizer.GetNextToken();
+            filtersArray.Add(token);
+            }
+currentFilterIndex = filtersArray.size();
+
 
 for (int i=0; i<filtersArray.size(); i++){
     double fres = 1;
@@ -921,6 +932,21 @@ void wxWebcamDBFrame::ClearExposureMeter()
    }
 }
 
+void wxWebcamDBFrame::UpdateFWheelString()
+{
+    wxString tmpfMap;
+    wxF()->getFitsHeaderValue(wxT("FILTMAP"), tmpfMap);
+if (tmpfMap != fWheelString){
+   filtersArray.empty();
+    wxStringTokenizer tokenizer(fWheelString, ";");
+        while ( tokenizer.HasMoreTokens() )
+        {
+            wxString token = tokenizer.GetNextToken();
+            filtersArray.Add(token);
+            }
+
+            }
+}
 void wxWebcamDBFrame::UpdateExposureMeter()
 {
    if(!m_exposure_meter_active){
@@ -1971,7 +1997,7 @@ void wxWebcamDBFrame::OnOpenStepperCOMPortClick(wxCommandEvent&  WXUNUSED(event)
             m_openStepperCOMPort_btn->SetBackgroundColour(wxColor("red"));
             SS_PortNSpin->Enable(false);
              m_openStepperCOMPort_btn->SetLabel("Close");
-             m_stepperCOM_timer.Start(8000);
+             m_stepperCOM_timer.Start(5000);
     }
     else         {
             wxMessageBox(wxString::Format("2Stepper error %d", b));
@@ -2091,6 +2117,7 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
 
                m_stepperCapture_timer.Stop();
                Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
+               //переробити
                if( Stepper.SMD_SetMoveParam(255, 0, FALSE, dir, (LONG32)(angle*calibr)) &&
                     Stepper.SMD_OnSHD(255, 0) &&
                     Stepper.SMD_ClearStep(255))
@@ -2121,22 +2148,41 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
    wxString captured;
    captured.Printf(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max));
 
-     if (vhig_ > Max_*0.9){
+
+
+    double filterWheelAngle = fWheelCalibration*360/filtersArray.size();
+    int tmpfIndex = currentFilterIndex;
+     if (vhig_ > Max_*0.2){
+            UpdateFWheelString();
+            if ( currentFilterIndex >0 ){
     //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
-    Stepper.SMD_SetMoveParam(255, 1, FALSE, FALSE, (LONG32)200);
+    Stepper.SMD_SetMoveParam(255, 1, FALSE, FALSE, (LONG32)(filterWheelAngle));
     Stepper.SMD_OnSHD(255, 1);
+    currentFilterIndex -= 1;
+            }
      }
 
-     if (vhig_ < Max_*0.01){
+     if (vhig_ < Max_*0.1){
+            UpdateFWheelString();
+            if ( currentFilterIndex < filtersArray.size()){
     //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
-    Stepper.SMD_SetMoveParam(255, 1, FALSE, TRUE, (LONG32)200);
+    Stepper.SMD_SetMoveParam(255, 1, FALSE, TRUE, (LONG32)(filterWheelAngle));
     Stepper.SMD_OnSHD(255, 1);
+    currentFilterIndex += 1;
+     }
      }
 
+    if (tmpfIndex != currentFilterIndex){
+     wxString FitsFilter;
 
+                    wxF()->getFitsHeaderValue(wxT("FILTER"), FitsFilter);
+                    FitsFilter = wxT(wxString::Format("%s", filtersArray[currentFilterIndex]));
+                    wxF()->saveFitsHeaderValue(wxT("FILTER"), FitsFilter);
+    }
+    else{
 
-                    StartCapture(false);
-
+                   StartCapture(false);
+    }
                     m_statusbar->SetStatusText(captured, 1);
                     m_stepperCapture_timer.Start(SS_StepperInterval->GetValue());
                     }

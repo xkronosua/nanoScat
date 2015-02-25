@@ -10385,7 +10385,7 @@
 	"wxcustom/wxPropertyPage.h"
 	"wxIO/wxPort.h"
 
-1424644893 e:\programs\nanoscat\wxwebcamdbmain.h
+1424772054 e:\programs\nanoscat\wxwebcamdbmain.h
 	"wxWebcamDBApp.h"
 	<wx/notebook.h>
 	<wx/sizer.h>
@@ -10649,7 +10649,7 @@
 	<wx/wx.h>
 	<wx/dcclient.h>
 
-1423618136 source:e:\programs\nanoscat\wxfactory.cpp
+1424769665 source:e:\programs\nanoscat\wxfactory.cpp
 	"wxFactory.h"
 	"wxIO/wxPortManager.h"
 	"wxIO/wxLongExpoPort.h"
@@ -10667,7 +10667,7 @@
 	"wxWebcam/wxArtcam.h"
 	"BatchJobManager.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.h
+1424769549 e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<vector>
@@ -11213,7 +11213,7 @@
 	"capturebase.h"
 	<dscaplib.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.cpp
+1424769572 source:e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.cpp
 	"wxFitsKeyword.h"
 
 1423618136 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsout.cpp
@@ -11398,7 +11398,7 @@
 	"wxWebcamDBMain.h"
 	<wx/image.h>
 
-1424650224 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
+1424772548 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
 	"wx_pch.h"
 	"wxWebcamDBMain.h"
 	"wx/dirdlg.h"

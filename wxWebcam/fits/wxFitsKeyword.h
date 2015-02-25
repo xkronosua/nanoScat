@@ -54,6 +54,7 @@ public:
                      // initially created this file ie SBIGs CCDOps Version 5.10
       EF_FILTER,     // FILTER String - Optical Filter used to take image, ie H-Alpha. If this
                      // keyword is not included there was no filter used to take the image.
+      EF_FILTMAP,    // FILTMAP String - Optical Filters MAP used to take image
       EF_ANGLE,      // stepper angle
       EF_CALIBR,     // stepper calibr
       EF_WAVELENGTH, // laser wavelength
@@ -133,6 +134,7 @@ public:
    void PixelSizeKwdX(float xPix_um);
    void PixelSizeKwdY(float yPix_um);
    void FilterDescriptionKwd(const wxString& filter);
+   void FilterMapDescriptionKwd(const wxString& filtMap);
 
    void StepperAngleKwd(float angle);
    void StepperCalibrKwd(float calibr);
