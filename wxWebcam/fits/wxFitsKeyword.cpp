@@ -14,7 +14,7 @@
 
 // NOTE the strings must match the enums
 static const wxChar* s_kwdString[] = {
-   wxT("SIMPLE  "),    wxT("BITPIX  "),    wxT("NAXIS   "),    wxT("NAXIS1  "),    wxT("NAXIS2  "),    wxT("NAXIS3  "),
+   wxT("SIMPLE  "),    wxT("BITPIX  "),    wxT("NAXIS   "),    wxT("NAXIS1  "),    wxT("NAXIS2  "),    wxT("NAXIS3  "),    wxT("EXPOSURE"),
    wxT("BSCALE  "),    wxT("BZERO   "),    wxT("DATE-OBS"),    wxT("TIMESYS "),    wxT("TELESCOP"),    wxT("INSTRUME"),    wxT("OBSERVER"),
    wxT("OBJECT  "),    wxT("EXPTIME "),    wxT("CCD_TEMP"),    wxT("PSZX    "),    wxT("PSZY    "),    wxT("XBINNING"),    wxT("YBINNING"),
    wxT("CAMSETUP"),    wxT("EGAIN   "),    wxT("FOCALLEN"),    wxT("APTDIA  "),    wxT("SWCREATE"),    wxT("FILTER  "),    wxT("FILTMAP "),
@@ -267,6 +267,11 @@ void wxFitsKeywordEx::StepperCalibrKwd(float calibr)
 void wxFitsKeywordEx::WavelengthKwd(float wavelength)
 {
    SetKeyword(wxFitsKeyword::EF_WAVELENGTH, wavelength);
+}
+
+void wxFitsKeywordEx::ExposureKwd(float exposure)
+{
+   SetKeyword(wxFitsKeyword::EF_EXPOSURE, exposure);
 }
 
 void wxFitsKeywordEx::DistanceKwd(float distance)

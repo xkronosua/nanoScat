@@ -371,6 +371,7 @@ class wxWebcamDBFrame: public wxFrame
       double fWheelCalibration;// = 360/4;
       int currentFilterIndex;// = 0;
       bool fWheelDirection;// = 0;
+      bool auto_exposure;
       wxString fWheelString;
       wxTimer     m_stepperCOM_timer;
       wxTimer     m_stepperCapture_timer;

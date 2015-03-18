@@ -4,9 +4,9 @@
  * Author:    ca ()
  * Created:   2007-04-11
  * Copyright: ca ()
- * License:   
+ * License:
  **************************************************************/
- 
+
 #ifndef WXWEBCAMDBAPP_H
 #define WXWEBCAMDBAPP_H
 

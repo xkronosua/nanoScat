@@ -440,7 +440,7 @@ bool wxFactory::getFitsHeaderEntries(wxPropGrid::Entries& entries)
       entries.push_back(wxPropGrid::Entry(wxT("DISTANCE"),wxT(""),wxT("Sample-Matrix Distance")));
       entries.push_back(wxPropGrid::Entry(wxT("POWER"),wxT(""),wxT("Laser power")));
       entries.push_back(wxPropGrid::Entry(wxT("FILTMAP"),wxT("1"),wxT("List of filters in wheel (from MAX to MIN) [F11,F12,F13;F21,F22;...;1]")));
-
+      entries.push_back(wxPropGrid::Entry(wxT("EXPOSURE"),wxT("0.00"),wxT("Cam exposure (s)")));
 
 
       // Also save these values to config immediately

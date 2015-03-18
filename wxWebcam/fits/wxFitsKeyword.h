@@ -55,6 +55,7 @@ public:
       EF_FILTER,     // FILTER String - Optical Filter used to take image, ie H-Alpha. If this
                      // keyword is not included there was no filter used to take the image.
       EF_FILTMAP,    // FILTMAP String - Optical Filters MAP used to take image
+      EF_EXPOSURE,   // exposure
       EF_ANGLE,      // stepper angle
       EF_CALIBR,     // stepper calibr
       EF_WAVELENGTH, // laser wavelength
@@ -139,6 +140,7 @@ public:
    void StepperAngleKwd(float angle);
    void StepperCalibrKwd(float calibr);
    void WavelengthKwd(float wavelength);
+   void ExposureKwd(float wavelength);
    void DistanceKwd(float distance);
    void PowerKwd(float power);
 

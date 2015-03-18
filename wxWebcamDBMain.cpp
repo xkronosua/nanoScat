@@ -296,8 +296,7 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	BoxSizer14 = new wxBoxSizer(wxHORIZONTAL);
 	LE_Text = new wxStaticText(m_record_panel, ID_STATICTEXT1, _("[sec]"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
 	BoxSizer14->Add(LE_Text, 1, wxBOTTOM|wxLEFT|wxALIGN_LEFT|wxALIGN_BOTTOM, 5);
-	LE_SpinCtrl1 = new wxSpinCtrlDbl(m_record_panel, ID_SPINCTRL1, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 100, 0, _T("ID_SPINCTRL1"));
-	LE_SpinCtrl1->SetToolTip(_("Length of long exposure in seconds"));
+
 	BoxSizer14->Add(LE_SpinCtrl1, 0, wxTOP|wxLEFT|wxEXPAND|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 4);
 	BoxSizer12->Add(BoxSizer14, 1, wxEXPAND|wxALIGN_LEFT|wxALIGN_BOTTOM, 5);
 	StaticBoxSizer2->Add(BoxSizer12, 1, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
@@ -512,7 +511,9 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	m_exposure_meter_panel->SetMaxSize(wxSize(128,64));
 	m_exposure_meter_panel->SetToolTip(_("Live histogram"));
     //StaticText1 = new wxStaticText(m_stepper_panel, ID_STATICTEXT2, _("Channel"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
-
+    LE_SpinCtrl1 = new wxSpinCtrlDbl(m_exposure_meter_panel, ID_SPINCTRL1, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 100, 0, _T("ID_SPINCTRL1"));
+	LE_SpinCtrl1->SetToolTip(_("Length of long exposure in seconds"));
+	FlexGridSizer1_1->Add(LE_SpinCtrl1);
 
 
 
@@ -735,7 +736,8 @@ void wxWebcamDBFrame::Init()
 {
 
 fWheelCalibration = 0.5;
-
+wxString comment_val;
+auto_exposure = wxF()->getFitsHeaderValue(wxT("COMMENT"), comment_val);
 fWheelDirection = 0;
 
    fBaseMap[_T("OP06")] = 0.251188643150958;
@@ -1417,6 +1419,8 @@ void wxWebcamDBFrame::OnCaptureClick(wxCommandEvent&  WXUNUSED(event))
       if(cam->IsConnected()) {
          if(cam->IsCapturing()) {
 
+            // delegate to helperdll
+
             // delegate to helper
             StopCapture();
          }
@@ -2026,8 +2030,8 @@ double angle = SS_AngSpin->GetValue();
 double calibr = SS_CalibrSpin->GetValue();
 Stepper.SMD_SetMoveParam(255, ANumber, FALSE, TRUE, (LONG32)(angle*calibr));
 Stepper.SMD_OnSHD(255, ANumber);
-Stepper.SMD_ClearStep(255);
-int direction = (SS_CWiceDirection->IsEnabled())? -1 : 1;
+//Stepper.SMD_ClearStep(255);
+int direction = 1;//(SS_CWiceDirection->IsEnabled())? -1 : 1;
 wxWebcamDBFrame::UpdateStepperAngle(angle*direction);
 }
 
@@ -2042,8 +2046,8 @@ double angle = SS_AngSpin->GetValue();
 double calibr = SS_CalibrSpin->GetValue();
 Stepper.SMD_SetMoveParam(255, ANumber, FALSE, FALSE, (LONG32)(angle*calibr));
 Stepper.SMD_OnSHD(255, ANumber);
-Stepper.SMD_ClearStep(255);
-int direction = (SS_CWiceDirection->IsEnabled())? -1 : 1;
+//Stepper.SMD_ClearStep(255);
+int direction = -1;//(SS_CWiceDirection->IsEnabled())? -1 : 1;
 wxWebcamDBFrame::UpdateStepperAngle(angle*direction);
 }
 
@@ -2055,14 +2059,17 @@ Stepper.SMD_ClearStep(255);
 
 void wxWebcamDBFrame::OnResetSHDClick(wxCommandEvent&  WXUNUSED(event))
 {
-Stepper.SMD_ResetSHD(255,1,1);
+Stepper.SMD_ResetSHD(255,TRUE,TRUE);
 }
 
 
 void wxWebcamDBFrame::OnStepperCOMTimer(wxTimerEvent& WXUNUSED(event))
 {
     if(wxWebcamDBFrame::isStepperConnected) {
-       Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
+     //  Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
+     //char p;
+     //Stepper.SMD_GetInform(p);
+
     }
     else {
        m_stepperCOM_timer.Stop();
@@ -2095,36 +2102,157 @@ else {
 
 void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
 {
+    m_stepperCapture_timer.Stop();
+    wxCamera* cam = wxF()->cam();
+    wxString FitsAngle, FitsCalibr, FitsObject, FitsExposure;
+    if (cam->IsConnected() && wxWebcamDBFrame::isStepperConnected){
+    if (!cam->IsCapturing()){
+        StartCapture(true);
+        double angle = SS_AngSpin->GetValue();
+        double calibr = SS_CalibrSpin->GetValue();
+        ///////////////////////////////////////Direction/////////////////
+        int direction = (SS_CWiceDirection->IsEnabled())? -1 : 1;
+        bool dir = (SS_CWiceDirection->IsEnabled())? FALSE : TRUE;
+        float exposure = LE_SpinCtrl1->GetValue();
+        double current_ang = UpdateStepperAngle(angle*direction);
 
-//wxMessageBox(wxString::Format(_T("pivot:
+        if (Stepper.SMD_SetMoveParam(255, 0, FALSE, dir, (LONG32)(angle*calibr)) &&
+                    Stepper.SMD_OnSHD(255, 0) &&
+                    Stepper.SMD_ClearStep(255))
+                    {
 
-    if(wxWebcamDBFrame::isStepperConnected ) {
-       //Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
+                    wxF()->getFitsHeaderValue(wxT("OBJECT"), FitsObject);
+                    FitsAngle = wxT(wxString::Format("%s_%f", FitsObject, current_ang));
+                    wxF()->saveFitsHeaderValue(wxT("ANGLE"), FitsAngle);
+
+
+                    wxF()->getFitsHeaderValue(wxT("ANGLE"), FitsAngle);
+                    FitsAngle = wxT(wxString::Format("%f", current_ang));
+                    wxF()->saveFitsHeaderValue(wxT("ANGLE"), FitsAngle);
+                    wxF()->getFitsHeaderValue(wxT("STEPPERC"), FitsCalibr);
+                    FitsCalibr = wxT(wxString::Format("%f", calibr));
+                    wxF()->saveFitsHeaderValue(wxT("STEPPERC"), FitsCalibr);
+                    wxF()->getFitsHeaderValue(wxT("EXPOSURE"), FitsExposure);
+                    FitsExposure = wxT(wxString::Format("%f", exposure));
+                    wxF()->saveFitsHeaderValue(wxT("EXPOSURE"), FitsExposure);
+
+                       m_stepperCapture_timer.Start(SS_StepperInterval->GetValue());
+                    }
+    }
+    else m_stepperCapture_timer.Start(1000);
+    }
+
+
+    else {
+
+     SS_StepperCapture_btn->SetLabel(_("Capture"));
+     StopCapture();
+
+    }
+/*
+wxString comment_val;
+int m_stepper_capture_interval = SS_StepperInterval->GetValue();
+auto_exposure = wxF()->getFitsHeaderValue(wxT("COMMENT"), comment_val);
+
+//постійно пробудження двигунів
+  Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
+m_stepperCapture_timer.Stop();
        wxCamera* cam = wxF()->cam();
-        if (cam && !(cam->IsCapturing())){
+if (cam && cam->IsConnected() && !(cam->IsCapturing())){
 
-       if (cam){
-           if(cam->IsConnected()){
+
                double angle = SS_AngSpin->GetValue();
                double calibr = SS_CalibrSpin->GetValue();
                ///////////////////////////////////////Direction/////////////////
                int direction = (SS_CWiceDirection->IsEnabled())? -1 : 1;
                bool dir = (SS_CWiceDirection->IsEnabled())? FALSE : TRUE;
+               float exposure = LE_SpinCtrl1->GetValue();
 
 
 
 
 
-               m_stepperCapture_timer.Stop();
-               Stepper.SMD_OpenComPort((INT32)SS_PortNSpin->GetValue());
+
+
+   unsigned short pivot, vlow,  vhig,  Max;
+   wxF()->cam()->Histogram().PivotDev(pivot, vlow,  vhig,  Max);
+   double pivot_ = (double)pivot;
+   double vhig_ = (double)vhig;
+   double vlow_ = (double)vlow;
+   double Max_ = (double)Max;
+   wxString captured;
+   captured.Printf(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max));
+
+bool tmp_exposure = 0;
+if(auto_exposure){
+
+    //double filterWheelAngle = fWheelCalibration*360/filtersArray.size();
+   // int tmpfIndex = currentFilterIndex;
+    UpdateExposureMeter();
+     if (vhig_ > Max_*0.9){
+
+
+           // exposure = LE_SpinCtrl1->GetValue();
+     if (exposure > 0.1) {
+            exposure*=0.9;
+            LE_SpinCtrl1->SetValue(exposure);
+tmp_exposure = true;
+            }
+
+   //         UpdateFWheelString();
+   //         if ( currentFilterIndex >0 ){
+   // //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
+   // Stepper.SMD_SetMoveParam(255, 1, FALSE, FALSE, (LONG32)(filterWheelAngle));
+   // Stepper.SMD_OnSHD(255, 1);
+   // currentFilterIndex -= 1;
+            }
+
+
+     else if (vhig_ < Max_*0.001){
+  //          UpdateFWheelString();
+  //          if ( currentFilterIndex < filtersArray.size()){
+  //  //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
+  //  Stepper.SMD_SetMoveParam(255, 1, FALSE, TRUE, (LONG32)(filterWheelAngle));
+  //  Stepper.SMD_OnSHD(255, 1);
+  // currentFilterIndex += 1;
+
+         // UpdateExposureMeter();
+
+     if (exposure < 4) {
+            exposure*=1.1;
+            LE_SpinCtrl1->SetValue(exposure);
+            }
+            tmp_exposure = true;
+     }
+         // UpdateExposureMeter();
+     }
+
+wxString FitsAngle, FitsCalibr, FitsObject, FitsExposure;
+
+if (!tmp_exposure)
+{
+
+
+wxF()->getFitsHeaderValue(wxT("EXPOSURE"), FitsExposure);
+                    FitsExposure = wxT(wxString::Format("%f", exposure));
+                    wxF()->saveFitsHeaderValue(wxT("EXPOSURE"), FitsExposure);
+
+m_stepperCapture_timer.Start(m_stepper_capture_interval);
+
+}
+else{
+    StartCapture(false);
+
+
+
                //переробити
-               if( Stepper.SMD_SetMoveParam(255, 0, FALSE, dir, (LONG32)(angle*calibr)) &&
+               if( wxWebcamDBFrame::isStepperConnected && Stepper.SMD_SetMoveParam(255, 0, FALSE, dir, (LONG32)(angle*calibr)) &&
                     Stepper.SMD_OnSHD(255, 0) &&
                     Stepper.SMD_ClearStep(255))
                     {
                     double current_ang = UpdateStepperAngle(angle*direction);
 
-                    wxString FitsAngle, FitsCalibr, FitsObject;
+
 
                     wxF()->getFitsHeaderValue(wxT("OBJECT"), FitsObject);
                     FitsAngle = wxT(wxString::Format("%s_%f", FitsObject, current_ang));
@@ -2139,39 +2267,9 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
                     wxF()->saveFitsHeaderValue(wxT("STEPPERC"), FitsCalibr);
 
 
- unsigned short pivot, vlow,  vhig,  Max;
-   wxF()->cam()->Histogram().PivotDev(pivot, vlow,  vhig,  Max);
-   double pivot_ = (double)pivot;
-   double vhig_ = (double)vhig;
-   double vlow_ = (double)vlow;
-   double Max_ = (double)Max;
-   wxString captured;
-   captured.Printf(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max));
-
-
-
-    double filterWheelAngle = fWheelCalibration*360/filtersArray.size();
-    int tmpfIndex = currentFilterIndex;
-     if (vhig_ > Max_*0.2){
-            UpdateFWheelString();
-            if ( currentFilterIndex >0 ){
-    //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
-    Stepper.SMD_SetMoveParam(255, 1, FALSE, FALSE, (LONG32)(filterWheelAngle));
-    Stepper.SMD_OnSHD(255, 1);
-    currentFilterIndex -= 1;
-            }
-     }
-
-     if (vhig_ < Max_*0.1){
-            UpdateFWheelString();
-            if ( currentFilterIndex < filtersArray.size()){
-    //wxMessageBox(wxString::Format(_T("pivot: %f; vlow: %f; vhig: %f; max: %f;"), double(pivot), double(vlow),  double(vhig),  double(Max)));
-    Stepper.SMD_SetMoveParam(255, 1, FALSE, TRUE, (LONG32)(filterWheelAngle));
-    Stepper.SMD_OnSHD(255, 1);
-    currentFilterIndex += 1;
-     }
-     }
-
+m_stepperCapture_timer.Start(m_stepper_capture_interval);
+*/
+/*
     if (tmpfIndex != currentFilterIndex){
      wxString FitsFilter;
 
@@ -2179,21 +2277,39 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
                     FitsFilter = wxT(wxString::Format("%s", filtersArray[currentFilterIndex]));
                     wxF()->saveFitsHeaderValue(wxT("FILTER"), FitsFilter);
     }
-    else{
+    else{*/
 
-                   StartCapture(false);
-    }
-                    m_statusbar->SetStatusText(captured, 1);
-                    m_stepperCapture_timer.Start(SS_StepperInterval->GetValue());
-                    }
+                     //StartCapture(false);
+
+   // }
+
+
+
+
+              //      }
+    //    }
+
+
+                  //  m_statusbar->SetStatusText(captured, 1);
+
+/*
             }
-        }
-    }}
-    else {
+             else {
        m_stepperCapture_timer.Stop();
-
+SS_StepperCapture_btn->SetLabel(_("Capture"));
+     StopCapture();
     }
+     }   //}
+    //}
+
 }
+else{
+
+}
+ m_stepperCapture_timer.Start(m_stepper_capture_interval);
+
+ */
+ }
 
 
 void wxWebcamDBFrame::OnCWStepperDirectionClick(wxCommandEvent&  WXUNUSED(event))
