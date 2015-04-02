@@ -27,6 +27,7 @@ class SMDDll: public PDLL
    DECLARE_FUNCTION0(INT32,  SMD_GetAddr);
    DECLARE_FUNCTION1(BOOL, SMD_SetAddr, BYTE );
    DECLARE_FUNCTION5(BOOL, SMD_SetMoveParam, BYTE , INT32 , BOOL , BOOL , LONG32 );
+   DECLARE_FUNCTION11(BOOL, SMD_GetState, int , bool& , bool& , bool& , int& , int& , bool& , bool& , bool& , int& , int&  );
 };
 
 

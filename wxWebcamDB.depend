@@ -15,11 +15,11 @@
 	<wx/dialog.h>
 	"wxthings/spinctld.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\sizer.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\sizer.h
 	"wx/defs.h"
 	"wx/window.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\defs.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\defs.h
 	"wx/platform.h"
 	"wx/features.h"
 	"wx/version.h"
@@ -30,7 +30,7 @@
 	<unistd.h>
 	"wx/msw/winundef.h"
 
-1213612286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\platform.h
+1213615886 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\platform.h
 	<stddef.h>
 	<AvailabilityMacros.h>
 	<unistd.h>
@@ -42,9 +42,9 @@
 	"wx/msw/gccpriv.h"
 	<AvailabilityMacros.h>
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\lib\vc_lib\mswd\wx\setup.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\lib\vc_lib\mswd\wx\setup.h
 
-1187332094 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\chkconf.h
+1187335694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\chkconf.h
 	"wx/palmos/chkconf.h"
 	"wx/msw/wince/chkconf.h"
 	"wx/msw/chkconf.h"
@@ -56,35 +56,35 @@
 	"wx/x11/chkconf.h"
 	"wx/univ/chkconf.h"
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\chkconf.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\chkconf.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\chkconf.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\chkconf.h
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\chkconf.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\chkconf.h
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\libraries.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\libraries.h
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\libraries.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\libraries.h
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gccpriv.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gccpriv.h
 	<_mingw.h>
 	<w32api.h>
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\features.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\features.h
 
-1220338544 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\version.h
+1220342144 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\version.h
 	"wx/cpp.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\cpp.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\cpp.h
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dlimpexp.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dlimpexp.h
 
-1220338544 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\debug.h
+1220342144 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\debug.h
 	<assert.h>
 	<limits.h>
 	"wx/wxchar.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wxchar.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wxchar.h
 	"wx/platform.h"
 	"wx/dlimpexp.h"
 	<stdio.h>
@@ -114,9 +114,9 @@
 	<time.h>
 	<string.h>
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\winundef.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\winundef.h
 
-1221458852 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\window.h
+1221462452 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\window.h
 	"wx/event.h"
 	"wx/list.h"
 	"wx/cursor.h"
@@ -142,7 +142,7 @@
 	"wx/os2/window.h"
 	"wx/univ/window.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\event.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\event.h
 	"wx/defs.h"
 	"wx/cpp.h"
 	"wx/object.h"
@@ -152,18 +152,18 @@
 	"wx/thread.h"
 	"wx/dynarray.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\object.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\object.h
 	"wx/memory.h"
 	"wx/xti.h"
 	"wx/msw/msvcrt.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\memory.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\memory.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/msgout.h"
 	<stddef.h>
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\string.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\string.h
 	"wx/defs.h"
 	<ctype.h>
 	<stdio.h>
@@ -186,11 +186,11 @@
 	"wx/arrstr.h"
 	"wx/iosfwrap.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\buffer.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\buffer.h
 	"wx/wxchar.h"
 	<stdlib.h>
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\strconv.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\strconv.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 	"wx/buffer.h"
@@ -198,35 +198,35 @@
 	<stdlib.h>
 	"wx/fontenc.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontenc.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontenc.h
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\beforestd.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\beforestd.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\afterstd.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\afterstd.h
 	"wx/msw/winundef.h"
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\arrstr.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\arrstr.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/dynarray.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dynarray.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dynarray.h
 	"wx/defs.h"
 	"wx/beforestd.h"
 	<vector>
 	<algorithm>
 	"wx/afterstd.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\iosfwrap.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\iosfwrap.h
 	<iostream.h>
 	<iosfwd>
 	"wx/msw/winundef.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msgout.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msgout.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\xti.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\xti.h
 	"wx/defs.h"
 	"wx/memory.h"
 	"wx/flags.h"
@@ -238,9 +238,9 @@
 	<typeinfo>
 	"wx/dynarray.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\flags.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\flags.h
 
-1220338544 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\hashmap.h
+1220342144 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\hashmap.h
 	"wx/string.h"
 	<unordered_map>
 	<tr1/unordered_map>
@@ -248,7 +248,7 @@
 	<hash_map>
 	<stddef.h>
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\log.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\log.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/arrstr.h"
@@ -258,27 +258,27 @@
 	"wx/generic/logg.h"
 	"wx/cocoa/log.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\logg.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\logg.h
 
-1213612286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\intl.h
+1213615886 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\intl.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/fontenc.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\msvcrt.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\msvcrt.h
 	<stdlib.h>
 	<crtdbg.h>
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\clntdata.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\clntdata.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/hashmap.h"
 	"wx/vector.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\vector.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\vector.h
 	"wx/defs.h"
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gdicmn.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gdicmn.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/string.h"
@@ -286,7 +286,7 @@
 	"wx/hashmap.h"
 	"wx/math.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\list.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\list.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -296,12 +296,12 @@
 	<list>
 	"wx/afterstd.h"
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\math.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\math.h
 	"wx/defs.h"
 	<math.h>
 	<float.h>
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\cursor.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\cursor.h
 	"wx/defs.h"
 	"wx/palmos/cursor.h"
 	"wx/msw/cursor.h"
@@ -316,18 +316,18 @@
 	"wx/os2/cursor.h"
 	"wx/utils.h"
 
-1195458930 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\cursor.h
+1195462530 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\cursor.h
 	"wx/msw/gdiimage.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gdiimage.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gdiimage.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 	"wx/list.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gdiobj.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gdiobj.h
 	"wx/object.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\utils.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\utils.h
 	"wx/object.h"
 	"wx/list.h"
 	"wx/filefn.h"
@@ -339,7 +339,7 @@
 	<unistd.h>
 	<stdio.h>
 
-1213612286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\filefn.h
+1213615886 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\filefn.h
 	"wx/list.h"
 	"wx/arrstr.h"
 	"wx/msw/wince/time.h"
@@ -375,23 +375,23 @@
 	<fcntl.h>
 	<sys/types.h>
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\time.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\time.h
 
-1194614174 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\private.h
+1194617774 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\private.h
 	"wx/msw/wrapwin.h"
 	"wx/msw/microwin.h"
 	"wx/log.h"
 	"wx/gdicmn.h"
 	"wx/colour.h"
 
-1213612284 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wrapwin.h
+1213615884 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wrapwin.h
 	"wx/platform.h"
 	<windows.h>
 	"wx/msw/winundef.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\microwin.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\microwin.h
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\colour.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\colour.h
 	"wx/defs.h"
 	"wx/gdiobj.h"
 	"wx/variant.h"
@@ -407,7 +407,7 @@
 	"wx/cocoa/colour.h"
 	"wx/os2/colour.h"
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\variant.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\variant.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -418,7 +418,7 @@
 	"wx/db.h"
 	"wx/iosfwrap.h"
 
-1220338544 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\datetime.h
+1220342144 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\datetime.h
 	"wx/defs.h"
 	<time.h>
 	"wx/msw/wince/time.h"
@@ -426,13 +426,13 @@
 	"wx/longlong.h"
 	"wx/dynarray.h"
 
-1220338544 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\longlong.h
+1220342144 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\longlong.h
 	"wx/defs.h"
 	"wx/string.h"
 	<limits.h>
 	"wx/iosfwrap.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\db.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\db.h
 	"wx/defs.h"
 	"wx/string.h"
 	<afxwin.h>
@@ -447,24 +447,24 @@
 	<sqlext.h>
 	"wx/object.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\isql.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\isql.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\isqlext.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\isqlext.h
 	"wx/isql.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\colour.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\colour.h
 	"wx/object.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\colour.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\colour.h
 	"wx/object.h"
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\platinfo.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\platinfo.h
 	"wx/string.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\thread.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\thread.h
 	"wx/defs.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\font.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\font.h
 	"wx/defs.h"
 	"wx/fontenc.h"
 	"wx/gdiobj.h"
@@ -480,10 +480,10 @@
 	"wx/cocoa/font.h"
 	"wx/os2/font.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\font.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\font.h
 	"wx/gdicmn.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\region.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\region.h
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 	"wx/palmos/region.h"
@@ -497,13 +497,13 @@
 	"wx/cocoa/region.h"
 	"wx/os2/region.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\region.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\region.h
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\validate.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\validate.h
 	"wx/defs.h"
 	"wx/event.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\palette.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\palette.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
@@ -516,16 +516,16 @@
 	"wx/mac/palette.h"
 	"wx/os2/palette.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\palette.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\palette.h
 	"wx/gdiobj.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\paletteg.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\paletteg.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
 	"wx/gdicmn.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\accel.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\accel.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/generic/accel.h"
@@ -537,30 +537,30 @@
 	"wx/generic/accel.h"
 	"wx/os2/accel.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\accel.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\accel.h
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\accel.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\accel.h
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\access.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\access.h
 	"wx/defs.h"
 	"wx/variant.h"
 	"wx/msw/ole/access.h"
 
-1186407642 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\access.h
+1186411242 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\access.h
 
-1213612284 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\window.h
+1213615884 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\window.h
 	"wx/hash.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\hash.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\hash.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/list.h"
 	"wx/dynarray.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\window.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\window.h
 	"wx/bitmap.h"
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\bitmap.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\bitmap.h
 	"wx/string.h"
 	"wx/gdicmn.h"
 	"wx/colour.h"
@@ -578,13 +578,13 @@
 	"wx/os2/bitmap.h"
 	"wx/generic/mask.h"
 
-1194614174 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\bitmap.h
+1194617774 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\bitmap.h
 	"wx/msw/gdiimage.h"
 	"wx/palette.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\mask.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\mask.h
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stattext.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stattext.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/stattext.h"
@@ -597,7 +597,7 @@
 	"wx/os2/stattext.h"
 	"wx/palmos/stattext.h"
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\control.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\control.h
 	"wx/defs.h"
 	"wx/window.h"
 	"wx/univ/control.h"
@@ -610,25 +610,25 @@
 	"wx/cocoa/control.h"
 	"wx/os2/control.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\control.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\control.h
 	"wx/univ/inphand.h"
 	"wx/univ/inpcons.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\inphand.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\inphand.h
 	"wx/univ/inpcons.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\inpcons.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\inpcons.h
 	"wx/object.h"
 	"wx/event.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\control.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\control.h
 	"wx/dynarray.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\stattext.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\stattext.h
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\stattext.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\stattext.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\spinctrl.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\spinctrl.h
 	"wx/defs.h"
 	"wx/spinbutt.h"
 	"wx/generic/spinctlg.h"
@@ -640,7 +640,7 @@
 	"wx/mac/spinctrl.h"
 	"wx/generic/spinctlg.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\spinbutt.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\spinbutt.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/event.h"
@@ -653,19 +653,19 @@
 	"wx/cocoa/spinbutt.h"
 	"wx/os2/spinbutt.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\spinbutt.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\spinbutt.h
 	"wx/univ/scrarrow.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\scrarrow.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\scrarrow.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\spinbutt.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\spinbutt.h
 	"wx/control.h"
 	"wx/event.h"
 
-1211176294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\spinctlg.h
+1211179894 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\spinctlg.h
 	"wx/textctrl.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textctrl.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textctrl.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/dynarray.h"
@@ -682,39 +682,39 @@
 	"wx/cocoa/textctrl.h"
 	"wx/os2/textctrl.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ioswrap.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ioswrap.h
 	<iostream.h>
 	<iostream>
 	"wx/msw/winundef.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\textctrl.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\textctrl.h
 	"wx/scrolwin.h"
 	"wx/univ/inphand.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\scrolwin.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\scrolwin.h
 	"wx/panel.h"
 	"wx/gtk/scrolwin.h"
 	"wx/gtk1/scrolwin.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\panel.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\panel.h
 	"wx/generic/panelg.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\panelg.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\panelg.h
 	"wx/window.h"
 	"wx/containr.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\containr.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\containr.h
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\textctrlce.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\textctrlce.h
 	"wx/dynarray.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\textctrl.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\textctrl.h
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\spinctrl.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\spinctrl.h
 	"wx/spinbutt.h"
 	"wx/dynarray.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\button.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\button.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/button.h"
@@ -727,12 +727,12 @@
 	"wx/os2/button.h"
 	"wx/palmos/button.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\button.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\button.h
 	"wx/bitmap.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\button.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\button.h
 
-1195458932 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dialog.h
+1195462532 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dialog.h
 	"wx/defs.h"
 	"wx/containr.h"
 	"wx/toplevel.h"
@@ -746,7 +746,7 @@
 	"wx/cocoa/dialog.h"
 	"wx/os2/dialog.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\toplevel.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\toplevel.h
 	"wx/window.h"
 	"wx/iconbndl.h"
 	"wx/palmos/toplevel.h"
@@ -762,18 +762,18 @@
 	"wx/motif/toplevel.h"
 	"wx/univ/toplevel.h"
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\iconbndl.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\iconbndl.h
 	"wx/dynarray.h"
 	"wx/gdicmn.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\toplevel.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\toplevel.h
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\toplevel.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\toplevel.h
 	"wx/univ/inpcons.h"
 	"wx/univ/inphand.h"
 	"wx/icon.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\icon.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\icon.h
 	"wx/iconloc.h"
 	"wx/generic/icon.h"
 	"wx/msw/icon.h"
@@ -788,18 +788,18 @@
 	"wx/os2/icon.h"
 	"wx/variant.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\iconloc.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\iconloc.h
 	"wx/string.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\icon.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\icon.h
 	"wx/bitmap.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\icon.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\icon.h
 	"wx/msw/gdiimage.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\dialog.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\dialog.h
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dialog.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dialog.h
 	"wx/panel.h"
 
 1392759873 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxthings\spinctld.h
@@ -822,7 +822,7 @@
 	"wxWebcam/wxCameraTypes.h"
 	"wxIO/wxPort.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wxprec.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wxprec.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 	"wx/msw/wrapwin.h"
@@ -835,21 +835,21 @@
 	"wx/mgl/private.h"
 	"wx/wx.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wrapcctl.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wrapcctl.h
 	"wx/msw/wrapwin.h"
 	<commctrl.h>
 	"wx/msw/missing.h"
 
-1188473904 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\missing.h
+1188477504 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\missing.h
 	<windows.h>
 	"wx/msw/winundef.h"
 	"wx/msw/wince/missing.h"
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\missing.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\missing.h
 	"wx/msw/private.h"
 	"shellapi.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wrapcdlg.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wrapcdlg.h
 	"wx/defs.h"
 	"wx/msw/wrapwin.h"
 	"wx/msw/private.h"
@@ -857,7 +857,7 @@
 	<commdlg.h>
 	"wx/msw/winundef.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wx.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wx.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/dynarray.h"
@@ -937,7 +937,7 @@
 	"wx/validate.h"
 	"wx/valtext.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\app.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\app.h
 	"wx/event.h"
 	"wx/build.h"
 	"wx/init.h"
@@ -955,38 +955,38 @@
 	"wx/os2/app.h"
 	"wx/univ/theme.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\build.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\build.h
 	"wx/version.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\init.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\init.h
 	"wx/defs.h"
 	"wx/wxchar.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\app.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\app.h
 	"wx/event.h"
 	"wx/icon.h"
 	"wx/msw/wrapwin.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\theme.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\theme.h
 	"wx/string.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stream.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stream.h
 	"wx/defs.h"
 	<stdio.h>
 	"wx/object.h"
 	"wx/string.h"
 	"wx/filefn.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stopwatch.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stopwatch.h
 	"wx/defs.h"
 	"wx/longlong.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\module.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\module.h
 	"wx/object.h"
 	"wx/list.h"
 	"wx/dynarray.h"
 
-1195458932 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\frame.h
+1195462532 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\frame.h
 	"wx/toplevel.h"
 	"wx/univ/frame.h"
 	"wx/palmos/frame.h"
@@ -998,11 +998,11 @@
 	"wx/cocoa/frame.h"
 	"wx/os2/frame.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\frame.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\frame.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\frame.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\frame.h
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\image.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\image.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -1021,40 +1021,40 @@
 	"wx/imagxpm.h"
 	"wx/imagiff.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagbmp.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagbmp.h
 	"wx/image.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagpng.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagpng.h
 	"wx/defs.h"
 	"wx/image.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imaggif.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imaggif.h
 	"wx/image.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagpcx.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagpcx.h
 	"wx/image.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagjpeg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagjpeg.h
 	"wx/defs.h"
 	"wx/image.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagtga.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagtga.h
 	"wx/image.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagtiff.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagtiff.h
 	"wx/defs.h"
 	"wx/image.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagpnm.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagpnm.h
 	"wx/image.h"
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagxpm.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagxpm.h
 	"wx/image.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagiff.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imagiff.h
 	"wx/image.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dc.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dc.h
 	"wx/object.h"
 	"wx/intl.h"
 	"wx/cursor.h"
@@ -1080,7 +1080,7 @@
 	"wx/os2/dc.h"
 	"wx/dcgraph.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\brush.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\brush.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/gdiobj.h"
@@ -1095,12 +1095,12 @@
 	"wx/cocoa/brush.h"
 	"wx/os2/brush.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\brush.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\brush.h
 	"wx/gdicmn.h"
 	"wx/gdiobj.h"
 	"wx/bitmap.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\pen.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\pen.h
 	"wx/defs.h"
 	"wx/palmos/pen.h"
 	"wx/msw/pen.h"
@@ -1113,31 +1113,31 @@
 	"wx/cocoa/pen.h"
 	"wx/os2/pen.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\pen.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\pen.h
 	"wx/gdiobj.h"
 	"wx/bitmap.h"
 	"wx/colour.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dc.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dc.h
 	"wx/defs.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcgraph.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcgraph.h
 	"wx/geometry.h"
 	"wx/dynarray.h"
 	"wx/graphics.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\geometry.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\geometry.h
 	"wx/defs.h"
 	"wx/utils.h"
 	"wx/gdicmn.h"
 	"wx/math.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\graphics.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\graphics.h
 	"wx/defs.h"
 	"wx/geometry.h"
 	"wx/dynarray.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcclient.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcclient.h
 	"wx/defs.h"
 	"wx/palmos/dcclient.h"
 	"wx/msw/dcclient.h"
@@ -1151,11 +1151,11 @@
 	"wx/cocoa/dcclient.h"
 	"wx/os2/dcclient.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcclient.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcclient.h
 	"wx/dc.h"
 	"wx/dynarray.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcmemory.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcmemory.h
 	"wx/bitmap.h"
 	"wx/palmos/dcmemory.h"
 	"wx/msw/dcmemory.h"
@@ -1169,21 +1169,21 @@
 	"wx/cocoa/dcmemory.h"
 	"wx/os2/dcmemory.h"
 
-1188280274 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcmemory.h
+1188283874 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcmemory.h
 	"wx/dcclient.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcprint.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcprint.h
 	"wx/defs.h"
 	"wx/palmos/dcprint.h"
 	"wx/msw/dcprint.h"
 	"wx/os2/dcprint.h"
 	"wx/mac/dcprint.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcprint.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcprint.h
 	"wx/dc.h"
 	"wx/cmndata.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\cmndata.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\cmndata.h
 	"wx/window.h"
 	"wx/font.h"
 	"wx/encinfo.h"
@@ -1191,10 +1191,10 @@
 	"wx/gdicmn.h"
 	"wx/stream.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\encinfo.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\encinfo.h
 	"wx/string.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcscreen.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcscreen.h
 	"wx/defs.h"
 	"wx/palmos/dcscreen.h"
 	"wx/msw/dcscreen.h"
@@ -1208,10 +1208,10 @@
 	"wx/cocoa/dcscreen.h"
 	"wx/os2/dcscreen.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcscreen.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dcscreen.h
 	"wx/dc.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\menuitem.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\menuitem.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/univ/menuitem.h"
@@ -1224,18 +1224,18 @@
 	"wx/cocoa/menuitem.h"
 	"wx/os2/menuitem.h"
 
-1187158704 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\menuitem.h
+1187162304 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\menuitem.h
 
-1187158710 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\menuitem.h
+1187162310 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\menuitem.h
 	"wx/ownerdrw.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ownerdrw.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ownerdrw.h
 	"wx/defs.h"
 	"wx/bitmap.h"
 	"wx/colour.h"
 	"wx/font.h"
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\menu.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\menu.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/window.h"
@@ -1250,16 +1250,16 @@
 	"wx/cocoa/menu.h"
 	"wx/os2/menu.h"
 
-1187158704 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\menu.h
+1187162304 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\menu.h
 	"wx/accel.h"
 	"wx/dynarray.h"
 
-1194614174 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\menu.h
+1194617774 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\menu.h
 	"wx/accel.h"
 	"wx/dynarray.h"
 	"wx/arrstr.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\timer.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\timer.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/longlong.h"
@@ -1275,15 +1275,15 @@
 	"wx/mac/timer.h"
 	"wx/os2/timer.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\timer.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\timer.h
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\timer.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\timer.h
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\settings.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\settings.h
 	"wx/colour.h"
 	"wx/font.h"
 
-1195458932 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msgdlg.h
+1195462532 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msgdlg.h
 	"wx/defs.h"
 	"wx/generic/msgdlgg.h"
 	"wx/generic/msgdlgg.h"
@@ -1297,15 +1297,15 @@
 	"wx/cocoa/msgdlg.h"
 	"wx/os2/msgdlg.h"
 
-1195458932 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\msgdlgg.h
+1195462532 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\msgdlgg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\msgdlg.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\msgdlg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dataobj.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dataobj.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/bitmap.h"
@@ -1336,17 +1336,17 @@
 	"wx/cocoa/dataobj2.h"
 	"wx/os2/dataobj2.h"
 
-1186407642 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\dataform.h
+1186411242 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\dataform.h
 
-1186407642 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\dataobj.h
+1186411242 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\dataobj.h
 
-1186407642 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\dataobj2.h
+1186411242 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\ole\dataobj2.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ctrlsub.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ctrlsub.h
 	"wx/defs.h"
 	"wx/control.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\bmpbuttn.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\bmpbuttn.h
 	"wx/defs.h"
 	"wx/bitmap.h"
 	"wx/button.h"
@@ -1359,14 +1359,14 @@
 	"wx/cocoa/bmpbuttn.h"
 	"wx/os2/bmpbuttn.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\bmpbuttn.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\bmpbuttn.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\bmpbuttn.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\bmpbuttn.h
 	"wx/button.h"
 	"wx/bitmap.h"
 	"wx/brush.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\checkbox.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\checkbox.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/checkbox.h"
@@ -1379,12 +1379,12 @@
 	"wx/os2/checkbox.h"
 	"wx/palmos/checkbox.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\checkbox.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\checkbox.h
 	"wx/button.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\checkbox.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\checkbox.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\checklst.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\checklst.h
 	"wx/listbox.h"
 	"wx/univ/checklst.h"
 	"wx/msw/wince/checklst.h"
@@ -1396,7 +1396,7 @@
 	"wx/cocoa/checklst.h"
 	"wx/os2/checklst.h"
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listbox.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listbox.h
 	"wx/defs.h"
 	"wx/ctrlsub.h"
 	"wx/univ/listbox.h"
@@ -1408,21 +1408,21 @@
 	"wx/os2/listbox.h"
 	"wx/cocoa/listbox.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\listbox.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\listbox.h
 	"wx/scrolwin.h"
 	"wx/dynarray.h"
 	"wx/arrstr.h"
 
-1194614174 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\listbox.h
+1194617774 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\listbox.h
 	"wx/dynarray.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\checklst.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\checklst.h
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\checklst.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\checklst.h
 
-1194614174 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\checklst.h
+1194617774 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\checklst.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\choice.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\choice.h
 	"wx/defs.h"
 	"wx/ctrlsub.h"
 	"wx/univ/choice.h"
@@ -1435,10 +1435,10 @@
 	"wx/cocoa/choice.h"
 	"wx/os2/choice.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\choice.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\choice.h
 	"wx/combobox.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\combobox.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\combobox.h
 	"wx/defs.h"
 	"wx/textctrl.h"
 	"wx/ctrlsub.h"
@@ -1451,10 +1451,10 @@
 	"wx/cocoa/combobox.h"
 	"wx/os2/combobox.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\combobox.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\combobox.h
 	"wx/combo.h"
 
-1195458932 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\combo.h
+1195462532 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\combo.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/renderer.h"
@@ -1462,28 +1462,28 @@
 	"wx/msw/combo.h"
 	"wx/generic/combo.h"
 
-1211434090 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\renderer.h
+1211437690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\renderer.h
 	"wx/gdicmn.h"
 	"wx/colour.h"
 	"wx/font.h"
 	"wx/bitmap.h"
 	"wx/string.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\combo.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\combo.h
 	"wx/timer.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\combo.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\combo.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\combobox.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\combobox.h
 	"wx/choice.h"
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\choicece.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\choicece.h
 	"wx/defs.h"
 	"wx/dynarray.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\choice.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\choice.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\scrolbar.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\scrolbar.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/scrolbar.h"
@@ -1495,13 +1495,13 @@
 	"wx/cocoa/scrolbar.h"
 	"wx/os2/scrolbar.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\scrolbar.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\scrolbar.h
 	"wx/univ/scrarrow.h"
 	"wx/renderer.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\scrolbar.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\scrolbar.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statbmp.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statbmp.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/bitmap.h"
@@ -1515,15 +1515,15 @@
 	"wx/cocoa/statbmp.h"
 	"wx/os2/statbmp.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statbmp.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statbmp.h
 	"wx/bitmap.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statbmp.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statbmp.h
 	"wx/control.h"
 	"wx/icon.h"
 	"wx/bitmap.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statbox.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statbox.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/statbox.h"
@@ -1535,11 +1535,11 @@
 	"wx/cocoa/statbox.h"
 	"wx/os2/statbox.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statbox.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statbox.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statbox.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statbox.h
 
-1220338544 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\radiobox.h
+1220342144 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\radiobox.h
 	"wx/ctrlsub.h"
 	"wx/dynarray.h"
 	"wx/univ/radiobox.h"
@@ -1552,14 +1552,14 @@
 	"wx/os2/radiobox.h"
 	"wx/palmos/radiobox.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\radiobox.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\radiobox.h
 	"wx/statbox.h"
 	"wx/dynarray.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\radiobox.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\radiobox.h
 	"wx/statbox.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\radiobut.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\radiobut.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/radiobut.h"
@@ -1572,12 +1572,12 @@
 	"wx/os2/radiobut.h"
 	"wx/palmos/radiobut.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\radiobut.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\radiobut.h
 	"wx/checkbox.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\radiobut.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\radiobut.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\slider.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\slider.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/slider.h"
@@ -1590,15 +1590,15 @@
 	"wx/os2/slider.h"
 	"wx/palmos/slider.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\slider.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\slider.h
 	"wx/univ/scrthumb.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\scrthumb.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\scrthumb.h
 	"wx/timer.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\slider95.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\slider95.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gauge.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gauge.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/gauge.h"
@@ -1610,11 +1610,11 @@
 	"wx/cocoa/gauge.h"
 	"wx/os2/gauge.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\gauge.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\gauge.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gauge95.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gauge95.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dirdlg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dirdlg.h
 	"wx/dialog.h"
 	"wx/generic/dirdlgg.h"
 	"wx/generic/dirdlgg.h"
@@ -1626,12 +1626,12 @@
 	"wx/cocoa/dirdlg.h"
 	"wx/generic/dirdlgg.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\dirdlgg.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\dirdlgg.h
 	"wx/dialog.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dirdlg.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\dirdlg.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\toolbar.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\toolbar.h
 	"wx/defs.h"
 	"wx/tbarbase.h"
 	"wx/univ/toolbar.h"
@@ -1645,40 +1645,40 @@
 	"wx/cocoa/toolbar.h"
 	"wx/os2/toolbar.h"
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\tbarbase.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\tbarbase.h
 	"wx/defs.h"
 	"wx/bitmap.h"
 	"wx/list.h"
 	"wx/control.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\toolbar.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\toolbar.h
 	"wx/button.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\tbar95.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\tbar95.h
 	"wx/dynarray.h"
 	"wx/imaglist.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imaglist.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\imaglist.h
 	"wx/generic/imaglist.h"
 	"wx/msw/imaglist.h"
 	"wx/mac/imaglist.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\imaglist.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\imaglist.h
 	"wx/defs.h"
 	"wx/list.h"
 	"wx/icon.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\imaglist.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\imaglist.h
 	"wx/bitmap.h"
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\tbarwce.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\tbarwce.h
 	"wx/dynarray.h"
 	"wx/msw/tbar95.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\layout.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\layout.h
 	"wx/object.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\mdi.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\mdi.h
 	"wx/defs.h"
 	"wx/generic/mdig.h"
 	"wx/msw/mdi.h"
@@ -1689,12 +1689,12 @@
 	"wx/cocoa/mdi.h"
 	"wx/generic/mdig.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\mdig.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\mdig.h
 	"wx/frame.h"
 	"wx/panel.h"
 	"wx/notebook.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\notebook.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\notebook.h
 	"wx/defs.h"
 	"wx/bookctrl.h"
 	"wx/univ/notebook.h"
@@ -1706,32 +1706,32 @@
 	"wx/cocoa/notebook.h"
 	"wx/os2/notebook.h"
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\bookctrl.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\bookctrl.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/dynarray.h"
 	"wx/notebook.h"
 	"wx/choicebk.h"
 
-1195458932 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\choicebk.h
+1195462532 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\choicebk.h
 	"wx/defs.h"
 	"wx/bookctrl.h"
 	"wx/choice.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\notebook.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\notebook.h
 	"wx/arrstr.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\notebook.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\notebook.h
 	"wx/control.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\notebook.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\notebook.h
 	"wx/event.h"
 	"wx/control.h"
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\mdi.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\mdi.h
 	"wx/frame.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statusbr.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statusbr.h
 	"wx/defs.h"
 	"wx/window.h"
 	"wx/list.h"
@@ -1743,47 +1743,47 @@
 	"wx/mac/statusbr.h"
 	"wx/generic/statusbr.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statusbr.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statusbr.h
 	"wx/univ/inpcons.h"
 	"wx/arrstr.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statbr95.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statbr95.h
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\statusbr.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\statusbr.h
 	"wx/defs.h"
 	"wx/pen.h"
 	"wx/arrstr.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\choicdlg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\choicdlg.h
 	"wx/generic/choicdgg.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\choicdgg.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\choicdgg.h
 	"wx/dynarray.h"
 	"wx/dialog.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textdlg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textdlg.h
 	"wx/generic/textdlgg.h"
 	"wx/numdlg.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\textdlgg.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\textdlgg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 	"wx/valtext.h"
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\valtext.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\valtext.h
 	"wx/defs.h"
 	"wx/textctrl.h"
 	"wx/validate.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\numdlg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\numdlg.h
 	"wx/defs.h"
 	"wx/generic/numdlgg.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\numdlgg.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\numdlgg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\filedlg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\filedlg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 	"wx/arrstr.h"
@@ -1797,34 +1797,34 @@
 	"wx/cocoa/filedlg.h"
 	"wx/os2/filedlg.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\filedlgg.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\filedlgg.h
 	"wx/listctrl.h"
 	"wx/datetime.h"
 	"wx/filefn.h"
 	"wx/filedlg.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listctrl.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listctrl.h
 	"wx/defs.h"
 	"wx/listbase.h"
 	"wx/msw/listctrl.h"
 	"wx/mac/carbon/listctrl.h"
 	"wx/generic/listctrl.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listbase.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listbase.h
 	"wx/colour.h"
 	"wx/font.h"
 	"wx/gdicmn.h"
 	"wx/event.h"
 
-1220338542 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\listctrl.h
+1220342142 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\listctrl.h
 	"wx/textctrl.h"
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\listctrl.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\listctrl.h
 	"wx/textctrl.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\filedlg.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\filedlg.h
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\config.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\config.h
 	"wx/defs.h"
 	"wx/confbase.h"
 	"wx/msw/regconf.h"
@@ -1832,42 +1832,42 @@
 	"wx/palmos/prefconf.h"
 	"wx/fileconf.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\confbase.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\confbase.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/string.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\regconf.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\regconf.h
 	"wx/msw/registry.h"
 	"wx/object.h"
 	"wx/confbase.h"
 
-1194614174 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\registry.h
+1194617774 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\registry.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\iniconf.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\iniconf.h
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fileconf.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fileconf.h
 	"wx/defs.h"
 	"wx/textfile.h"
 	"wx/string.h"
 	"wx/confbase.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textfile.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textfile.h
 	"wx/defs.h"
 	"wx/textbuf.h"
 	"wx/file.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textbuf.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\textbuf.h
 	"wx/defs.h"
 	"wx/arrstr.h"
 	"wx/convauto.h"
 	"wx/string.h"
 	"wx/dynarray.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\convauto.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\convauto.h
 	"wx/strconv.h"
 
-1186407694 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\file.h
+1186411294 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\file.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/filefn.h"
@@ -1881,10 +1881,10 @@
 	<vector>
 	<list>
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\grid.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\grid.h
 	"wx/generic/grid.h"
 
-1221458852 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\grid.h
+1221462452 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\grid.h
 	"wx/defs.h"
 	"wx/scrolwin.h"
 
@@ -2147,10 +2147,10 @@
 	<list>
 	"wx/bookctrl.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\propdlg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\propdlg.h
 	"wx/generic/propdlg.h"
 
-1195458932 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\propdlg.h
+1195462532 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\propdlg.h
 	"wx/defs.h"
 	"wx/dialog.h"
 
@@ -2341,7 +2341,7 @@
 	<wx/button.h>
 	"wxcustom/wxPropertyPage.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statline.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\statline.h
 	"wx/defs.h"
 	"wx/control.h"
 	"wx/univ/statline.h"
@@ -2353,11 +2353,11 @@
 	"wx/cocoa/statline.h"
 	"wx/generic/statline.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statline.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\statline.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statline.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\statline.h
 
-1186407686 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\statline.h
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\statline.h
 
 1392759873 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\settingsnamepolicy.h
 	<wx/panel.h>
@@ -2518,23 +2518,23 @@
 1392759873 source:c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\w32res\resource.rc
 	"wx/msw/wx.rc"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wx.rc
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wx.rc
 	<winresrc.h>
 	<windows.h>
 	"wx/msw/wince/wince.rc"
 	"wx/msw/rcdefs.h"
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\wince.rc
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\wince.rc
 	<commctrl.h>
 	"wx/msw/wince/smartphone.rc"
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\smartphone.rc
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\smartphone.rc
 	<aygshell.h>
 	"wx/msw/wince/resources.h"
 
-1186407648 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\resources.h
+1186411248 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\wince\resources.h
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\rcdefs.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\rcdefs.h
 
 1392759873 source:c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxconfigpath.cpp
 	"wxConfigPath.h"
@@ -2549,21 +2549,21 @@
 	<wx/intl.h>
 	<wx/settings.h>
 
-1186407690 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontenum.h
+1186411290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontenum.h
 	"wx/fontenc.h"
 	"wx/arrstr.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontmap.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontmap.h
 	"wx/fontenc.h"
 	"wx/fontutil.h"
 	"wx/fontutil.h"
 
-1194614178 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontutil.h
+1194617778 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\fontutil.h
 	"wx/font.h"
 	"wx/msw/wrapwin.h"
 	"wx/unix/fontutil.h"
 
-1186407596 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\unix\fontutil.h
+1186411196 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\unix\fontutil.h
 
 1392759873 source:c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxcustom\wxpropertypagedialog.cpp
 	"wxPropertyPageDialog.h"
@@ -2612,7 +2612,7 @@
 1392759873 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxguiderbridgeinterface.h
 	"wxGuider.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stdpaths.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\stdpaths.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/filefn.h"
@@ -2622,9 +2622,9 @@
 	"wx/unix/stdpaths.h"
 	"wx/palmos/stdpaths.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\stdpaths.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\stdpaths.h
 
-1186407596 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\unix\stdpaths.h
+1186411196 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\unix\stdpaths.h
 
 1392759873 source:c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxguider.cpp
 	"wxGuider.h"
@@ -2637,21 +2637,21 @@
 	"wxIO/GP_BRIDGE.h"
 	"wxGuidingConfig.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\socket.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\socket.h
 	"wx/defs.h"
 	"wx/event.h"
 	"wx/sckaddr.h"
 	"wx/gsocket.h"
 	"wx/list.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\sckaddr.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\sckaddr.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/gsocket.h"
 	<sys/socket.h>
 	<sys/un.h>
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gsocket.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gsocket.h
 	"wx/defs.h"
 	"wx/dlimpexp.h"
 	<stddef.h>
@@ -2661,7 +2661,7 @@
 	"wx/mac/gsockmac.h"
 	"wx/unix/gsockunx.h"
 
-1186407652 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gsockmsw.h
+1186411252 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\gsockmsw.h
 	"wx/setup.h"
 	"wx/gsocket.h"
 	"gsocket.h"
@@ -2669,7 +2669,7 @@
 	<sys/types.h>
 	<winsock.h>
 
-1186407596 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\unix\gsockunx.h
+1186411196 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\unix\gsockunx.h
 	"wx/setup.h"
 	"wx/gsocket.h"
 	"gsocket.h"
@@ -2878,7 +2878,7 @@
 	"GPUsbW32.h"
 	"SAUSB_LibHid.h"
 
-1392759873 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\include\sausb_libhid.h
+1392763473 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\include\sausb_libhid.h
 	<windows.h>
 
 1392759873 source:c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxio\iobuffer.cpp
@@ -2943,7 +2943,7 @@
 
 1392759873 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxio\porttalk_ioctl.h
 
-1194614180 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\filename.h
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\filename.h
 	"wx/arrstr.h"
 	"wx/filefn.h"
 	"wx/datetime.h"
@@ -3003,7 +3003,7 @@
 	"wxWebcam/wxArtcam.h"
 	"wxWebcam_icons.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\artprov.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\artprov.h
 	"wx/string.h"
 	"wx/bitmap.h"
 	"wx/icon.h"
@@ -3107,7 +3107,7 @@
 	<wx/stdpaths.h>
 	<wx/dir.h>
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dir.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dir.h
 	"wx/longlong.h"
 	"wx/string.h"
 
@@ -3145,7 +3145,7 @@
 	"wx/wx.h"
 	<deque>
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wfstream.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\wfstream.h
 	"wx/defs.h"
 	"wx/object.h"
 	"wx/string.h"
@@ -3153,7 +3153,7 @@
 	"wx/file.h"
 	"wx/ffile.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ffile.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\ffile.h
 	"wx/defs.h"
 	"wx/string.h"
 	"wx/filefn.h"
@@ -3225,7 +3225,7 @@
 	"capturebase.h"
 	<dscaplib.h>
 
-1392759873 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\include\dscaplib.h
+1392763473 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\include\dscaplib.h
 	"captypes.h"
 
 1392759873 source:c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxwebcam\fits\wxfitskeyword.cpp
@@ -3265,7 +3265,7 @@
 	"../BatchJobManager.h"
 	"../GenericDebHelp.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcbuffer.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\dcbuffer.h
 	"wx/dcmemory.h"
 	"wx/dcclient.h"
 	"wx/window.h"
@@ -3345,12 +3345,12 @@
 	"wxYP162Fits.h"
 	"../wxNamePolicy.h"
 
-1211176296 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\zipstrm.h
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\zipstrm.h
 	"wx/defs.h"
 	"wx/archive.h"
 	"wx/filename.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\archive.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\archive.h
 	"wx/defs.h"
 	"wx/stream.h"
 	"wx/filename.h"
@@ -3460,7 +3460,7 @@
 1392759873 c:\users\kronosua\downloads\wxastrocapture-master1\wxastrocapture-master\wxwebcamprops.h
 	<wx/propdlg.h>
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\aboutdlg.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\aboutdlg.h
 	"wx/defs.h"
 	"wx/app.h"
 	"wx/icon.h"
@@ -8450,7 +8450,7 @@
 	<windows.h>
 	<winbase.h>
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\tglbtn.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\tglbtn.h
 	"wx/defs.h"
 	"wx/event.h"
 	"wx/control.h"
@@ -8463,12 +8463,12 @@
 	"wx/palmos/tglbtn.h"
 	"wx/os2/tglbtn.h"
 
-1186407594 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\tglbtn.h
+1186411194 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\univ\tglbtn.h
 	"wx/button.h"
 
-1186407650 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\tglbtn.h
+1186411250 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\msw\tglbtn.h
 
-1211176290 e:\wxwidgets_dev\components\wxwidgets-2.8.9\lib\vc_lib\msw\wx\setup.h
+1211179890 e:\wxwidgets_dev\components\wxwidgets-2.8.9\lib\vc_lib\msw\wx\setup.h
 
 1392759874 source:c:\users\ÂÃ\desktop\wxnanoscat\wxastrocapture-master\advancedguidingparams.cpp
 	"AdvancedGuidingParams.h"
@@ -9965,7 +9965,7 @@
 
 1211172690 c:\wxwidgets-2.8.9\lib\vc_lib\msw\wx\setup.h
 
-1423618134 source:e:\programs\nanoscat\advancedguidingparams.cpp
+1423621734 source:e:\programs\nanoscat\advancedguidingparams.cpp
 	"AdvancedGuidingParams.h"
 	<wx/font.h>
 	<wx/intl.h>
@@ -9973,7 +9973,7 @@
 	"wxFactory.h"
 	"wxGuider.h"
 
-1423618134 e:\programs\nanoscat\advancedguidingparams.h
+1423621734 e:\programs\nanoscat\advancedguidingparams.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/spinctrl.h>
@@ -9981,16 +9981,16 @@
 	<wx/dialog.h>
 	"wxthings/spinctld.h"
 
-1423618137 e:\programs\nanoscat\wxthings\spinctld.h
+1423621737 e:\programs\nanoscat\wxthings\spinctld.h
 	"wx/spinbutt.h"
 	"wx/spinctrl.h"
 	"../wxthings/thingdef.h"
 
-1423618137 e:\programs\nanoscat\wxthings\thingdef.h
+1423621737 e:\programs\nanoscat\wxthings\thingdef.h
 	"wx/defs.h"
 	"wx/dynarray.h"
 
-1423618136 e:\programs\nanoscat\wxfactory.h
+1423621736 e:\programs\nanoscat\wxfactory.h
 	"wx/wxprec.h"
 	<vector>
 	"wx/wx.h"
@@ -10001,34 +10001,34 @@
 	"wxWebcam/wxCameraTypes.h"
 	"wxIO/wxPort.h"
 
-1423618136 e:\programs\nanoscat\wxguider.h
+1423621736 e:\programs\nanoscat\wxguider.h
 	<cstring>
 
-1423618137 e:\programs\nanoscat\wxcustom\wxpropgrid.h
+1423621737 e:\programs\nanoscat\wxcustom\wxpropgrid.h
 	<wx/grid.h>
 	<vector>
 	<list>
 
-1423618136 e:\programs\nanoscat\wxnamepolicy.h
+1423621736 e:\programs\nanoscat\wxnamepolicy.h
 	<wx/string.h>
 	<wx/arrstr.h>
 	<wx/config.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxcameratypes.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxcameratypes.h
 
-1423618136 e:\programs\nanoscat\wxio\wxport.h
+1423621736 e:\programs\nanoscat\wxio\wxport.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxPortDescr.h"
 	<vector>
 
-1423618136 e:\programs\nanoscat\wxio\wxportdescr.h
+1423621736 e:\programs\nanoscat\wxio\wxportdescr.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<map>
 	<string>
 
-1423618134 source:e:\programs\nanoscat\artemiscooling.cpp
+1423621734 source:e:\programs\nanoscat\artemiscooling.cpp
 	"ArtemisCooling.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10036,37 +10036,37 @@
 	"wxWebcam/wxCamera.h"
 	"wxFactory.h"
 
-1423618134 e:\programs\nanoscat\artemiscooling.h
+1423621734 e:\programs\nanoscat\artemiscooling.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/spinctrl.h>
 	<wx/panel.h>
 	<wx/button.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxcamera.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxcamera.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxCameraTypes.h"
 	"wxHistogram.h"
 	"wxCamCoords.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxhistogram.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxhistogram.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<vector>
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxcamcoords.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxcamcoords.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618134 source:e:\programs\nanoscat\artemisprops.cpp
+1423621734 source:e:\programs\nanoscat\artemisprops.cpp
 	"ArtemisProps.h"
 	<wx/intl.h>
 	<wx/string.h>
 	"wxWebcam/wxArtcam.h"
 	"wxFactory.h"
 
-1423618134 e:\programs\nanoscat\artemisprops.h
+1423621734 e:\programs\nanoscat\artemisprops.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<wx/sizer.h>
@@ -10078,7 +10078,7 @@
 	<wx/button.h>
 	"wxthings/spinctld.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxartcam.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxartcam.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<wx/config.h>
@@ -10089,16 +10089,16 @@
 	"wxArtcamTimerCB.h"
 	<vector>
 
-1423618136 e:\programs\nanoscat\wxwebcam\arttypes.h
+1423621736 e:\programs\nanoscat\wxwebcam\arttypes.h
 	<stddef.h>
 	"GenericImageMem.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\genericimagemem.h
+1423621736 e:\programs\nanoscat\wxwebcam\genericimagemem.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<stddef.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\artbase.h
+1423621736 e:\programs\nanoscat\wxwebcam\artbase.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxCameraTypes.h"
@@ -10106,24 +10106,24 @@
 	"ArtDevice.h"
 	"wxArtSample.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\artdevice.h
+1423621736 e:\programs\nanoscat\wxwebcam\artdevice.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxartsample.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxartsample.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"ArtTypes.h"
 	"GenericImageMem.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxartcamtimer.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxartcamtimer.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxartcamtimercb.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxartcamtimercb.h
 	"ArtTypes.h"
 
-1423618134 source:e:\programs\nanoscat\batchexposure.cpp
+1423621734 source:e:\programs\nanoscat\batchexposure.cpp
 	"BatchExposure.h"
 	<wx/sizer.h>
 	<wx/checkbox.h>
@@ -10131,32 +10131,32 @@
 	<wx/intl.h>
 	<wx/string.h>
 
-1423618134 e:\programs\nanoscat\batchexposure.h
+1423621734 e:\programs\nanoscat\batchexposure.h
 	"wxthings/spinctld.h"
 	<wx/panel.h>
 
-1423618134 source:e:\programs\nanoscat\batchjob.cpp
+1423621734 source:e:\programs\nanoscat\batchjob.cpp
 	"BatchJob.h"
 
-1423618134 e:\programs\nanoscat\batchjob.h
+1423621734 e:\programs\nanoscat\batchjob.h
 
-1423618134 source:e:\programs\nanoscat\batchjobmanager.cpp
+1423621734 source:e:\programs\nanoscat\batchjobmanager.cpp
 	"BatchJobManager.h"
 	"wxFactory.h"
 	"wxConfigPath.h"
 	"wxWebcam/wxCamera.h"
 
-1423618134 e:\programs\nanoscat\batchjobmanager.h
+1423621734 e:\programs\nanoscat\batchjobmanager.h
 	<wx/config.h>
 	<list>
 	"BatchJob.h"
 	<wx/string.h>
 
-1423618136 e:\programs\nanoscat\wxconfigpath.h
+1423621736 e:\programs\nanoscat\wxconfigpath.h
 	<wx/string.h>
 	<wx/config.h>
 
-1423618134 source:e:\programs\nanoscat\batchsetup.cpp
+1423621734 source:e:\programs\nanoscat\batchsetup.cpp
 	"BatchSetup.h"
 	<math.h>
 	<wx/sizer.h>
@@ -10166,11 +10166,11 @@
 	"BatchExposure.h"
 	"wxFactory.h"
 
-1423618134 e:\programs\nanoscat\batchsetup.h
+1423621734 e:\programs\nanoscat\batchsetup.h
 	<wx/panel.h>
 	"BatchJobManager.h"
 
-1423618134 source:e:\programs\nanoscat\defaultprops.cpp
+1423621734 source:e:\programs\nanoscat\defaultprops.cpp
 	"DefaultProps.h"
 	<wx/bookctrl.h>
 	<wx/intl.h>
@@ -10178,7 +10178,7 @@
 	"wxWebcam/wxWebcam.h"
 	"wxFactory.h"
 
-1423618134 e:\programs\nanoscat\defaultprops.h
+1423621734 e:\programs\nanoscat\defaultprops.h
 	<wx/wxprec.h>
 	<wx/timer.h>
 	<wx/sizer.h>
@@ -10186,7 +10186,7 @@
 	<wx/panel.h>
 	<wx/button.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxwebcam.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxwebcam.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<wx/config.h>
@@ -10197,31 +10197,31 @@
 	"wxWebcamTimerCB.h"
 	"../wxIO/wxPortManager.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\captypes.h
+1423621736 e:\programs\nanoscat\wxwebcam\captypes.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxCameraTypes.h"
 	"wxCameraTypes.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\capturebase.h
+1423621736 e:\programs\nanoscat\wxwebcam\capturebase.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"captypes.h"
 	"wxWebSample.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxwebsample.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxwebsample.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"captypes.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxwebcamtimer.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxwebcamtimer.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxwebcamtimercb.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxwebcamtimercb.h
 	"captypes.h"
 
-1423618136 e:\programs\nanoscat\wxio\wxportmanager.h
+1423621736 e:\programs\nanoscat\wxio\wxportmanager.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxPortDescr.h"
@@ -10229,46 +10229,46 @@
 	<string>
 	<map>
 
-1423618134 source:e:\programs\nanoscat\fitsheader.cpp
+1423621734 source:e:\programs\nanoscat\fitsheader.cpp
 	"FitsHeader.h"
 	"wxMainToolBar.h"
 	<wx/intl.h>
 	<wx/string.h>
 	"wxFactory.h"
 
-1423618134 e:\programs\nanoscat\fitsheader.h
+1423621734 e:\programs\nanoscat\fitsheader.h
 	<wx/sizer.h>
 	<wx/panel.h>
 	<wx/grid.h>
 	"wxcustom/wxPropGrid.h"
 	"wxcustom/wxPropertyPage.h"
 
-1423618137 e:\programs\nanoscat\wxcustom\wxpropertypage.h
+1423621737 e:\programs\nanoscat\wxcustom\wxpropertypage.h
 	<wx/panel.h>
 
-1423618136 e:\programs\nanoscat\wxmaintoolbar.h
+1423621736 e:\programs\nanoscat\wxmaintoolbar.h
 	<wx/toolbar.h>
 	"wxWebcam/wxCameraTypes.h"
 
-1423618134 source:e:\programs\nanoscat\genericdebhelp.cpp
+1423621734 source:e:\programs\nanoscat\genericdebhelp.cpp
 	"GenericDebHelp.h"
 
-1423618134 e:\programs\nanoscat\genericdebhelp.h
+1423621734 e:\programs\nanoscat\genericdebhelp.h
 
-1423618134 source:e:\programs\nanoscat\imageheaderdialog.cpp
+1423621734 source:e:\programs\nanoscat\imageheaderdialog.cpp
 	"ImageHeaderDialog.h"
 	"FitsHeader.h"
 	"wx/bookctrl.h"
 
-1423618134 e:\programs\nanoscat\imageheaderdialog.h
+1423621734 e:\programs\nanoscat\imageheaderdialog.h
 	"wxcustom/wxPropertyPageDialog.h"
 
-1423618137 e:\programs\nanoscat\wxcustom\wxpropertypagedialog.h
+1423621737 e:\programs\nanoscat\wxcustom\wxpropertypagedialog.h
 	<wx/propdlg.h>
 	<list>
 	"wx/bookctrl.h"
 
-1423618134 source:e:\programs\nanoscat\loadsaveprops.cpp
+1423621734 source:e:\programs\nanoscat\loadsaveprops.cpp
 	"LoadSaveProps.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10276,7 +10276,7 @@
 	"wxFactory.h"
 	<wx/config.h>
 
-1423618134 e:\programs\nanoscat\loadsaveprops.h
+1423621734 e:\programs\nanoscat\loadsaveprops.h
 	<wx/wxprec.h>
 	<wx/sizer.h>
 	<wx/stattext.h>
@@ -10285,18 +10285,18 @@
 	<wx/panel.h>
 	<wx/button.h>
 
-1423618134 source:e:\programs\nanoscat\optionsguiding.cpp
+1423621734 source:e:\programs\nanoscat\optionsguiding.cpp
 	"OptionsGuiding.h"
 	"SettingsGuiding.h"
 	"SettingsGuidingInterface.h"
 	"SettingsGuidePort.h"
 	<wx/bookctrl.h>
 
-1423618134 e:\programs\nanoscat\optionsguiding.h
+1423621734 e:\programs\nanoscat\optionsguiding.h
 	<wx/propdlg.h>
 	"wxcustom/wxPropertyPageDialog.h"
 
-1423618134 e:\programs\nanoscat\settingsguiding.h
+1423621734 e:\programs\nanoscat\settingsguiding.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/spinctrl.h>
@@ -10305,13 +10305,13 @@
 	"wxthings/spinctld.h"
 	"wxcustom/wxPropertyPage.h"
 
-1423618134 e:\programs\nanoscat\settingsguidinginterface.h
+1423621734 e:\programs\nanoscat\settingsguidinginterface.h
 	<wx/sizer.h>
 	<wx/panel.h>
 	<wx/choice.h>
 	"wxcustom/wxPropertyPage.h"
 
-1423618134 e:\programs\nanoscat\settingsguideport.h
+1423621734 e:\programs\nanoscat\settingsguideport.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/panel.h>
@@ -10320,14 +10320,14 @@
 	"wxcustom/wxPropertyPage.h"
 	"wxIO/wxPort.h"
 
-1423618137 e:\programs\nanoscat\wxcustom\wxioportctrl.h
+1423621737 e:\programs\nanoscat\wxcustom\wxioportctrl.h
 	<wx/wxprec.h>
 	<vector>
 	<wx/checkbox.h>
 	<wx/sizer.h>
 	<wx/panel.h>
 
-1423618134 source:e:\programs\nanoscat\primaryprops.cpp
+1423621734 source:e:\programs\nanoscat\primaryprops.cpp
 	"PrimaryProps.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10335,7 +10335,7 @@
 	"wxWebcam/wxWebcam.h"
 	"wxFactory.h"
 
-1423618134 e:\programs\nanoscat\primaryprops.h
+1423621734 e:\programs\nanoscat\primaryprops.h
 	<wx/wxprec.h>
 	<wx/timer.h>
 	<wx/sizer.h>
@@ -10346,7 +10346,7 @@
 	<wx/panel.h>
 	<wx/choice.h>
 
-1423618134 source:e:\programs\nanoscat\secondaryprops.cpp
+1423621734 source:e:\programs\nanoscat\secondaryprops.cpp
 	"SecondaryProps.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10354,7 +10354,7 @@
 	"wxWebcam/wxWebcam.h"
 	"wxFactory.h"
 
-1423618134 e:\programs\nanoscat\secondaryprops.h
+1423621734 e:\programs\nanoscat\secondaryprops.h
 	<wx/wxprec.h>
 	<wx/timer.h>
 	<wx/sizer.h>
@@ -10364,7 +10364,7 @@
 	<wx/slider.h>
 	<wx/panel.h>
 
-1423618134 source:e:\programs\nanoscat\settingscontrolport.cpp
+1423621734 source:e:\programs\nanoscat\settingscontrolport.cpp
 	"SettingsControlPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10373,7 +10373,7 @@
 	"wxIO/wxLongExpoPort.h"
 	"wxIO/wxPortManager.h"
 
-1426538538 e:\programs\nanoscat\settingscontrolport.h
+1426542138 e:\programs\nanoscat\settingscontrolport.h
 	<wx/wxprec.h>
 	<wx/sizer.h>
 	<wx/stattext.h>
@@ -10385,7 +10385,7 @@
 	"wxcustom/wxPropertyPage.h"
 	"wxIO/wxPort.h"
 
-1425706576 e:\programs\nanoscat\wxwebcamdbmain.h
+1428013658 e:\programs\nanoscat\wxwebcamdbmain.h
 	"wxWebcamDBApp.h"
 	<wx/notebook.h>
 	<wx/sizer.h>
@@ -10412,49 +10412,49 @@
 	"wxFactory.h"
 	"SMDDrv.h"
 
-1426538538 e:\programs\nanoscat\wxwebcamdbapp.h
+1426542138 e:\programs\nanoscat\wxwebcamdbapp.h
 	<wx/wxprec.h>
 	<wx/wx.h>
 
-1423618137 e:\programs\nanoscat\wxcustom\wxstatusbarex.h
+1423621737 e:\programs\nanoscat\wxcustom\wxstatusbarex.h
 	<wx/statusbr.h>
 
-1423618136 e:\programs\nanoscat\wxsubframe.h
+1423621736 e:\programs\nanoscat\wxsubframe.h
 	<wx/image.h>
 	"wxStar.h"
 	<set>
 
-1423618136 e:\programs\nanoscat\wxstar.h
+1423621736 e:\programs\nanoscat\wxstar.h
 	<wx/gdicmn.h>
 
-1423618134 e:\programs\nanoscat\smddrv.h
+1427995207 e:\programs\nanoscat\smddrv.h
 	"include/PDll.h"
 
-1423618136 e:\programs\nanoscat\include\pdll.h
+1427994446 e:\programs\nanoscat\include\pdll.h
 	<windows.h>
 	<winbase.h>
 
-1423618136 e:\programs\nanoscat\wxio\wxlongexpoport.h
+1423621736 e:\programs\nanoscat\wxio\wxlongexpoport.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<wx/config.h>
 	"wxPortDescr.h"
 	"wxPortManager.h"
 
-1423618134 source:e:\programs\nanoscat\settingsdialog.cpp
+1423621734 source:e:\programs\nanoscat\settingsdialog.cpp
 	"SettingsDialog.h"
 	"SettingsVideoCapture.h"
 	"SettingsControlPort.h"
 	"SettingsNamePolicy.h"
 	"wx/bookctrl.h"
 
-1423618134 e:\programs\nanoscat\settingsdialog.h
+1423621734 e:\programs\nanoscat\settingsdialog.h
 	<wx/propdlg.h>
 	<list>
 	"wxcustom/wxPropertyPageDialog.h"
 	"wx/bookctrl.h"
 
-1423618134 e:\programs\nanoscat\settingsvideocapture.h
+1423621734 e:\programs\nanoscat\settingsvideocapture.h
 	<wx/wxprec.h>
 	<wx/sizer.h>
 	<wx/stattext.h>
@@ -10465,11 +10465,11 @@
 	<wx/button.h>
 	"wxcustom/wxPropertyPage.h"
 
-1423618134 e:\programs\nanoscat\settingsnamepolicy.h
+1423621734 e:\programs\nanoscat\settingsnamepolicy.h
 	<wx/panel.h>
 	"wxcustom/wxPropertyPage.h"
 
-1423618134 source:e:\programs\nanoscat\settingsguideport.cpp
+1423621734 source:e:\programs\nanoscat\settingsguideport.cpp
 	"SettingsGuidePort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10479,14 +10479,14 @@
 	"wxIO/wxGuiderPort.h"
 	"wxWebcam/wxWebcam.h"
 
-1423618134 e:\programs\nanoscat\settingsguideportserial.h
+1423621734 e:\programs\nanoscat\settingsguideportserial.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/panel.h>
 	<wx/choice.h>
 	"wxIO/wxGuiderPort.h"
 
-1423618136 e:\programs\nanoscat\wxio\wxguiderport.h
+1423621736 e:\programs\nanoscat\wxio\wxguiderport.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<wx/config.h>
@@ -10494,31 +10494,31 @@
 	"wxGuiderPortProtocol.h"
 	"wxPortManager.h"
 
-1423618136 e:\programs\nanoscat\wxio\wxguiderportprotocol.h
+1423621736 e:\programs\nanoscat\wxio\wxguiderportprotocol.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxPortDescr.h"
 
-1423618134 e:\programs\nanoscat\settingsguideportparallel.h
+1423621734 e:\programs\nanoscat\settingsguideportparallel.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/panel.h>
 	"wxcustom/wxIoPortCtrl.h"
 
-1423618134 source:e:\programs\nanoscat\settingsguideportparallel.cpp
+1423621734 source:e:\programs\nanoscat\settingsguideportparallel.cpp
 	"SettingsGuidePortParallel.h"
 	<wx/intl.h>
 	<wx/string.h>
 	"wxFactory.h"
 	"wxIO/wxGuiderPort.h"
 
-1423618134 source:e:\programs\nanoscat\settingsguideportserial.cpp
+1423621734 source:e:\programs\nanoscat\settingsguideportserial.cpp
 	"SettingsGuidePortSerial.h"
 	<wx/intl.h>
 	<wx/string.h>
 	"wxFactory.h"
 
-1423618134 source:e:\programs\nanoscat\settingsguiding.cpp
+1423621734 source:e:\programs\nanoscat\settingsguiding.cpp
 	"SettingsGuiding.h"
 	"wxGuidingConfig.h"
 	"SettingsGuidingCalibrateDlg.h"
@@ -10526,11 +10526,11 @@
 	<wx/string.h>
 	<wx/msgdlg.h>
 
-1423618136 e:\programs\nanoscat\wxguidingconfig.h
+1423621736 e:\programs\nanoscat\wxguidingconfig.h
 	<wx/string.h>
 	"wxGuider.h"
 
-1423618134 e:\programs\nanoscat\settingsguidingcalibratedlg.h
+1423621734 e:\programs\nanoscat\settingsguidingcalibratedlg.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/textctrl.h>
@@ -10540,7 +10540,7 @@
 	"wxSubFrame.h"
 	<wx/timer.h>
 
-1423618134 source:e:\programs\nanoscat\settingsguidingcalibratedlg.cpp
+1423621734 source:e:\programs\nanoscat\settingsguidingcalibratedlg.cpp
 	"SettingsGuidingCalibrateDlg.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10550,9 +10550,9 @@
 	"SettingsGuiding.h"
 	"wxWebcam/wxWebcam.h"
 
-1423618137 e:\programs\nanoscat\wxwebcam_icons.h
+1423621737 e:\programs\nanoscat\wxwebcam_icons.h
 
-1423618134 source:e:\programs\nanoscat\settingsguidinginterface.cpp
+1423621734 source:e:\programs\nanoscat\settingsguidinginterface.cpp
 	"SettingsGuidingInterface.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10564,44 +10564,44 @@
 	"SettingsGuidingInterfaceFile.h"
 	"SettingsGuidingInterfaceBridge.h"
 
-1423618134 e:\programs\nanoscat\settingsguidinginterfaceport.h
+1423621734 e:\programs\nanoscat\settingsguidinginterfaceport.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/panel.h>
 
-1423618134 e:\programs\nanoscat\settingsguidinginterfacefile.h
+1423621734 e:\programs\nanoscat\settingsguidinginterfacefile.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/textctrl.h>
 	<wx/panel.h>
 	<wx/button.h>
 
-1423618134 e:\programs\nanoscat\settingsguidinginterfacebridge.h
+1423621734 e:\programs\nanoscat\settingsguidinginterfacebridge.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/textctrl.h>
 	<wx/panel.h>
 
-1423618134 source:e:\programs\nanoscat\settingsguidinginterfacebridge.cpp
+1423621734 source:e:\programs\nanoscat\settingsguidinginterfacebridge.cpp
 	"SettingsGuidingInterfaceBridge.h"
 	<wx/intl.h>
 	<wx/string.h>
 	<wx/msgdlg.h>
 	"wxGuidingConfig.h"
 
-1423618134 source:e:\programs\nanoscat\settingsguidinginterfacefile.cpp
+1423621734 source:e:\programs\nanoscat\settingsguidinginterfacefile.cpp
 	"SettingsGuidingInterfaceFile.h"
 	<wx/intl.h>
 	<wx/string.h>
 	<wx/dirdlg.h>
 	"wxGuidingConfig.h"
 
-1423618134 source:e:\programs\nanoscat\settingsguidinginterfaceport.cpp
+1423621734 source:e:\programs\nanoscat\settingsguidinginterfaceport.cpp
 	"SettingsGuidingInterfacePort.h"
 	<wx/intl.h>
 	<wx/string.h>
 
-1423618134 source:e:\programs\nanoscat\settingsnamepolicy.cpp
+1423621734 source:e:\programs\nanoscat\settingsnamepolicy.cpp
 	"SettingsNamePolicy.h"
 	<wx/sizer.h>
 	<wx/stattext.h>
@@ -10615,19 +10615,19 @@
 	"wxFactory.h"
 	"wxWebcam/wxArtcam.h"
 
-1423618134 source:e:\programs\nanoscat\settingsvideocapture.cpp
+1423621734 source:e:\programs\nanoscat\settingsvideocapture.cpp
 	"SettingsVideoCapture.h"
 	<wx/intl.h>
 	<wx/string.h>
 	"wxFactory.h"
 
-1423618136 source:e:\programs\nanoscat\w32res\resource.rc
+1423621736 source:e:\programs\nanoscat\w32res\resource.rc
 	"wx/msw/wx.rc"
 
-1423618136 source:e:\programs\nanoscat\wxconfigpath.cpp
+1423621736 source:e:\programs\nanoscat\wxconfigpath.cpp
 	"wxConfigPath.h"
 
-1423618137 source:e:\programs\nanoscat\wxcustom\wxioportctrl.cpp
+1423621737 source:e:\programs\nanoscat\wxcustom\wxioportctrl.cpp
 	"wxIoPortCtrl.h"
 	<wx/bitmap.h>
 	<wx/font.h>
@@ -10637,19 +10637,19 @@
 	<wx/intl.h>
 	<wx/settings.h>
 
-1423618137 source:e:\programs\nanoscat\wxcustom\wxpropertypagedialog.cpp
+1423621737 source:e:\programs\nanoscat\wxcustom\wxpropertypagedialog.cpp
 	"wxPropertyPageDialog.h"
 	"wxPropertyPage.h"
 
-1423618137 source:e:\programs\nanoscat\wxcustom\wxpropgrid.cpp
+1423621737 source:e:\programs\nanoscat\wxcustom\wxpropgrid.cpp
 	"wxPropGrid.h"
 
-1423618137 source:e:\programs\nanoscat\wxcustom\wxstatusbarex.cpp
+1423621737 source:e:\programs\nanoscat\wxcustom\wxstatusbarex.cpp
 	"wxStatusBarEx.h"
 	<wx/wx.h>
 	<wx/dcclient.h>
 
-1425708659 source:e:\programs\nanoscat\wxfactory.cpp
+1425712259 source:e:\programs\nanoscat\wxfactory.cpp
 	"wxFactory.h"
 	"wxIO/wxPortManager.h"
 	"wxIO/wxLongExpoPort.h"
@@ -10667,46 +10667,46 @@
 	"wxWebcam/wxArtcam.h"
 	"BatchJobManager.h"
 
-1425704910 e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.h
+1425708510 e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<vector>
 	<map>
 
-1423618136 e:\programs\nanoscat\wxguiderfileinterface.h
+1423621736 e:\programs\nanoscat\wxguiderfileinterface.h
 	"wxGuider.h"
 	<wx/string.h>
 	<fstream>
 
-1423618136 e:\programs\nanoscat\wxguiderportinterface.h
+1423621736 e:\programs\nanoscat\wxguiderportinterface.h
 	"wxGuider.h"
 
-1423618136 e:\programs\nanoscat\wxguiderbridgeinterface.h
+1423621736 e:\programs\nanoscat\wxguiderbridgeinterface.h
 	"wxGuider.h"
 
-1423618136 source:e:\programs\nanoscat\wxguider.cpp
+1423621736 source:e:\programs\nanoscat\wxguider.cpp
 	"wxGuider.h"
 	"wxGuidingConfig.h"
 
-1423618136 source:e:\programs\nanoscat\wxguiderbridgeinterface.cpp
+1423621736 source:e:\programs\nanoscat\wxguiderbridgeinterface.cpp
 	"wxGuiderBridgeInterface.h"
 	"wx/socket.h"
 	"wxIO/wxGuiderPort.h"
 	"wxIO/GP_BRIDGE.h"
 	"wxGuidingConfig.h"
 
-1423618136 e:\programs\nanoscat\wxio\gp_bridge.h
+1423621736 e:\programs\nanoscat\wxio\gp_bridge.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxGuiderPortProtocol.h"
 
-1423618136 source:e:\programs\nanoscat\wxguiderfileinterface.cpp
+1423621736 source:e:\programs\nanoscat\wxguiderfileinterface.cpp
 	"wxGuiderFileInterface.h"
 	"wxGuidingConfig.h"
 	<time.h>
 	<math.h>
 
-1423618136 source:e:\programs\nanoscat\wxguiderportinterface.cpp
+1423621736 source:e:\programs\nanoscat\wxguiderportinterface.cpp
 	"wxGuiderPortInterface.h"
 	"wxGuidingConfig.h"
 	"wxIO/wxGuiderPort.h"
@@ -10714,13 +10714,13 @@
 	<time.h>
 	<math.h>
 
-1423618136 source:e:\programs\nanoscat\wxguidingconfig.cpp
+1423621736 source:e:\programs\nanoscat\wxguidingconfig.cpp
 	"wxGuidingConfig.h"
 	"wxFactory.h"
 	"wxConfigPath.h"
 	"wxGuider.h"
 
-1423618136 source:e:\programs\nanoscat\wxguidinginterfacebridge.cpp
+1423621736 source:e:\programs\nanoscat\wxguidinginterfacebridge.cpp
 	"wxGuidingInterfaceBridge.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10728,17 +10728,17 @@
 	"wxFactory.h"
 	<wx/msgdlg.h>
 
-1423618136 e:\programs\nanoscat\wxguidinginterfacebridge.h
+1423621736 e:\programs\nanoscat\wxguidinginterfacebridge.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/textctrl.h>
 	<wx/panel.h>
 	"wxNoteBookPageEx.h"
 
-1423618136 e:\programs\nanoscat\wxnotebookpageex.h
+1423621736 e:\programs\nanoscat\wxnotebookpageex.h
 	<wx/panel.h>
 
-1423618136 source:e:\programs\nanoscat\wxguidinginterfacefile.cpp
+1423621736 source:e:\programs\nanoscat\wxguidinginterfacefile.cpp
 	"wxGuidingInterfaceFile.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10746,7 +10746,7 @@
 	"wxGuidingConfig.h"
 	"wxFactory.h"
 
-1423618136 e:\programs\nanoscat\wxguidinginterfacefile.h
+1423621736 e:\programs\nanoscat\wxguidinginterfacefile.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/textctrl.h>
@@ -10754,7 +10754,7 @@
 	<wx/button.h>
 	"wxNoteBookPageEx.h"
 
-1423618136 source:e:\programs\nanoscat\wxguidinginterfaceparallelport.cpp
+1423621736 source:e:\programs\nanoscat\wxguidinginterfaceparallelport.cpp
 	"wxGuidingInterfaceParallelPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10763,14 +10763,14 @@
 	"wxFactory.h"
 	"wxWebcam/wxWebcam.h"
 
-1423618136 e:\programs\nanoscat\wxguidinginterfaceparallelport.h
+1423621736 e:\programs\nanoscat\wxguidinginterfaceparallelport.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/panel.h>
 	<wx/choice.h>
 	"wxNoteBookPageEx.h"
 
-1423618136 source:e:\programs\nanoscat\wxguidinginterfaceserialport.cpp
+1423621736 source:e:\programs\nanoscat\wxguidinginterfaceserialport.cpp
 	"wxGuidingInterfaceSerialPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10778,7 +10778,7 @@
 	"wxFactory.h"
 	"wxWebcam/wxWebcam.h"
 
-1423618136 e:\programs\nanoscat\wxguidinginterfaceserialport.h
+1423621736 e:\programs\nanoscat\wxguidinginterfaceserialport.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/panel.h>
@@ -10786,7 +10786,7 @@
 	"wxIO/wxGuiderPort.h"
 	"wxNoteBookPageEx.h"
 
-1423618136 source:e:\programs\nanoscat\wxguidinginterfaceusbport.cpp
+1423621736 source:e:\programs\nanoscat\wxguidinginterfaceusbport.cpp
 	"wxGuidingInterfaceUsbPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10794,7 +10794,7 @@
 	"wxFactory.h"
 	"wxWebcam/wxWebcam.h"
 
-1423618136 e:\programs\nanoscat\wxguidinginterfaceusbport.h
+1423621736 e:\programs\nanoscat\wxguidinginterfaceusbport.h
 	<wx/sizer.h>
 	<wx/stattext.h>
 	<wx/panel.h>
@@ -10802,7 +10802,7 @@
 	"wxIO/wxGuiderPort.h"
 	"wxNoteBookPageEx.h"
 
-1423618136 source:e:\programs\nanoscat\wxguidingoptions.cpp
+1423621736 source:e:\programs\nanoscat\wxguidingoptions.cpp
 	"wxGuidingOptions.h"
 	"wxGuidingInterfaceFile.h"
 	"wxGuidingInterfaceBridge.h"
@@ -10816,7 +10816,7 @@
 	<wx/string.h>
 	<map>
 
-1423618136 e:\programs\nanoscat\wxguidingoptions.h
+1423621736 e:\programs\nanoscat\wxguidingoptions.h
 	<wx/notebook.h>
 	<wx/sizer.h>
 	<wx/panel.h>
@@ -10825,111 +10825,111 @@
 	<wx/choicebk.h>
 	"SettingsGuiding.h"
 
-1423618136 e:\programs\nanoscat\wxmessagearea.h
+1423621736 e:\programs\nanoscat\wxmessagearea.h
 	<wx/dialog.h>
 
-1423618136 source:e:\programs\nanoscat\wxio\gp_bridge.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gp_bridge.cpp
 	"wx/socket.h"
 	"GP_BRIDGE.h"
 	"../wxFactory.h"
 	"wxGuiderPort.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\gp_lx200.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gp_lx200.cpp
 	"GP_LX200.h"
 	"../wxFactory.h"
 
-1423618136 e:\programs\nanoscat\wxio\gp_lx200.h
+1423621736 e:\programs\nanoscat\wxio\gp_lx200.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxGuiderPort.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\gp_lx200pg.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gp_lx200pg.cpp
 	"GP_LX200PG.h"
 	"../wxFactory.h"
 
-1423618136 e:\programs\nanoscat\wxio\gp_lx200pg.h
+1423621736 e:\programs\nanoscat\wxio\gp_lx200pg.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxGuiderPort.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\gp_mts_3sdi.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gp_mts_3sdi.cpp
 	"GP_MTS_3SDI.h"
 	"../wxFactory.h"
 	"MTS3_PF.h"
 
-1423618136 e:\programs\nanoscat\wxio\gp_mts_3sdi.h
+1423621736 e:\programs\nanoscat\wxio\gp_mts_3sdi.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxGuiderPort.h"
 
-1423618136 e:\programs\nanoscat\wxio\mts3_pf.h
+1423621736 e:\programs\nanoscat\wxio\mts3_pf.h
 
-1423618136 source:e:\programs\nanoscat\wxio\gp_nexstar.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gp_nexstar.cpp
 	"GP_NexStar.h"
 	"../wxFactory.h"
 
-1423618136 e:\programs\nanoscat\wxio\gp_nexstar.h
+1423621736 e:\programs\nanoscat\wxio\gp_nexstar.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxGuiderPort.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\gp_st4.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gp_st4.cpp
 	"GP_ST4.h"
 	"../wxFactory.h"
 
-1423618136 e:\programs\nanoscat\wxio\gp_st4.h
+1423621736 e:\programs\nanoscat\wxio\gp_st4.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxGuiderPort.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\gpusb.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gpusb.cpp
 	"GPUsb.h"
 	"GPUsbW32.h"
 	"GPUsbUX.h"
 
-1423618136 e:\programs\nanoscat\wxio\gpusb.h
+1423621736 e:\programs\nanoscat\wxio\gpusb.h
 
-1423618136 e:\programs\nanoscat\wxio\gpusbw32.h
+1423621736 e:\programs\nanoscat\wxio\gpusbw32.h
 	"GPUsb.h"
 
-1423618136 e:\programs\nanoscat\wxio\gpusbux.h
+1423621736 e:\programs\nanoscat\wxio\gpusbux.h
 	"GPUsb.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\gpusbw32.cpp
+1423621736 source:e:\programs\nanoscat\wxio\gpusbw32.cpp
 	"GPUsbW32.h"
 	"SAUSB_LibHid.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\iobuffer.cpp
+1423621736 source:e:\programs\nanoscat\wxio\iobuffer.cpp
 	"IOBuffer.h"
 	<memory.h>
 	<string.h>
 
-1423618136 e:\programs\nanoscat\wxio\iobuffer.h
+1423621736 e:\programs\nanoscat\wxio\iobuffer.h
 	<stddef.h>
 
-1423618136 source:e:\programs\nanoscat\wxio\lxusb.cpp
+1423621736 source:e:\programs\nanoscat\wxio\lxusb.cpp
 	"LXUsb.h"
 	"LXUsbW32.h"
 	"LXUsbUX.h"
 
-1423618136 e:\programs\nanoscat\wxio\lxusb.h
+1423621736 e:\programs\nanoscat\wxio\lxusb.h
 
-1423618136 e:\programs\nanoscat\wxio\lxusbw32.h
+1423621736 e:\programs\nanoscat\wxio\lxusbw32.h
 	"LXUsb.h"
 
-1423618136 e:\programs\nanoscat\wxio\lxusbux.h
+1423621736 e:\programs\nanoscat\wxio\lxusbux.h
 	"LXUsb.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\lxusbw32.cpp
+1423621736 source:e:\programs\nanoscat\wxio\lxusbw32.cpp
 	"LXUsbW32.h"
 	"SAUSB_LibHid.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\mts3_pf.cpp
+1423621736 source:e:\programs\nanoscat\wxio\mts3_pf.cpp
 	"MTS3_PF.h"
 	"wxPortManager.h"
 	<wx/thread.h>
 
-1423618136 source:e:\programs\nanoscat\wxio\portenumw32.cpp
+1423621736 source:e:\programs\nanoscat\wxio\portenumw32.cpp
 	"PortEnumW32.h"
 	<setupapi.h>
 	<winreg.h>
@@ -10937,13 +10937,13 @@
 	"wxPort.h"
 	"ShoestringVidPid.h"
 
-1423618136 e:\programs\nanoscat\wxio\portenumw32.h
+1423621736 e:\programs\nanoscat\wxio\portenumw32.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 e:\programs\nanoscat\wxio\shoestringvidpid.h
+1423621736 e:\programs\nanoscat\wxio\shoestringvidpid.h
 
-1423618136 source:e:\programs\nanoscat\wxio\portw32.cpp
+1423621736 source:e:\programs\nanoscat\wxio\portw32.cpp
 	"PortW32.h"
 	<assert.h>
 	<winioctl.h>
@@ -10954,14 +10954,14 @@
 	<wx/stdpaths.h>
 	<wx/filename.h>
 
-1423618136 e:\programs\nanoscat\wxio\portw32.h
+1423621736 e:\programs\nanoscat\wxio\portw32.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxPort.h"
 
-1423618136 e:\programs\nanoscat\wxio\porttalk_ioctl.h
+1423621736 e:\programs\nanoscat\wxio\porttalk_ioctl.h
 
-1423618136 source:e:\programs\nanoscat\wxio\wxguiderport.cpp
+1423621736 source:e:\programs\nanoscat\wxio\wxguiderport.cpp
 	"wxGuiderPort.h"
 	"../wxConfigPath.h"
 	"../wxFactory.h"
@@ -10971,40 +10971,40 @@
 	"GP_LX200.h"
 	"GP_LX200PG.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\wxguiderportprotocol.cpp
+1423621736 source:e:\programs\nanoscat\wxio\wxguiderportprotocol.cpp
 	"wxGuiderPortProtocol.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\wxlongexpoport.cpp
+1423621736 source:e:\programs\nanoscat\wxio\wxlongexpoport.cpp
 	"wxLongExpoPort.h"
 	<assert.h>
 	"../wxFactory.h"
 	"wxPortManager.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\wxport.cpp
+1423621736 source:e:\programs\nanoscat\wxio\wxport.cpp
 	"wxPort.h"
 	"PortW32.h"
 	"PortEnumW32.h"
 	"PortUX.h"
 	"PortEnumUX.h"
 
-1423618136 e:\programs\nanoscat\wxio\portux.h
+1423621736 e:\programs\nanoscat\wxio\portux.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxPort.h"
 
-1423618136 e:\programs\nanoscat\wxio\portenumux.h
+1423621736 e:\programs\nanoscat\wxio\portenumux.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\wxportdescr.cpp
+1423621736 source:e:\programs\nanoscat\wxio\wxportdescr.cpp
 	"wxPortDescr.h"
 
-1423618136 source:e:\programs\nanoscat\wxio\wxportmanager.cpp
+1423621736 source:e:\programs\nanoscat\wxio\wxportmanager.cpp
 	"wxPortManager.h"
 	"wxPort.h"
 	<vector>
 
-1423618136 source:e:\programs\nanoscat\wxmaintoolbar.cpp
+1423621736 source:e:\programs\nanoscat\wxmaintoolbar.cpp
 	"wxMainToolBar.h"
 	"wxthings/spinctld.h"
 	<wx/choice.h>
@@ -11015,7 +11015,7 @@
 	"wxWebcam/wxArtcam.h"
 	"wxWebcam_icons.h"
 
-1423618136 source:e:\programs\nanoscat\wxmessagearea.cpp
+1423621736 source:e:\programs\nanoscat\wxmessagearea.cpp
 	"wxMessageArea.h"
 	<wx/listctrl.h>
 	<wx/artprov.h>
@@ -11029,7 +11029,7 @@
 	<wx/app.h>
 	<wx/listctrl.h>
 
-1423618136 source:e:\programs\nanoscat\wxnamepolicy.cpp
+1428014464 source:e:\programs\nanoscat\wxnamepolicy.cpp
 	"wxNamePolicy.h"
 	"wxFactory.h"
 	"wxWebcam/wxWebcam.h"
@@ -11037,19 +11037,19 @@
 	<wx/datetime.h>
 	"wxConfigPath.h"
 
-1423618136 source:e:\programs\nanoscat\wxnotebookpageex.cpp
+1423621736 source:e:\programs\nanoscat\wxnotebookpageex.cpp
 	"wxNoteBookPageEx.h"
 
-1423618136 source:e:\programs\nanoscat\wxstar.cpp
+1423621736 source:e:\programs\nanoscat\wxstar.cpp
 	"wxStar.h"
 	<cmath>
 
-1423618136 source:e:\programs\nanoscat\wxsubframe.cpp
+1423621736 source:e:\programs\nanoscat\wxsubframe.cpp
 	"wxSubFrame.h"
 	<wx/utils.h>
 	<wx/timer.h>
 
-1423618137 source:e:\programs\nanoscat\wxthings\spinctld.cpp
+1423621737 source:e:\programs\nanoscat\wxthings\spinctld.cpp
 	"wx/wxprec.h"
 	"wx/valtext.h"
 	"wx/textctrl.h"
@@ -11058,7 +11058,7 @@
 	"wx/math.h"
 	<float.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\artbase.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\artbase.cpp
 	"ArtBase.h"
 	"ArtDrv.h"
 	"Atik16Drv.h"
@@ -11066,89 +11066,89 @@
 	"ArtDrvSim.h"
 	<memory.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\artdrv.h
+1423621736 e:\programs\nanoscat\wxwebcam\artdrv.h
 	"ArtTypes.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\atik16drv.h
+1423621736 e:\programs\nanoscat\wxwebcam\atik16drv.h
 	"ArtTypes.h"
 	"Atik16Cmd.h"
 	"Atik16ThreadCB.h"
 	"ArtDrv.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\atik16cmd.h
+1423621736 e:\programs\nanoscat\wxwebcam\atik16cmd.h
 	"ArtTypes.h"
 	<string>
 
-1423618136 e:\programs\nanoscat\wxwebcam\atik16threadcb.h
+1423621736 e:\programs\nanoscat\wxwebcam\atik16threadcb.h
 	"ArtTypes.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\artdrvw32dll.h
+1423621736 e:\programs\nanoscat\wxwebcam\artdrvw32dll.h
 	"ArtDrv.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\artdrvsim.h
+1423621736 e:\programs\nanoscat\wxwebcam\artdrvsim.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<wx/filename.h>
 	"ArtDrv.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\artdevice.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\artdevice.cpp
 	"ArtDevice.h"
 	"ArtDrv.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\artdrvhscw32dll.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\artdrvhscw32dll.cpp
 	"ArtDrvHscW32DLL.h"
 	"ArtemisHSCAPI.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\artdrvhscw32dll.h
+1423621736 e:\programs\nanoscat\wxwebcam\artdrvhscw32dll.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"ArtDrv.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\artemishscapi.h
+1423621736 e:\programs\nanoscat\wxwebcam\artemishscapi.h
 	<comdef.h>
 	"arttypes.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\artdrvsim.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\artdrvsim.cpp
 	"ArtDrvSim.h"
 	"wx/thread.h"
 	<wx/stdpaths.h>
 	<wx/dir.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\artdrvw32dll.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\artdrvw32dll.cpp
 	"ArtDrvW32DLL.h"
 	"ArtemisCCDAPI.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\artemisccdapi.h
+1423621736 e:\programs\nanoscat\wxwebcam\artemisccdapi.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<comdef.h>
 	"ArtTypes.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\artemisccdapi.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\artemisccdapi.cpp
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<windows.h>
 	<comdef.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\artemishscapi.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\artemishscapi.cpp
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<windows.h>
 	<comdef.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\avi\asyncwrite.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\avi\asyncwrite.cpp
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"AsyncWrite.h"
 	<assert.h>
 	<wx/wfstream.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\avi\asyncwrite.h
+1423621736 e:\programs\nanoscat\wxwebcam\avi\asyncwrite.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<deque>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\avi\avilib.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\avi\avilib.cpp
 	"avilib.h"
 	"wx/wxprec.h"
 	"wx/wx.h"
@@ -11165,22 +11165,22 @@
 	"riff.h"
 	<iostream>
 
-1423618136 e:\programs\nanoscat\wxwebcam\avi\avilib.h
+1423621736 e:\programs\nanoscat\wxwebcam\avi\avilib.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\avi\inttypes.h
+1423621736 e:\programs\nanoscat\wxwebcam\avi\inttypes.h
 	<sys/types.h>
 	<inttypes.h>
 	<stdlib.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\avi\byteswap.h
+1423621736 e:\programs\nanoscat\wxwebcam\avi\byteswap.h
 	<sys/types.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\avi\riff.h
+1423621736 e:\programs\nanoscat\wxwebcam\avi\riff.h
 	"byteswap.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\avi\avilib_buf.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\avi\avilib_buf.cpp
 	"avilib.h"
 	"wx/wxprec.h"
 	"wx/wx.h"
@@ -11198,48 +11198,48 @@
 	"riff.h"
 	<iostream>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\capturebase.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\capturebase.cpp
 	"capturebase.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\dscapture.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\dscapture.cpp
 	"dscapture.h"
 	"GenericImageMem.h"
 	<memory.h>
 
-1423618136 e:\programs\nanoscat\wxwebcam\dscapture.h
+1423621736 e:\programs\nanoscat\wxwebcam\dscapture.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"captypes.h"
 	"capturebase.h"
 	<dscaplib.h>
 
-1425704880 source:e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.cpp
+1425708480 source:e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.cpp
 	"wxFitsKeyword.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsout.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsout.cpp
 	"wxFitsOut.h"
 	"../../version.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\fits\wxfitsout.h
+1423621736 e:\programs\nanoscat\wxwebcam\fits\wxfitsout.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxFitsKeyword.h"
 
-1423618136 e:\programs\nanoscat\version.h
+1423621736 e:\programs\nanoscat\version.h
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsoutputstream.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsoutputstream.cpp
 	"wxFitsOutputStream.h"
 	"wxFitsOut.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\fits\wxfitsoutputstream.h
+1423621736 e:\programs\nanoscat\wxwebcam\fits\wxfitsoutputstream.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\genericimagemem.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\genericimagemem.cpp
 	"GenericImageMem.h"
 	<memory.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxartcam.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxartcam.cpp
 	"wxArtcam.h"
 	<wx/dcbuffer.h>
 	"wxImageStore.h"
@@ -11250,57 +11250,57 @@
 	"../BatchJobManager.h"
 	"../GenericDebHelp.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wximagestore.h
+1423621736 e:\programs\nanoscat\wxwebcam\wximagestore.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<wx/filename.h>
 	"wxCameraTypes.h"
 	"fits/wxFitsKeyword.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxartcoords.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxartcoords.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxCamCoords.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxtimeformatter.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxtimeformatter.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxCameraTypes.h"
 	"wxTimeFont.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxtimefont.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxtimefont.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxartcamtimer.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxartcamtimer.cpp
 	"wxArtcamTimer.h"
 	"wxArtcamTimerCB.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxartcoords.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxartcoords.cpp
 	"wxArtCoords.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxartsample.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxartsample.cpp
 	"wxArtSample.h"
 	"GenericImageMem.h"
 	"../debtools.h"
 
-1423618136 e:\programs\nanoscat\debtools.h
+1423621736 e:\programs\nanoscat\debtools.h
 	<string.h>
 	<stdio.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxbmp2fits.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxbmp2fits.cpp
 	"wxBMP2Fits.h"
 	"wxCameraTypes.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxbmp2fits.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxbmp2fits.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"fits/wxFitsOut.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxcamcoords.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxcamcoords.cpp
 	"wxCamCoords.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxcamera.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxcamera.cpp
 	"wxCamera.h"
 	"../wxFactory.h"
 	<wx/dcbuffer.h>
@@ -11310,10 +11310,10 @@
 	"../wxMessageArea.h"
 	"../BatchJobManager.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxhistogram.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxhistogram.cpp
 	"wxHistogram.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wximagestore.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wximagestore.cpp
 	"wxImageStore.h"
 	"../wxFactory.h"
 	"../wxMessageArea.h"
@@ -11325,19 +11325,19 @@
 	"wxYP162Fits.h"
 	"../wxNamePolicy.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxyp162fits.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxyp162fits.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"fits/wxFitsOut.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxtimefont.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxtimefont.cpp
 	"wxTimeFont.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxtimeformatter.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxtimeformatter.cpp
 	"wxTimeFormatter.h"
 	<wx/datetime.h>
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxwebcam.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxwebcam.cpp
 	"wxWebcam.h"
 	"wxWebcamWin32DS.h"
 	"wxWebcamV4L2.h"
@@ -11354,43 +11354,43 @@
 	"../BatchJobManager.h"
 	"../GenericDebHelp.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxwebcamwin32ds.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxwebcamwin32ds.h
 	"wxWebcam.h"
 	"captypes.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxwebcamv4l2.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxwebcamv4l2.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"captypes.h"
 	"wxWebcam.h"
 
-1423618136 e:\programs\nanoscat\wxwebcam\wxwebcoords.h
+1423621736 e:\programs\nanoscat\wxwebcam\wxwebcoords.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	"wxCamCoords.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxwebcamtimer.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxwebcamtimer.cpp
 	"wxWebcamTimer.h"
 	"wxWebcamTimerCB.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxwebcamwin32ds.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxwebcamwin32ds.cpp
 	"wxWebcamWin32DS.h"
 	"dscapture.h"
 	"captypes.h"
 	"../GenericDebHelp.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxwebcoords.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxwebcoords.cpp
 	"wxWebCoords.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxwebsample.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxwebsample.cpp
 	"wxWebSample.h"
 	"GenericImageMem.h"
 
-1423618136 source:e:\programs\nanoscat\wxwebcam\wxyp162fits.cpp
+1423621736 source:e:\programs\nanoscat\wxwebcam\wxyp162fits.cpp
 	"wxYP162Fits.h"
 	"wxCameraTypes.h"
 
-1423618137 source:e:\programs\nanoscat\wxwebcamdbapp.cpp
+1423621737 source:e:\programs\nanoscat\wxwebcamdbapp.cpp
 	"wx_pch.h"
 	"wxWebcamDBApp.h"
 	<wx/stdpaths.h>
@@ -11398,7 +11398,7 @@
 	"wxWebcamDBMain.h"
 	<wx/image.h>
 
-1426541174 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
+1428014620 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
 	"wx_pch.h"
 	"wxWebcamDBMain.h"
 	"wx/dirdlg.h"
@@ -11426,10 +11426,10 @@
 	"wxWebcam/wxArtcam.h"
 	"wxWebcam_icons.h"
 
-1423618137 e:\programs\nanoscat\wxwebcamprops.h
+1423621737 e:\programs\nanoscat\wxwebcamprops.h
 	<wx/propdlg.h>
 
-1423618137 source:e:\programs\nanoscat\wxwebcamprops.cpp
+1423621737 source:e:\programs\nanoscat\wxwebcamprops.cpp
 	"wxWebcamProps.h"
 	"wx/bookctrl.h"
 	"PrimaryProps.h"
@@ -11442,9 +11442,9 @@
 	"wxWebcam/wxWebcam.h"
 	"wxWebcam/wxArtcam.h"
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listimpl.cpp
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\listimpl.cpp
 
-1186407692 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\tokenzr.h
+1186411292 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\tokenzr.h
 	"wx/object.h"
 	"wx/string.h"
 	"wx/arrstr.h"

@@ -44,7 +44,7 @@
 		} \
 		else \
 			return (retVal)NULL; \
-	}   	
+	}
 
 #define DECLARE_FUNCTION1(retVal, FuncName, Param1) \
 	typedef  retVal (CALLBACK* TYPE_##FuncName)(Param1); \
@@ -230,6 +230,29 @@
 			return (retVal)NULL; \
 	}
 
+#define DECLARE_FUNCTION11(retVal, FuncName, Param1, Param2, Param3, Param4, Param5, Param6, Param7, Param8, Param9, Param10, Param11) \
+	typedef  retVal (CALLBACK* TYPE_##FuncName)(Param1, Param2, Param3, Param4, Param5, Param6, Param7, Param8, Param9, Param10, Param11); \
+	TYPE_##FuncName m_##FuncName; \
+	short m_is##FuncName;\
+	retVal FuncName (Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7, Param8 p8, Param9 p9, Param10 p10, Param11 p11) \
+	{\
+		if (m_dllHandle)\
+		{\
+			if (FUNC_LOADED != m_is##FuncName) \
+			{\
+				m_##FuncName = NULL; \
+				m_##FuncName = (TYPE_##FuncName)GetProcAddress(m_dllHandle, #FuncName); \
+				m_is##FuncName = FUNC_LOADED;\
+			}\
+			if (NULL != m_##FuncName) \
+				return m_##FuncName(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11);\
+			else \
+				return (retVal)NULL; \
+		}\
+		else\
+			return (retVal)NULL; \
+	}
+
 #define DECLARE_FUNCTION9(retVal, FuncName, Param1, Param2, Param3, Param4, Param5, Param6, Param7, Param8, Param9) \
 	typedef  retVal (CALLBACK* TYPE_##FuncName)(Param1, Param2, Param3, Param4, Param5, Param6, Param7, Param8, Param9); \
 	TYPE_##FuncName m_##FuncName; \
@@ -276,6 +299,9 @@
 			return (retVal)NULL;\
 	}
 
+
+
+
 //declare constructors and LoadFunctions
 #define DECLARE_CLASS(ClassName) \
 	public:	\
@@ -311,7 +337,7 @@ public:
 		if (m_dllHandle == NULL && showMsg)
 		{
 			//show warning here if needed
-		}		
+		}
 	}
 
 	bool SetDllName(const char* newName)
@@ -366,7 +392,7 @@ public:
 		if (!m_refCount)
 			return;
 
-		//if this is the last time this instance has been unitialized, 
+		//if this is the last time this instance has been unitialized,
 		//then do a full uninitialization
 		m_refCount--;
 
@@ -385,7 +411,7 @@ public:
 	~PDLL()
 	{
 		//force this to be a true uninitialize
-		m_refCount = 1; 
+		m_refCount = 1;
 		Uninitialize();
 
 		//free name

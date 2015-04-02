@@ -115,6 +115,7 @@ class wxWebcamDBFrame: public wxFrame
         void OnStepperCaptureClick(wxCommandEvent& event);
         void OnCWStepperDirectionClick(wxCommandEvent&  event);
         void OnCCWStepperDirectionClick(wxCommandEvent&  event);
+        void OnSpinCurrentAngleChanged(wxCommandEvent&  event);
 
 		//*)
 
@@ -122,6 +123,8 @@ class wxWebcamDBFrame: public wxFrame
 		void OnGuideTimer(wxTimerEvent& event);
 		void OnStepperCOMTimer(wxTimerEvent& event);
 		void OnStepperCaptureTimer(wxTimerEvent& event);
+		void OnStepperAfterCaptureTimer(wxTimerEvent& event);
+
 
 		void OnIdle(wxIdleEvent& event);
       void OnUpdateCamData(wxCommandEvent& event); //BM:20090104 added
@@ -137,9 +140,11 @@ class wxWebcamDBFrame: public wxFrame
 		void ShutdownAll();
         void SetStepperState(bool state){ wxWebcamDBFrame::isStepperConnected = state;};
         bool GetStepperState(){ return wxWebcamDBFrame::isStepperConnected;};
+
         double GetStepperAngle(){return StepperAngle;}
-        double UpdateStepperAngle(double ang){StepperAngle+=ang; SS_CurrentAngle->SetLabel(wxString::Format("%f", StepperAngle)); return StepperAngle;};
-        double ResetStepperAngle(){StepperAngle = 0;  SS_CurrentAngle->SetLabel(wxString::Format("%f", StepperAngle)); return StepperAngle;};
+        double SetStepperAngle(double ang){return StepperAngle=ang;}
+        double UpdateStepperAngle(double ang){StepperAngle+=ang; SS_CurrentAngle->SetValue( StepperAngle); return StepperAngle;};
+        double ResetStepperAngle(){StepperAngle = 0;  SS_CurrentAngle->SetValue(StepperAngle); return StepperAngle;};
         void UpdateFWheelString();
 
 		int Contains(wxArrayString& cameras,const wxString& substr);
@@ -238,6 +243,7 @@ class wxWebcamDBFrame: public wxFrame
       static const long ID_GUIDE_TIMER1;
       static const long ID_STEPPER_COM_TIMER;
       static const long ID_STEPPER_CAPTURE_TIMER;
+      static const long ID_STEPPER_AFTER_CAPTURE_TIMER;
 
 
 		//(*Declarations(wxWebcamDBFrame)
@@ -295,7 +301,7 @@ class wxWebcamDBFrame: public wxFrame
         wxSpinCtrl* SS_MultFrecSpin;
         wxButton* SS_CWiceDirection;
         wxButton* SS_CCWiceDirection;
-        wxStaticText* SS_CurrentAngle;
+        wxSpinCtrlDbl* SS_CurrentAngle;
         wxSpinCtrl* SS_StepperInterval;
         wxButton* SS_StepperCapture_btn;
 
@@ -348,6 +354,7 @@ class wxWebcamDBFrame: public wxFrame
       wxTimer    m_gauge_timer;
       int        m_gdir;
 
+
       wxString   m_capture_feedback;
       wxDateTime m_start_capture;
 
@@ -375,9 +382,11 @@ class wxWebcamDBFrame: public wxFrame
       wxString fWheelString;
       wxTimer     m_stepperCOM_timer;
       wxTimer     m_stepperCapture_timer;
+      wxTimer     m_stepperAfterCapture_timer;
       filtersMap fBaseMap;
       wxArrayString filtersArray;
       filtersMap fMap;
+      bool StepperExposurePause;
 };
 
 

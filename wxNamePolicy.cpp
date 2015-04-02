@@ -278,6 +278,13 @@ void wxNamePolicyFile::SetDefaultPolicy()
    avail.Add(_("filter"));
    avail.Add(_("timestamp"));
    avail.Add(_("timestamp_msec"));
+   avail.Add(_("angle"));
+   avail.Add(_("stepperc"));
+   avail.Add(_("wavelang"));
+   avail.Add(_("distance"));
+   avail.Add(_("power"));
+   avail.Add(_("filtmap"));
+   avail.Add(_("exposure"));
    SetAvailableTemplate(avail);
 }
 
