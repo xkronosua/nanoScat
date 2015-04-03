@@ -746,7 +746,24 @@ void wxWebcamDBFrame::ReplaceCamera(wxWindow* old_camera, wxCamera* new_camera)
 
 void wxWebcamDBFrame::Init()
 {
+wxPropGrid::Entries entries;
+            // nothing in configuration, push empty entries
+      entries.push_back(wxPropGrid::Entry(wxT("INSTRUME"),wxT(""),wxT("Name of instrument (camera)")));
+      entries.push_back(wxPropGrid::Entry(wxT("PSZX"),wxT(""),wxT("Size of a pixel in X direction [m]")));
+      entries.push_back(wxPropGrid::Entry(wxT("PSZY"),wxT(""),wxT("Size of a pixel in Y direction [m]")));
+      entries.push_back(wxPropGrid::Entry(wxT("IMAGETYP"),wxT(""),wxT("LIGHT, BIAS, FLAT or DARK")));
+      entries.push_back(wxPropGrid::Entry(wxT("COMMENT"),wxT(""),wxT("Any Comment")));
+      entries.push_back(wxPropGrid::Entry(wxT("FILTER"),wxT(""),wxT("Filter used")));
+      entries.push_back(wxPropGrid::Entry(wxT("OBJECT"),wxT("Object"),wxT("Object of observation")));
+      entries.push_back(wxPropGrid::Entry(wxT("ANGLE"),wxT(""),wxT("Angle from Stepper")));
+      entries.push_back(wxPropGrid::Entry(wxT("STEPPERC"),wxT(""),wxT("Angle Calibration")));
+      entries.push_back(wxPropGrid::Entry(wxT("WAVELANG"),wxT(""),wxT("Laser wavelength")));
+      entries.push_back(wxPropGrid::Entry(wxT("DISTANCE"),wxT(""),wxT("Sample-Matrix Distance")));
+      entries.push_back(wxPropGrid::Entry(wxT("POWER"),wxT(""),wxT("Laser power")));
+      entries.push_back(wxPropGrid::Entry(wxT("FILTMAP"),wxT("1"),wxT("List of filters in wheel (from MAX to MIN) [F11,F12,F13;F21,F22;...;1]")));
+      entries.push_back(wxPropGrid::Entry(wxT("EXPOSURE"),wxT("0.00"),wxT("Cam exposure (s)")));
 
+wxF()->saveFitsHeaderEntries(entries);
 
 fWheelCalibration = 0.5;
 wxString comment_val;
