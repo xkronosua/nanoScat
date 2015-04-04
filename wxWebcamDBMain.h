@@ -19,12 +19,11 @@
 #include <wx/menu.h>
 #include <wx/textctrl.h>
 #include <wx/checkbox.h>
-#include "BatchSetup.h"
 #include <wx/spinctrl.h>
 #include <wx/toolbar.h>
-#include <wx/tglbtn.h>
 #include <wx/panel.h>
 #include <wx/choice.h>
+#include <wx/bmpbuttn.h>
 #include <wx/button.h>
 #include <wx/frame.h>
 #include <wx/gauge.h>
@@ -60,7 +59,7 @@ class wxWebcamDBFrame: public wxFrame
       void UpdateStatusBar();
       void UpdateExposureMeter();
       void ClearExposureMeter();
-      void UpdateGuiderTuning();
+//      void UpdateGuiderTuning();
       void UpdateIncrement();
 
 	private:
@@ -86,17 +85,17 @@ class wxWebcamDBFrame: public wxFrame
 		void OnExposureMeteScaleChange(wxSpinEvent& event);
 		void OnMeterChannelSelect(wxCommandEvent& event);
 		void OnMenuItemImageHeader(wxCommandEvent& event);
-		void OnPickGuideStarClick(wxCommandEvent& event);
+//		void OnPickGuideStarClick(wxCommandEvent& event);
 		void OnvideoPanelLeftDown(wxMouseEvent& event);
 		void OnShowReticleClick(wxCommandEvent& event);
-		void OnMenuItemGuidingSelected(wxCommandEvent& event);
-		void OnGuideTelescopeClick(wxCommandEvent& event);
-		void OnReverseRAClick(wxCommandEvent& event);
-		void OnReverseDECClick(wxCommandEvent& event);
-		void OnDecNSChoiceSelect(wxCommandEvent& event);
-		void OnRaAggrSpinChange(wxSpinEvent& event);
-		void OnDecAggrSpinChange(wxSpinEvent& event);
-		void OnAdvancedGuideParamsClick(wxCommandEvent& event);
+//		void OnMenuItemGuidingSelected(wxCommandEvent& event);
+//		void OnGuideTelescopeClick(wxCommandEvent& event);
+//		void OnReverseRAClick(wxCommandEvent& event);
+//		void OnReverseDECClick(wxCommandEvent& event);
+//		void OnDecNSChoiceSelect(wxCommandEvent& event);
+//		void OnRaAggrSpinChange(wxSpinEvent& event);
+//		void OnDecAggrSpinChange(wxSpinEvent& event);
+//		void OnAdvancedGuideParamsClick(wxCommandEvent& event);
 		void OnUnZoom(wxCommandEvent& event);
 		void OnFullFrame(wxCommandEvent& event);
 		void OnPauseClick(wxCommandEvent& event);
@@ -105,7 +104,7 @@ class wxWebcamDBFrame: public wxFrame
 		void OnPauseBatchButtonClick(wxCommandEvent& event);
 		void OnNotebook1PageChanged(wxNotebookEvent& event);
 		void OnMaxFrames_CheckBoxClick(wxCommandEvent& event);
-		void OnMenuItemOptionsGuiding(wxCommandEvent& event);
+//		void OnMenuItemOptionsGuiding(wxCommandEvent& event);
 		void OnSetStepperParamClick(wxCommandEvent& event);
 		void OnOpenStepperCOMPortClick(wxCommandEvent& event);
 		void OnStepperMoveCWiceClick(wxCommandEvent& event);
@@ -116,11 +115,12 @@ class wxWebcamDBFrame: public wxFrame
         void OnCWStepperDirectionClick(wxCommandEvent&  event);
         void OnCCWStepperDirectionClick(wxCommandEvent&  event);
         void OnSpinCurrentAngleChanged(wxCommandEvent&  event);
+        void OnSS_PortNSpinChange(wxCommandEvent&  event);
 
 		//*)
 
 		void OnGaugeTimer(wxTimerEvent& event);
-		void OnGuideTimer(wxTimerEvent& event);
+//		void OnGuideTimer(wxTimerEvent& event);
 		void OnStepperCOMTimer(wxTimerEvent& event);
 		void OnStepperCaptureTimer(wxTimerEvent& event);
 		void OnStepperAfterCaptureTimer(wxTimerEvent& event);
@@ -136,7 +136,7 @@ class wxWebcamDBFrame: public wxFrame
 		void PauseCapture(bool batch);
 
 		void UpdateLEcontrols();
-		void UpdateBatchControls();
+//		void UpdateBatchControls();
 		void ShutdownAll();
         void SetStepperState(bool state){ wxWebcamDBFrame::isStepperConnected = state;};
         bool GetStepperState(){ return wxWebcamDBFrame::isStepperConnected;};
@@ -158,73 +158,40 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_TEXTCTRL1;
 		static const long ID_CHECKBOX7;
 		static const long ID_SPINCTRL4;
-		static const long ID_CHECKBOX1;
-		static const long ID_STATICTEXT1;
-		static const long ID_SPINCTRL1;
-		static const long ID_STATICTEXT2;
-		static const long ID_CHOICE1;
-		static const long ID_PANEL3;
-		static const long ID_CHECKBOX2;
-		static const long ID_SPINCTRL2;
 		static const long ID_PANEL1;
 		static const long ID_BUTTON1;
-		static const long ID_STATICTEXT3;
-		static const long ID_STATICTEXT4;
-		static const long ID_STATICTEXT5;
-		static const long ID_STATICTEXT6;
-		static const long ID_STATICTEXT7;
-		static const long ID_STATICTEXT8;
-		static const long ID_CHECKBOX3;
-		static const long ID_CHECKBOX4;
-		static const long ID_CHECKBOX6;
-		static const long ID_STATICTEXT9;
-		static const long ID_CHOICE2;
-		static const long ID_STATICTEXT10;
-		static const long ID_SPINCTRL3;
-		static const long ID_STATICTEXT12;
-		static const long ID_SPINCTRL5;
 		static const long ID_BUTTON2;
-		static const long ID_PANEL4;
-		static const long ID_BATCH_CAPTURE_BTN;
-////STEPPER
-		static const long ID_SET_STEPPER_PARAM_BTN;
-		static const long ID_RESET_STEPPER_BTN;
-		static const long ID_RESET_STEPPER_COUNTER_BTN;
-		static const long ID_OPEN_STEPPER_COM_PORT_BTN;
-		static const long ID_MOVE_STEPPER_CWICE_BTN;
-		static const long ID_MOVE_STEPPER_CCWICE_BTN;
-		static const long ID_SSANG;
-		static const long ID_STEPPER_I_CHOICE;
-		static const long ID_STEPPER_I_STOP_CHOICE;
-		static const long ID_SSI;
-		static const long ID_SSISTOP;
-		static const long ID_SSWMODE;
-		static const long ID_STEPPER_W_MODE_CHOICE;
-		static const long ID_SSFREC;
-		static const long ID_SSFRECSPIN;
-		static const long ID_SSCALIBR;
-		static const long ID_SSCALIBRSPIN;
-		static const long ID_SSPORTN;
-		static const long ID_SSPORTNSPIN;
-		static const long ID_SSMOTORN;
-		static const long ID_SSMOTORNSPIN;
-		static const long ID_SSMULTFREC;
-		static const long ID_SSMULTFRECSPIN;
-		static const long ID_SSCWICE_DIRECTION;
-		static const long ID_SSCCWICE_DIRECTION;
-		static const long ID_SSCURRENTANGLE;
-		static const long ID_STEPPER_CAPTURE_BTN;
-		static const long ID_STEPPER_INTERVAL;
-
-
-
-
-//////
+		static const long ID_STATICTEXT3;
+		static const long ID_SPINCTRL3;
+		static const long ID_STATICTEXT4;
+		static const long ID_CHOICE2;
+		static const long ID_BUTTON4;
 		static const long ID_BUTTON5;
-		static const long ID_STATICTEXT13;
+		static const long ID_BITMAPBUTTON1;
+		static const long ID_BITMAPBUTTON2;
+		static const long ID_STATICTEXT5;
+		static const long ID_SPINCTRL5;
+		static const long ID_STATICTEXT6;
+		static const long ID_SPINCTRL6;
+		static const long ID_CHOICE3;
+		static const long ID_CHOICE4;
+		static const long ID_STATICTEXT9;
+		static const long ID_CHOICE5;
+		static const long ID_STATICTEXT10;
+		static const long ID_SPINCTRL7;
 		static const long ID_STATICTEXT11;
-		static const long ID_STATICTEXT14;
-		static const long ID_CUSTOM1;
+		static const long ID_SPINCTRL8;
+		static const long ID_BUTTON6;
+		static const long ID_SPINCTRL9;
+		static const long ID_BUTTON7;
+		static const long ID_BUTTON8;
+		static const long ID_SPINCTRL10;
+		static const long ID_CHOICE1;
+		static const long ID_CHECKBOX2;
+		static const long ID_SPINCTRL2;
+		static const long ID_CHECKBOX1;
+		static const long ID_SPINCTRL1;
+		static const long ID_PANEL3;
 		static const long ID_PANEL2;
 		static const long ID_NOTEBOOK1;
 		static const long ID_CAMERA_PANEL;
@@ -232,7 +199,7 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_MENUITEM_CONNECT;
 		static const long ID_MENUITEM_DISCONNECT;
 		static const long ID_MENUITEM_SETTINGS;
-		static const long ID_MENUITEM_GUIDING2;
+//		static const long ID_MENUITEM_GUIDING2;
 		static const long ID_MENUITEM_HEADER;
 		static const long idMenuAbout;
 		static const long ID_STATUSBAR1;
@@ -240,109 +207,72 @@ class wxWebcamDBFrame: public wxFrame
 		//*)
 
       static const long ID_GAUGE_TIMER1;
-      static const long ID_GUIDE_TIMER1;
+//      static const long ID_GUIDE_TIMER1;
       static const long ID_STEPPER_COM_TIMER;
       static const long ID_STEPPER_CAPTURE_TIMER;
       static const long ID_STEPPER_AFTER_CAPTURE_TIMER;
 
 
 		//(*Declarations(wxWebcamDBFrame)
-		wxBoxSizer* BoxSizer6;
-		wxPanel* m_batch_panel;
-		wxPanel* m_stepper_panel;
-		wxBoxSizer* BoxSizer9_1;
+		wxStaticText* StaticText9;
+		wxButton* SS_CWiceDirection;
+		wxButton* SS_StepperCapture_btn;
+		wxBitmapButton* StepperMoveCCWice;
 		wxMenuItem* MenuItem8;
 		wxCheckBox* LE_CheckBox;
 		wxMenuItem* MenuItem7;
 		wxCheckBox* MaxFrames_CheckBox;
 		wxTextCtrl* m_increment;
-		BatchSetup* m_batch_setup;
-		wxBoxSizer* BoxSizer10;
 		wxNotebook* Notebook1;
-		wxBoxSizer* BoxSizer7;
-		wxStaticText* m_guide_mag;
-		wxBoxSizer* BoxSizer8;
+		wxButton* m_openStepperCOMPort_btn;
+		wxStaticText* StaticText2;
 		wxMenuItem* MenuItem2;
-		wxStaticBoxSizer* StaticBoxSizer4;
-		wxCheckBox* m_reverseRA;
+		wxButton* SetStepperParam;
 		wxMenu* Menu3;
-		wxCheckBox* GuideTelescope;
+		wxChoice* m_stepperIStopChoice;
 		wxMenuItem* MenuItem1;
 		wxButton* m_capture_btn;
-		wxPanel* m_record_panel;
-		wxChoice* m_decNSChoice;
-		wxStaticText* StaticText1;
-		wxBoxSizer* BoxSizer2;
-		wxMenu* Menu1;
-		wxButton* m_batchCapture_btn;
-///////////Stepper
-		wxButton* m_setStepperParam_btn;
-		wxButton* m_resetStepperCounter_btn;
-		wxButton* m_resetStepper_btn;
-		wxButton* m_openStepperCOMPort_btn;
-		wxButton* m_moveStepperCWice_btn;
-		wxButton* m_moveStepperCCWice_btn;
-		wxStaticText* SS_SetAng;
 		wxSpinCtrlDbl* SS_AngSpin;
-		wxChoice* m_stepperIChoice;
-        wxChoice* m_stepperIStopChoice;
-        wxStaticText* SS_IStopText;
-        wxChoice* m_stepperWModeChoice;
-        wxStaticText* SS_WModeText;
-        wxStaticText* SS_FrecText;
-        wxSpinCtrl* SS_FrecSpin;
-        wxStaticText* SS_CalibrText;
-        wxSpinCtrlDbl* SS_CalibrSpin;
-        wxStaticText* SS_PortNText;
-        wxSpinCtrl* SS_PortNSpin;
-        wxStaticText* SS_MotorNText;
-        wxSpinCtrl* SS_MotorNSpin;
-        wxStaticText* SS_MultFrecText;
-        wxSpinCtrl* SS_MultFrecSpin;
-        wxButton* SS_CWiceDirection;
-        wxButton* SS_CCWiceDirection;
-        wxSpinCtrlDbl* SS_CurrentAngle;
-        wxSpinCtrl* SS_StepperInterval;
-        wxButton* SS_StepperCapture_btn;
-
-///////
-		wxStaticBoxSizer* StaticBoxSizer13;
-		wxButton* PauseBatchButton;
+		wxStaticText* StaticText8;
+		wxSpinCtrl* SS_StepperInterval;
+		wxButton* SS_CCWiceDirection;
+		wxPanel* m_record_panel;
+		wxBoxSizer* BoxSizer2;
+		wxStaticText* StaticText3;
+		wxMenu* Menu1;
+		wxSpinCtrl* SS_FrecSpin;
 		wxSpinCtrlDbl* m_meter_scale;
+		wxStaticText* CalibrKLabel;
 		wxMainToolBar* ToolBar1;
 		wxMenuItem* MenuItem3;
-		wxSpinCtrlDbl* m_RaAggrSpin;
+		wxSpinCtrlDbl* SS_CalibrSpin;
+		wxBitmapButton* StepperMoveCWice;
 		wxCheckBox* m_activate_exposure_meter;
-		wxStaticText* m_batch_status3;
-		wxStaticText* m_batch_status2;
+		wxStaticText* StaticText5;
+		wxSpinCtrlDbl* SS_CurrentAngle;
+		wxChoice* SS_MotorN;
+		wxPanel* m_stepper_panel;
 		wxChoice* m_meter_channel;
-		wxCheckBox* m_reverseDEC;
-		wxStaticText* m_guide_dx;
-		wxStaticText* m_batch_status1;
-		wxStaticText* LE_Text;
-		wxStaticText* SS_IText;
+		wxButton* ResetStepperCounter;
+		wxChoice* m_stepperWModeChoice;
+		wxChoice* m_stepperIChoice;
 		wxStatusBarEx* m_statusbar;
 		wxBoxSizer* BoxSizer1;
-		wxBoxSizer* BoxSizer14_1;
-		wxBoxSizer* BoxSizer12_1;
 		wxButton* m_pause_btn;
-		wxButton* PickGuideStar;
 		wxMenuBar* MenuBar1;
 		wxSpinCtrlDbl* LE_SpinCtrl1;
-		wxSpinCtrlDbl* SS_ISpin;
 		wxPanel* m_exposure_meter_panel;
 		wxStaticBoxSizer* StaticBoxSizer1;
-		wxStaticBoxSizer* StaticBoxSizer2_1;
+		wxSpinCtrl* SS_PortNSpin;
 		wxSpinCtrl* MaxFrames_SpinCtrl;
-		wxStaticText* m_guide_dy;
 		wxMenu* Menu2;
 		wxMenuItem* MenuItem9;
 		wxGauge* m_gauge1;
-		wxPanel* m_guide_panel;
-		wxStaticText* m_staticText_RA;
-		wxMenuItem* MenuItemGuiding;
+		wxStaticText* StaticText4;
+//		wxMenuItem* MenuItemGuiding;
+		wxButton* ResetSHD;
+		wxSpinCtrl* SS_MultFrecSpin;
 		wxMenu* Menu4;
-		wxSpinCtrlDbl* m_DecAggrSpin;
 		//*)
 
 		DECLARE_EVENT_TABLE()
@@ -365,9 +295,9 @@ class wxWebcamDBFrame: public wxFrame
       bool   m_exposure_meter_active;
       double m_exposure_meter_scale;
 
-      wxTimer     m_guide_timer;     // ** temp solution, the guide timer
-      wxSubFrame  m_guide_subframe;  // the object that handles guiding calculations
-      bool        m_guide_active;    // true when guide commands shall be issued
+//      wxTimer     m_guide_timer;     // ** temp solution, the guide timer
+//      wxSubFrame  m_guide_subframe;  // the object that handles guiding calculations
+//      bool        m_guide_active;    // true when guide commands shall be issued
 
       ///stepper
       BYTE ATrtAddr;// = 255;

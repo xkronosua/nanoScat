@@ -19,10 +19,10 @@
 #include "wx/dirdlg.h"
 #include "SettingsDialog.h"
 #include "ImageHeaderDialog.h"
-///#include "OptionsGuiding.h"     /// OLD Options guiding
-#include "wxGuidingOptions.h"   /// NEW Options guiding
+/////#include "OptionsGuiding.h"     /// OLD Options guiding
+//#include "wxGuidingOptions.h"   /// NEW Options guiding
 #include "wxWebcamProps.h"
-#include "AdvancedGuidingParams.h"
+//#include "AdvancedGuidingParams.h"
 #include <wx/dcclient.h>
 #include <wx/dcbuffer.h>
 #include <wx/aboutdlg.h>
@@ -31,9 +31,9 @@
 // version.h defines program version number as "MyAppVer" string
 #include "version.h"
 #include "wxIO/wxLongExpoPort.h"
-#include "wxIO/wxGuiderPort.h"
-#include "wxGuidingConfig.h"
-#include "wxGuider.h"
+//#include "wxIO/wxGuiderPort.h"
+//#include "wxGuidingConfig.h"
+//#include "wxGuider.h"
 #include "wxMainToolBar.h"
 
 #include "wxMessageArea.h"
@@ -65,8 +65,12 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*InternalHeaders(wxWebcamDBFrame)
+#include <wx/artprov.h>
+#include <wx/bitmap.h>
 #include <wx/settings.h>
+#include <wx/font.h>
 #include <wx/intl.h>
+#include <wx/image.h>
 #include <wx/string.h>
 //*)
 
@@ -89,71 +93,40 @@ const long wxWebcamDBFrame::ID_BUTTON3 = wxNewId();
 const long wxWebcamDBFrame::ID_TEXTCTRL1 = wxNewId();
 const long wxWebcamDBFrame::ID_CHECKBOX7 = wxNewId();
 const long wxWebcamDBFrame::ID_SPINCTRL4 = wxNewId();
-const long wxWebcamDBFrame::ID_CHECKBOX1 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT1 = wxNewId();
-const long wxWebcamDBFrame::ID_SPINCTRL1 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT2 = wxNewId();
-const long wxWebcamDBFrame::ID_CHOICE1 = wxNewId();
-const long wxWebcamDBFrame::ID_PANEL3 = wxNewId();
-const long wxWebcamDBFrame::ID_CHECKBOX2 = wxNewId();
-const long wxWebcamDBFrame::ID_SPINCTRL2 = wxNewId();
 const long wxWebcamDBFrame::ID_PANEL1 = wxNewId();
 const long wxWebcamDBFrame::ID_BUTTON1 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT3 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT4 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT5 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT6 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT7 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT8 = wxNewId();
-const long wxWebcamDBFrame::ID_CHECKBOX3 = wxNewId();
-const long wxWebcamDBFrame::ID_CHECKBOX4 = wxNewId();
-const long wxWebcamDBFrame::ID_CHECKBOX6 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT9 = wxNewId();
-const long wxWebcamDBFrame::ID_CHOICE2 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT10 = wxNewId();
-const long wxWebcamDBFrame::ID_SPINCTRL3 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT12 = wxNewId();
-const long wxWebcamDBFrame::ID_SPINCTRL5 = wxNewId();
 const long wxWebcamDBFrame::ID_BUTTON2 = wxNewId();
-const long wxWebcamDBFrame::ID_PANEL4 = wxNewId();
-const long wxWebcamDBFrame::ID_BATCH_CAPTURE_BTN = wxNewId();
-///Stepper
-const long wxWebcamDBFrame::ID_SET_STEPPER_PARAM_BTN = wxNewId();
-const long wxWebcamDBFrame::ID_RESET_STEPPER_BTN = wxNewId();
-const long wxWebcamDBFrame::ID_RESET_STEPPER_COUNTER_BTN = wxNewId();
-const long wxWebcamDBFrame::ID_OPEN_STEPPER_COM_PORT_BTN = wxNewId();
-const long wxWebcamDBFrame::ID_MOVE_STEPPER_CWICE_BTN = wxNewId();
-const long wxWebcamDBFrame::ID_MOVE_STEPPER_CCWICE_BTN = wxNewId();
-const long wxWebcamDBFrame::ID_SSANG = wxNewId();
-const long wxWebcamDBFrame::ID_STEPPER_CAPTURE_BTN = wxNewId();
-
-const long wxWebcamDBFrame::ID_STEPPER_I_CHOICE = wxNewId();
-const long wxWebcamDBFrame::ID_STEPPER_I_STOP_CHOICE = wxNewId();
-const long wxWebcamDBFrame::ID_SSI = wxNewId();
-const long wxWebcamDBFrame::ID_SSISTOP = wxNewId();
-const long wxWebcamDBFrame::ID_SSWMODE = wxNewId();
-const long wxWebcamDBFrame::ID_STEPPER_W_MODE_CHOICE = wxNewId();
-const long wxWebcamDBFrame::ID_SSFRECSPIN = wxNewId();
-const long wxWebcamDBFrame::ID_SSFREC = wxNewId();
-const long wxWebcamDBFrame::ID_SSCALIBRSPIN = wxNewId();
-const long wxWebcamDBFrame::ID_SSCALIBR = wxNewId();
-const long wxWebcamDBFrame::ID_SSPORTNSPIN= wxNewId();
-const long wxWebcamDBFrame::ID_SSMOTORNSPIN = wxNewId();
-const long wxWebcamDBFrame::ID_SSMULTFRECSPIN = wxNewId();
-const long wxWebcamDBFrame::ID_SSPORTN= wxNewId();
-const long wxWebcamDBFrame::ID_SSMOTORN = wxNewId();
-const long wxWebcamDBFrame::ID_SSMULTFREC = wxNewId();
-const long wxWebcamDBFrame::ID_SSCURRENTANGLE = wxNewId();
-const long wxWebcamDBFrame::ID_STEPPER_INTERVAL = wxNewId();
-const long wxWebcamDBFrame::ID_SSCWICE_DIRECTION = wxNewId();
-const long wxWebcamDBFrame::ID_SSCCWICE_DIRECTION = wxNewId();
-//sTEPPER
-
+const long wxWebcamDBFrame::ID_STATICTEXT3 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL3 = wxNewId();
+const long wxWebcamDBFrame::ID_STATICTEXT4 = wxNewId();
+const long wxWebcamDBFrame::ID_CHOICE2 = wxNewId();
+const long wxWebcamDBFrame::ID_BUTTON4 = wxNewId();
 const long wxWebcamDBFrame::ID_BUTTON5 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT13 = wxNewId();
+const long wxWebcamDBFrame::ID_BITMAPBUTTON1 = wxNewId();
+const long wxWebcamDBFrame::ID_BITMAPBUTTON2 = wxNewId();
+const long wxWebcamDBFrame::ID_STATICTEXT5 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL5 = wxNewId();
+const long wxWebcamDBFrame::ID_STATICTEXT6 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL6 = wxNewId();
+const long wxWebcamDBFrame::ID_CHOICE3 = wxNewId();
+const long wxWebcamDBFrame::ID_CHOICE4 = wxNewId();
+const long wxWebcamDBFrame::ID_STATICTEXT9 = wxNewId();
+const long wxWebcamDBFrame::ID_CHOICE5 = wxNewId();
+const long wxWebcamDBFrame::ID_STATICTEXT10 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL7 = wxNewId();
 const long wxWebcamDBFrame::ID_STATICTEXT11 = wxNewId();
-const long wxWebcamDBFrame::ID_STATICTEXT14 = wxNewId();
-const long wxWebcamDBFrame::ID_CUSTOM1 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL8 = wxNewId();
+const long wxWebcamDBFrame::ID_BUTTON6 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL9 = wxNewId();
+const long wxWebcamDBFrame::ID_BUTTON7 = wxNewId();
+const long wxWebcamDBFrame::ID_BUTTON8 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL10 = wxNewId();
+const long wxWebcamDBFrame::ID_CHOICE1 = wxNewId();
+const long wxWebcamDBFrame::ID_CHECKBOX2 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL2 = wxNewId();
+const long wxWebcamDBFrame::ID_CHECKBOX1 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL1 = wxNewId();
+const long wxWebcamDBFrame::ID_PANEL3 = wxNewId();
 const long wxWebcamDBFrame::ID_PANEL2 = wxNewId();
 const long wxWebcamDBFrame::ID_NOTEBOOK1 = wxNewId();
 const long wxWebcamDBFrame::ID_CAMERA_PANEL = wxNewId();
@@ -161,7 +134,7 @@ const long wxWebcamDBFrame::idMenuQuit = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_CONNECT = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_DISCONNECT = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_SETTINGS = wxNewId();
-const long wxWebcamDBFrame::ID_MENUITEM_GUIDING2 = wxNewId();
+//const long wxWebcamDBFrame::ID_MENUITEM_GUIDING2 = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_HEADER = wxNewId();
 const long wxWebcamDBFrame::idMenuAbout = wxNewId();
 const long wxWebcamDBFrame::ID_STATUSBAR1 = wxNewId();
@@ -175,7 +148,7 @@ wxWebcamDBFrame* wxWebcamDBFrame::m_self=NULL;
 const long ID_MENUITEM_DD= wxNewId();
 
 const long wxWebcamDBFrame::ID_GAUGE_TIMER1 = wxNewId();
-const long wxWebcamDBFrame::ID_GUIDE_TIMER1 = wxNewId();
+//const long wxWebcamDBFrame::ID_GUIDE_TIMER1 = wxNewId();
 const long wxWebcamDBFrame::ID_STEPPER_COM_TIMER = wxNewId();
 const long wxWebcamDBFrame::ID_STEPPER_CAPTURE_TIMER = wxNewId();
 const long wxWebcamDBFrame::ID_STEPPER_AFTER_CAPTURE_TIMER = wxNewId();
@@ -192,7 +165,7 @@ BEGIN_EVENT_TABLE(wxWebcamDBFrame,wxFrame)
 	//(*EventTable(wxWebcamDBFrame)
 	//*)
 	EVT_TIMER(ID_GAUGE_TIMER1,wxWebcamDBFrame::OnGaugeTimer)
-	EVT_TIMER(ID_GUIDE_TIMER1,wxWebcamDBFrame::OnGuideTimer)
+//	EVT_TIMER(ID_GUIDE_TIMER1,wxWebcamDBFrame::OnGuideTimer)
 	EVT_TIMER(ID_STEPPER_COM_TIMER,wxWebcamDBFrame::OnStepperCOMTimer)
 	EVT_TIMER(ID_STEPPER_CAPTURE_TIMER,wxWebcamDBFrame::OnStepperCaptureTimer)
 	EVT_TIMER(ID_STEPPER_AFTER_CAPTURE_TIMER,wxWebcamDBFrame::OnStepperAfterCaptureTimer)
@@ -205,7 +178,7 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 : m_factory()
 , m_gauge_timer(this,ID_GAUGE_TIMER1)
 , m_gdir(1)
-, m_guide_timer(this,ID_GUIDE_TIMER1)
+//, m_guide_timer(this,ID_GUIDE_TIMER1)
 , m_stepperCOM_timer(this, ID_STEPPER_COM_TIMER)
 , m_stepperCapture_timer(this, ID_STEPPER_CAPTURE_TIMER)
 , m_stepperAfterCapture_timer(this, ID_STEPPER_AFTER_CAPTURE_TIMER)
@@ -213,42 +186,25 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 {
 
 	//(*Initialize(wxWebcamDBFrame)
-	wxBoxSizer* BoxSizer4;
-	wxStaticBoxSizer* StaticBoxSizer2;
 	wxBoxSizer* BoxSizer15;
-	wxBoxSizer* BoxSizer5;
-	wxStaticText* StaticText2;
-	wxBoxSizer* BoxSizer13;
 	wxButton* Button1;
-	wxFlexGridSizer* FlexGridSizer3;
-	wxStaticText* StaticText19;
 	wxPanel* video_panel;
-	wxBoxSizer* BoxSizer11;
+	wxFlexGridSizer* FlexGridSizer2;
 	wxBoxSizer* BoxSizer16;
-	wxStaticBoxSizer* StaticBoxSizer7;
-	wxBoxSizer* BoxSizer12;
-	wxButton* Button5;
-	wxBoxSizer* BoxSizer14;
-	wxStaticBoxSizer* StaticBoxSizer8;
-	wxStaticBoxSizer* StaticBoxSizer3;
-	wxStaticBoxSizer* StaticBoxSizer6;
-	wxStaticText* StaticText7;
 	wxBoxSizer* BoxSizer17;
-	wxBoxSizer* BoxSizer9;
 	wxFlexGridSizer* FlexGridSizer1;
-	wxFlexGridSizer* FlexGridSizer1_1;
-	wxBoxSizer* BoxSizer3;
-	wxStaticBoxSizer* StaticBoxSizer5;
-	wxStaticText* StaticText17;
-	wxStaticText* StaticText4;
-	wxBoxSizer* BoxSizer25;
 	wxCheckBox* ShowReticle;
 
 	Create(parent, wxID_ANY, _("wxAstroCapture - Windows linuX Astronomy Capture"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE|wxMINIMIZE_BOX, _T("wxID_ANY"));
-	SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_INACTIVEBORDER));
+	SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
+	SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
-	Notebook1 = new wxNotebook(this, ID_NOTEBOOK1, wxDefaultPosition, wxSize(200,-1), wxNB_MULTILINE, _T("ID_NOTEBOOK1"));
+	Notebook1 = new wxNotebook(this, ID_NOTEBOOK1, wxDefaultPosition, wxSize(180,-1), wxNB_MULTILINE, _T("ID_NOTEBOOK1"));
+	Notebook1->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
+	Notebook1->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_GRAYTEXT));
 	m_record_panel = new wxPanel(Notebook1, ID_PANEL1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
+	m_record_panel->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_GRAYTEXT));
+	m_record_panel->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOWFRAME));
 	FlexGridSizer1 = new wxFlexGridSizer(0, 1, 0, 0);
 	StaticBoxSizer1 = new wxStaticBoxSizer(wxVERTICAL, m_record_panel, _("Video Device"));
 	Button1 = new wxButton(m_record_panel, ID_DEVICE_PROPERTIES, _("Properties ..."), wxDefaultPosition, wxSize(-1,-1), 0, wxDefaultValidator, _T("ID_DEVICE_PROPERTIES"));
@@ -285,273 +241,153 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	BoxSizer15->Add(5,-1,1, wxALL|wxALIGN_LEFT|wxALIGN_TOP, 5);
 	MaxFrames_SpinCtrl = new wxSpinCtrl(m_record_panel, ID_SPINCTRL4, _T("1"), wxDefaultPosition, wxSize(70,-1), 0, 1, 10000, 1, _T("ID_SPINCTRL4"));
 	MaxFrames_SpinCtrl->SetValue(_T("1"));
-	//MaxFrames_SpinCtrl->Disable();
+	MaxFrames_SpinCtrl->Disable();
 	MaxFrames_SpinCtrl->SetToolTip(_("Max number of frames to capture"));
 	BoxSizer15->Add(MaxFrames_SpinCtrl, 0, wxTOP|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 5);
 	FlexGridSizer1->Add(BoxSizer15, 1, wxBOTTOM|wxLEFT|wxEXPAND|wxALIGN_LEFT|wxALIGN_BOTTOM, 5);
 	FlexGridSizer1->Add(-1,5,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
-	StaticBoxSizer2 = new wxStaticBoxSizer(wxHORIZONTAL, m_record_panel, _("Long exposures"));
-	BoxSizer12 = new wxBoxSizer(wxVERTICAL);
-	LE_CheckBox = new wxCheckBox(m_record_panel, ID_CHECKBOX1, _("Long exposure"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
-	LE_CheckBox->SetValue(false);
-	LE_CheckBox->SetToolTip(_("Check to enable webcam long exposure"));
-	BoxSizer12->Add(LE_CheckBox, 1, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-
-	//BoxSizer12->Add(BoxSizer14, 1, wxEXPAND|wxALIGN_LEFT|wxALIGN_BOTTOM, 5);
-	StaticBoxSizer2->Add(BoxSizer12, 1, wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	FlexGridSizer1->Add(StaticBoxSizer2, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	FlexGridSizer1->Add(-1,5,0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	m_record_panel->SetSizer(FlexGridSizer1);
 	FlexGridSizer1->Fit(m_record_panel);
 	FlexGridSizer1->SetSizeHints(m_record_panel);
-	m_guide_panel = new wxPanel(Notebook1, ID_PANEL4, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL4"));
-	BoxSizer5 = new wxBoxSizer(wxVERTICAL);
-	StaticBoxSizer4 = new wxStaticBoxSizer(wxVERTICAL, m_guide_panel, _("Guide star tracking"));
-	PickGuideStar = new wxButton(m_guide_panel, ID_BUTTON1, _("Pick guide star"), wxDefaultPosition, wxSize(100,30), 0, wxDefaultValidator, _T("ID_BUTTON1"));
-	StaticBoxSizer4->Add(PickGuideStar, 0, wxTOP|wxBOTTOM|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer6 = new wxBoxSizer(wxVERTICAL);
-	BoxSizer7 = new wxBoxSizer(wxHORIZONTAL);
-	StaticText2 = new wxStaticText(m_guide_panel, ID_STATICTEXT3, _("Ra:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
-	BoxSizer7->Add(StaticText2, 1, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	m_guide_dx = new wxStaticText(m_guide_panel, ID_STATICTEXT4, _("N/A"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
-	BoxSizer7->Add(m_guide_dx, 2, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer6->Add(BoxSizer7, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-	BoxSizer8 = new wxBoxSizer(wxHORIZONTAL);
-	StaticText4 = new wxStaticText(m_guide_panel, ID_STATICTEXT5, _("Dec:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT5"));
-	BoxSizer8->Add(StaticText4, 1, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	m_guide_dy = new wxStaticText(m_guide_panel, ID_STATICTEXT6, _("N/A"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT6"));
-	BoxSizer8->Add(m_guide_dy, 2, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer6->Add(BoxSizer8, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-	BoxSizer10 = new wxBoxSizer(wxHORIZONTAL);
-	StaticText7 = new wxStaticText(m_guide_panel, ID_STATICTEXT7, _("Mag:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT7"));
-	BoxSizer10->Add(StaticText7, 1, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	m_guide_mag = new wxStaticText(m_guide_panel, ID_STATICTEXT8, _("N/A"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT8"));
-	BoxSizer10->Add(m_guide_mag, 2, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer6->Add(BoxSizer10, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-	StaticBoxSizer4->Add(BoxSizer6, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
-	BoxSizer5->Add(StaticBoxSizer4, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer5->Add(-1,10,0, wxTOP|wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StaticBoxSizer5 = new wxStaticBoxSizer(wxVERTICAL, m_guide_panel, _("Guiding commands"));
-	GuideTelescope = new wxCheckBox(m_guide_panel, ID_CHECKBOX3, _("Guide telescope"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX3"));
-	GuideTelescope->SetValue(true);
-	StaticBoxSizer5->Add(GuideTelescope, 0, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 3);
-	StaticBoxSizer6 = new wxStaticBoxSizer(wxHORIZONTAL, m_guide_panel, _("Reverse"));
-	m_reverseRA = new wxCheckBox(m_guide_panel, ID_CHECKBOX4, _("RA"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX4"));
-	m_reverseRA->SetValue(false);
-	StaticBoxSizer6->Add(m_reverseRA, 1, wxTOP|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
-	m_reverseDEC = new wxCheckBox(m_guide_panel, ID_CHECKBOX6, _("DEC"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX6"));
-	m_reverseDEC->SetValue(false);
-	StaticBoxSizer6->Add(m_reverseDEC, 1, wxTOP|wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
-	StaticBoxSizer5->Add(StaticBoxSizer6, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 3);
-	FlexGridSizer3 = new wxFlexGridSizer(0, 3, 0, 0);
-	StaticText17 = new wxStaticText(m_guide_panel, ID_STATICTEXT9, _("Dec"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT9"));
-	FlexGridSizer3->Add(StaticText17, 1, wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_decNSChoice = new wxChoice(m_guide_panel, ID_CHOICE2, wxDefaultPosition, wxSize(90,-1), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE2"));
-	m_decNSChoice->Append(_("None"));
-	m_decNSChoice->Append(_("N and S"));
-	m_decNSChoice->Append(_("N+ only"));
-	m_decNSChoice->Append(_("S- only"));
-	FlexGridSizer3->Add(m_decNSChoice, 1, wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 3);
-	StaticBoxSizer5->Add(FlexGridSizer3, 0, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 3);
-	BoxSizer5->Add(StaticBoxSizer5, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer5->Add(-1,10,0, wxTOP|wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StaticBoxSizer13 = new wxStaticBoxSizer(wxVERTICAL, m_guide_panel, _("Aggressiveness"));
-	BoxSizer13 = new wxBoxSizer(wxHORIZONTAL);
-	m_staticText_RA = new wxStaticText(m_guide_panel, ID_STATICTEXT10, _("RA (k)"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT10"));
-	BoxSizer13->Add(m_staticText_RA, 1, wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_RaAggrSpin = new wxSpinCtrlDbl(m_guide_panel, ID_SPINCTRL3, _T("1.0"), wxDefaultPosition, wxSize(70,-1), 0, 0, 100, 1, _T("ID_SPINCTRL3"));
-	m_RaAggrSpin->SetValue(_T("1.0"));
-	BoxSizer13->Add(m_RaAggrSpin, 0, wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StaticBoxSizer13->Add(BoxSizer13, 1, wxTOP|wxBOTTOM|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer25 = new wxBoxSizer(wxHORIZONTAL);
-	StaticText19 = new wxStaticText(m_guide_panel, ID_STATICTEXT12, _("DEC (k)"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT12"));
-	BoxSizer25->Add(StaticText19, 1, wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_DecAggrSpin = new wxSpinCtrlDbl(m_guide_panel, ID_SPINCTRL5, _T("1.0"), wxDefaultPosition, wxSize(70,-1), 0, 0, 100, 1, _T("ID_SPINCTRL5"));
-	m_DecAggrSpin->SetValue(_T("1.0"));
-	BoxSizer25->Add(m_DecAggrSpin, 0, wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StaticBoxSizer13->Add(BoxSizer25, 1, wxTOP|wxBOTTOM|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	Button5 = new wxButton(m_guide_panel, ID_BUTTON2, _("Advanced..."), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
-	StaticBoxSizer13->Add(Button5, 0, wxTOP|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer5->Add(StaticBoxSizer13, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_guide_panel->SetSizer(BoxSizer5);
-	BoxSizer5->Fit(m_guide_panel);
-	BoxSizer5->SetSizeHints(m_guide_panel);
-	m_batch_panel = new wxPanel(Notebook1, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
-	BoxSizer9 = new wxBoxSizer(wxVERTICAL);
-	StaticBoxSizer7 = new wxStaticBoxSizer(wxVERTICAL, m_batch_panel, _("Batch Processing"));
-	m_batchCapture_btn = new wxButton(m_batch_panel, ID_BATCH_CAPTURE_BTN, _("Start Batch"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_BATCH_CAPTURE_BTN"));
-	StaticBoxSizer7->Add(m_batchCapture_btn, 0, wxTOP|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	PauseBatchButton = new wxButton(m_batch_panel, ID_BUTTON5, _("Pause Batch"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_BUTTON5"));
-	PauseBatchButton->Disable();
-	StaticBoxSizer7->Add(PauseBatchButton, 0, wxTOP|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer9->Add(StaticBoxSizer7, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StaticBoxSizer8 = new wxStaticBoxSizer(wxVERTICAL, m_batch_panel, _("Status"));
-	m_batch_status1 = new wxStaticText(m_batch_panel, ID_STATICTEXT13, _("Batch not running"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT13"));
-	StaticBoxSizer8->Add(m_batch_status1, 0, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_batch_status2 = new wxStaticText(m_batch_panel, ID_STATICTEXT11, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT11"));
-	StaticBoxSizer8->Add(m_batch_status2, 0, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_batch_status3 = new wxStaticText(m_batch_panel, ID_STATICTEXT14, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT14"));
-	StaticBoxSizer8->Add(m_batch_status3, 0, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer9->Add(StaticBoxSizer8, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer11 = new wxBoxSizer(wxVERTICAL);
-	m_batch_setup = new BatchSetup(m_batch_panel,ID_CUSTOM1,wxDefaultPosition,wxDefaultSize);
-	BoxSizer11->Add(m_batch_setup, 0, wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer9->Add(BoxSizer11, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_batch_panel->SetSizer(BoxSizer9);
-	BoxSizer9->Fit(m_batch_panel);
-	BoxSizer9->SetSizeHints(m_batch_panel);
-/////////STEPPER
-
 	m_stepper_panel = new wxPanel(Notebook1, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
-	FlexGridSizer1_1 = new wxFlexGridSizer(19, 2,0,0);
-
-
-    m_openStepperCOMPort_btn = new wxButton(m_stepper_panel, ID_OPEN_STEPPER_COM_PORT_BTN, _("Open"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_OPEN_STEPPER_COM_PORT_BTN"));
-	m_openStepperCOMPort_btn->SetBackgroundColour(wxColor("green"));
-	FlexGridSizer1_1->Add(m_openStepperCOMPort_btn,0,0,0,0);
-
-	m_setStepperParam_btn = new wxButton(m_stepper_panel, ID_SET_STEPPER_PARAM_BTN, _("Set"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_SET_STEPPER_PARAM_BTN"));
-	FlexGridSizer1_1->Add(m_setStepperParam_btn,0,0,0,0);
-	SS_PortNText = new wxStaticText(m_stepper_panel, ID_SSPORTN, _("Port:"));
-	FlexGridSizer1_1->Add(SS_PortNText, 0,0,0,0);
-    SS_PortNSpin = new wxSpinCtrl(m_stepper_panel, ID_SSPORTNSPIN, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 255, 0, _T("ID_SSPORTNSPIN"));
-	SS_PortNSpin->SetToolTip(_("COMPort for Stepper"));
-	FlexGridSizer1_1->Add(SS_PortNSpin, 0, wxMINIMIZE);
-	SS_MotorNText = new wxStaticText(m_stepper_panel, ID_SSMOTORN, _("Motor:"));
-	FlexGridSizer1_1->Add(SS_MotorNText, 0, wxMINIMIZE);
-    SS_MotorNSpin = new wxSpinCtrl(m_stepper_panel, ID_SSMOTORNSPIN, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 255, 0, _T("ID_SSMOTORNSPIN"));
-	SS_MotorNSpin->SetToolTip(_("Stepper index"));
-	FlexGridSizer1_1->Add(SS_MotorNSpin, 0, wxMINIMIZE);
-	m_resetStepperCounter_btn = new wxButton(m_stepper_panel, ID_RESET_STEPPER_COUNTER_BTN, _("ResetC"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_RESET_STEPPER_COUNTER_BTN"));
-	FlexGridSizer1_1->Add(m_resetStepperCounter_btn,0, wxMINIMIZE);
-	m_resetStepper_btn = new wxButton(m_stepper_panel, ID_RESET_STEPPER_BTN, _("ResetM"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_RESET_STEPPER_BTN"));
-	FlexGridSizer1_1->Add(m_resetStepper_btn,0, wxMINIMIZE);
-	m_moveStepperCWice_btn = new wxButton(m_stepper_panel, ID_MOVE_STEPPER_CWICE_BTN, _("<<<"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_MOVE_STEPPER_CWICE_BTN"));
-	FlexGridSizer1_1->Add(m_moveStepperCWice_btn,0, wxMINIMIZE);
-	m_moveStepperCCWice_btn = new wxButton(m_stepper_panel, ID_MOVE_STEPPER_CCWICE_BTN, _(">>>"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_MOVE_STEPPER_CCWICE_BTN"));
-	FlexGridSizer1_1->Add(m_moveStepperCCWice_btn,0, wxMINIMIZE);
-
-	SS_CalibrText = new wxStaticText(m_stepper_panel, ID_SSCALIBR, _("CalibrK:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_SSCALIBR"));
-	FlexGridSizer1_1->Add(SS_CalibrText, 0, wxMINIMIZE);
-    SS_CalibrSpin = new wxSpinCtrlDbl(m_stepper_panel, ID_SSCALIBRSPIN, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0.000000001, 999999, 200, _T("ID_SSCALIBRSPIN"));
-	SS_CalibrSpin->SetToolTip(_("Calibration of Stepping"));
-	FlexGridSizer1_1->Add(SS_CalibrSpin, 0, wxMINIMIZE);
-
-	SS_SetAng = new wxStaticText(m_stepper_panel, ID_SSANG, _("Ang.[deg]:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_SSANG"));
-	FlexGridSizer1_1->Add(SS_SetAng, 0, wxMINIMIZE);
-	SS_AngSpin = new wxSpinCtrlDbl(m_stepper_panel, ID_SSANG, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0.000001, 10000, 1, _T("ID_SSANG"));
-	SS_AngSpin->SetToolTip(_("Angle for Stepping"));
-	FlexGridSizer1_1->Add(SS_AngSpin, 0, wxMINIMIZE);
-    SS_IText = new wxStaticText(m_stepper_panel, ID_SSI, _("I:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_SSI"));
-	FlexGridSizer1_1->Add(SS_IText, 0, wxMINIMIZE);
-	m_stepperIChoice = new wxChoice(m_stepper_panel, ID_STEPPER_I_CHOICE, wxDefaultPosition, wxSize(90,-1), 0, 0, 0, wxDefaultValidator, _T("ID_STEPPER_I_CHOICE"));
+	FlexGridSizer2 = new wxFlexGridSizer(20, 2, 0, 0);
+	m_openStepperCOMPort_btn = new wxButton(m_stepper_panel, ID_BUTTON1, _("Open"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
+	m_openStepperCOMPort_btn->SetBackgroundColour(wxColour(0,255,128));
+	FlexGridSizer2->Add(m_openStepperCOMPort_btn, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SetStepperParam = new wxButton(m_stepper_panel, ID_BUTTON2, _("Set"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
+	FlexGridSizer2->Add(SetStepperParam, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StaticText2 = new wxStaticText(m_stepper_panel, ID_STATICTEXT3, _("Port:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
+	FlexGridSizer2->Add(StaticText2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_PortNSpin = new wxSpinCtrl(m_stepper_panel, ID_SPINCTRL3, _T("1"), wxDefaultPosition, wxSize(60,21), 0, 0, 100, 1, _T("ID_SPINCTRL3"));
+	SS_PortNSpin->SetValue(_T("1"));
+	SS_PortNSpin->SetToolTip(_("COM-порт драйверу крокового двигуна"));
+	FlexGridSizer2->Add(SS_PortNSpin, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StaticText3 = new wxStaticText(m_stepper_panel, ID_STATICTEXT4, _("Motor:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
+	FlexGridSizer2->Add(StaticText3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_MotorN = new wxChoice(m_stepper_panel, ID_CHOICE2, wxDefaultPosition, wxSize(62,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE2"));
+	SS_MotorN->SetSelection( SS_MotorN->Append(_("0")) );
+	SS_MotorN->Append(_("1"));
+	SS_MotorN->SetToolTip(_("Номер двигуна"));
+	FlexGridSizer2->Add(SS_MotorN, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	ResetStepperCounter = new wxButton(m_stepper_panel, ID_BUTTON4, _("Counter"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
+	ResetStepperCounter->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_MENU));
+	ResetStepperCounter->SetBackgroundColour(wxColour(255,0,0));
+	ResetStepperCounter->SetToolTip(_("Скинути лічильник кроків"));
+	FlexGridSizer2->Add(ResetStepperCounter, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	ResetSHD = new wxButton(m_stepper_panel, ID_BUTTON5, _("Motor"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON5"));
+	ResetSHD->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOW));
+	ResetSHD->SetBackgroundColour(wxColour(145,0,0));
+	ResetSHD->SetToolTip(_("Скинути налаштування двигуна"));
+	FlexGridSizer2->Add(ResetSHD, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StepperMoveCWice = new wxBitmapButton(m_stepper_panel, ID_BITMAPBUTTON1, wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_GO_BACK")),wxART_BUTTON), wxDefaultPosition, wxSize(40,30), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTON1"));
+	StepperMoveCWice->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHT));
+	StepperMoveCWice->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_GRADIENTACTIVECAPTION));
+	FlexGridSizer2->Add(StepperMoveCWice, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StepperMoveCCWice = new wxBitmapButton(m_stepper_panel, ID_BITMAPBUTTON2, wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_GO_FORWARD")),wxART_BUTTON), wxDefaultPosition, wxSize(40,30), wxBU_AUTODRAW, wxDefaultValidator, _T("ID_BITMAPBUTTON2"));
+	StepperMoveCCWice->SetBackgroundColour(wxColour(213,213,0));
+	FlexGridSizer2->Add(StepperMoveCCWice, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	CalibrKLabel = new wxStaticText(m_stepper_panel, ID_STATICTEXT5, _("CalibrK:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT5"));
+	CalibrKLabel->SetToolTip(_("Calibration coef"));
+	FlexGridSizer2->Add(CalibrKLabel, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_CalibrSpin = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL5, _T("127.4"), wxDefaultPosition, wxSize(90,-1), 0, 0, 9999, 127, _T("ID_SPINCTRL5"));
+	SS_CalibrSpin->SetValue(_T("127.4"));
+	SS_CalibrSpin->SetToolTip(_("Коефіцієнт калібровки для кроків"));
+	FlexGridSizer2->Add(SS_CalibrSpin, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StaticText5 = new wxStaticText(m_stepper_panel, ID_STATICTEXT6, _("Ang.[deg]:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT6"));
+	FlexGridSizer2->Add(StaticText5, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_AngSpin = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL6, _T("1."), wxDefaultPosition, wxSize(90,-1), 0, 0, 99999, 1, _T("ID_SPINCTRL6"));
+	SS_AngSpin->SetValue(_T("1."));
+	SS_AngSpin->SetToolTip(_("Кут повороту"));
+	FlexGridSizer2->Add(SS_AngSpin, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	m_stepperIChoice = new wxChoice(m_stepper_panel, ID_CHOICE3, wxDefaultPosition, wxSize(60,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE3"));
 	m_stepperIChoice->Append(_("0"));
-	m_stepperIChoice->Append(_("0.4"));
+	m_stepperIChoice->SetSelection( m_stepperIChoice->Append(_("0.4")) );
 	m_stepperIChoice->Append(_("0.8"));
 	m_stepperIChoice->Append(_("1.2"));
 	m_stepperIChoice->Append(_("1.6"));
 	m_stepperIChoice->Append(_("2.0"));
-	m_stepperIChoice->Select(1);
-	FlexGridSizer1_1->Add(m_stepperIChoice,0, wxMINIMIZE);
-    SS_IStopText = new wxStaticText(m_stepper_panel, ID_SSISTOP, _("I_Stop:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_SSISTOP"));
-	FlexGridSizer1_1->Add(SS_IStopText, 0, wxMINIMIZE);
-    m_stepperIStopChoice = new wxChoice(m_stepper_panel, ID_STEPPER_I_STOP_CHOICE, wxDefaultPosition, wxSize(90,-1), 0, 0, 0, wxDefaultValidator, _T("ID_STEPPER_I_STOP_CHOICE"));
+	m_stepperIChoice->SetToolTip(_("Струм маршування"));
+	FlexGridSizer2->Add(m_stepperIChoice, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	m_stepperIStopChoice = new wxChoice(m_stepper_panel, ID_CHOICE4, wxDefaultPosition, wxSize(60,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE4"));
 	m_stepperIStopChoice->Append(_("0"));
-	m_stepperIStopChoice->Append(_("0.4"));
+	m_stepperIStopChoice->SetSelection( m_stepperIStopChoice->Append(_("0.4")) );
 	m_stepperIStopChoice->Append(_("0.8"));
 	m_stepperIStopChoice->Append(_("1.2"));
 	m_stepperIStopChoice->Append(_("1.6"));
 	m_stepperIStopChoice->Append(_("2.0"));
-	m_stepperIStopChoice->Select(0);
-	FlexGridSizer1_1->Add(m_stepperIStopChoice,0, wxMINIMIZE);
-    SS_WModeText = new wxStaticText(m_stepper_panel, ID_SSWMODE, _("W_Mode:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_SSWMODE"));
-	FlexGridSizer1_1->Add(SS_WModeText, 0, wxMINIMIZE);
-    m_stepperWModeChoice = new wxChoice(m_stepper_panel, ID_STEPPER_W_MODE_CHOICE, wxDefaultPosition, wxSize(90,-1), 0, 0, 0, wxDefaultValidator, _T("ID_STEPPER_W_MODE_CHOICE"));
-	m_stepperWModeChoice->Append(_("Wave"));
+	m_stepperIStopChoice->SetToolTip(_("Струм стримування"));
+	FlexGridSizer2->Add(m_stepperIStopChoice, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StaticText8 = new wxStaticText(m_stepper_panel, ID_STATICTEXT9, _("W_Mode:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT9"));
+	FlexGridSizer2->Add(StaticText8, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	m_stepperWModeChoice = new wxChoice(m_stepper_panel, ID_CHOICE5, wxDefaultPosition, wxSize(60,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE5"));
+	m_stepperWModeChoice->SetSelection( m_stepperWModeChoice->Append(_("Wave")) );
 	m_stepperWModeChoice->Append(_("Full"));
 	m_stepperWModeChoice->Append(_("1/2"));
-	m_stepperWModeChoice->Select(0);
-	FlexGridSizer1_1->Add(m_stepperWModeChoice,0, wxMINIMIZE);
-    SS_FrecText = new wxStaticText(m_stepper_panel, ID_SSFREC, _("Frec:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_SSFREC"));
-	FlexGridSizer1_1->Add(SS_FrecText, 0, wxMINIMIZE);
-    SS_FrecSpin = new wxSpinCtrl(m_stepper_panel, ID_SSFRECSPIN, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 1, 255, 200, _T("ID_SSFRECSPIN"));
-	SS_FrecSpin->SetToolTip(_("Frec. of Stepping"));
-	FlexGridSizer1_1->Add(SS_FrecSpin, 0, wxMINIMIZE);
-
-	SS_MultFrecText = new wxStaticText(m_stepper_panel, ID_SSMULTFREC, _("MultF:"));
-	FlexGridSizer1_1->Add(SS_MultFrecText, 0, wxMINIMIZE);
-    SS_MultFrecSpin = new wxSpinCtrl(m_stepper_panel, ID_SSMULTFRECSPIN, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 1, 255, 1, _T("ID_SSMULTFRECSPIN"));
-	SS_MultFrecSpin->SetToolTip(_("Frec. Multypl."));
-	FlexGridSizer1_1->Add(SS_MultFrecSpin, 0, wxMINIMIZE);
-
-    SS_StepperInterval = new wxSpinCtrl(m_stepper_panel, ID_STEPPER_INTERVAL, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 1, 10000000, 100000, _T("ID_STEPPER_INTERVAL"));
-	SS_StepperInterval->SetToolTip(_("Interval btw. steps"));
-	FlexGridSizer1_1->Add(SS_StepperInterval);
-
-    SS_StepperCapture_btn = new wxButton(m_stepper_panel, ID_STEPPER_CAPTURE_BTN, _("Capture"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_STEPPER_CAPTURE_BTN"));
-	FlexGridSizer1_1->Add(SS_StepperCapture_btn,0, wxMINIMIZE);
-
-	SS_CWiceDirection = new wxButton(m_stepper_panel, ID_SSCWICE_DIRECTION, _("<<"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_SSCWICE_DIRECTION"));
-	FlexGridSizer1_1->Add(SS_CWiceDirection);
-	SS_CCWiceDirection = new wxButton(m_stepper_panel, ID_SSCCWICE_DIRECTION, _(">>"), wxDefaultPosition, wxSize(-1,25), 0, wxDefaultValidator, _T("ID_SSCCWICE_DIRECTION"));
-	FlexGridSizer1_1->Add(SS_CCWiceDirection);
-
-
-
-
-
-
-	//StaticBoxSizer3 = new wxStaticBoxSizer(wxVERTICAL, m_stepper_panel, _("Exposure Meter"));
-	//BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
-	//FlexGridSizer1_1->Add(StaticText1);
+	m_stepperWModeChoice->SetToolTip(_("Режим збудження фаз"));
+	FlexGridSizer2->Add(m_stepperWModeChoice, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StaticText4 = new wxStaticText(m_stepper_panel, ID_STATICTEXT10, _("Frec:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT10"));
+	FlexGridSizer2->Add(StaticText4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_FrecSpin = new wxSpinCtrl(m_stepper_panel, ID_SPINCTRL7, _T("200"), wxDefaultPosition, wxSize(90,-1), 0, 1, 255, 200, _T("ID_SPINCTRL7"));
+	SS_FrecSpin->SetValue(_T("200"));
+	SS_FrecSpin->SetToolTip(_("Тактова частота обертання"));
+	FlexGridSizer2->Add(SS_FrecSpin, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StaticText9 = new wxStaticText(m_stepper_panel, ID_STATICTEXT11, _("MultF:"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT11"));
+	FlexGridSizer2->Add(StaticText9, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_MultFrecSpin = new wxSpinCtrl(m_stepper_panel, ID_SPINCTRL8, _T("1"), wxDefaultPosition, wxSize(90,-1), 0, 1, 255, 1, _T("ID_SPINCTRL8"));
+	SS_MultFrecSpin->SetValue(_T("1"));
+	SS_MultFrecSpin->SetToolTip(_("Множник напівперіоду тактової частоти"));
+	FlexGridSizer2->Add(SS_MultFrecSpin, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_StepperCapture_btn = new wxButton(m_stepper_panel, ID_BUTTON6, _("Capture"), wxDefaultPosition, wxSize(60,23), 0, wxDefaultValidator, _T("ID_BUTTON6"));
+	FlexGridSizer2->Add(SS_StepperCapture_btn, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_StepperInterval = new wxSpinCtrl(m_stepper_panel, ID_SPINCTRL9, _T("1000"), wxDefaultPosition, wxSize(70,21), 0, 1, 0, 1000, _T("ID_SPINCTRL9"));
+	SS_StepperInterval->SetValue(_T("1000"));
+	SS_StepperInterval->SetToolTip(_("Час релаксації [мс]"));
+	FlexGridSizer2->Add(SS_StepperInterval, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_CWiceDirection = new wxButton(m_stepper_panel, ID_BUTTON7, _("<<<"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON7"));
+	wxFont SS_CWiceDirectionFont(12,wxSWISS,wxFONTSTYLE_NORMAL,wxBOLD,false,_T("Stencil"),wxFONTENCODING_DEFAULT);
+	SS_CWiceDirection->SetFont(SS_CWiceDirectionFont);
+	SS_CWiceDirection->SetToolTip(_("Напрям обертання при зйомці"));
+	FlexGridSizer2->Add(SS_CWiceDirection, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_CCWiceDirection = new wxButton(m_stepper_panel, ID_BUTTON8, _(">>>"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON8"));
+	SS_CCWiceDirection->Disable();
+	wxFont SS_CCWiceDirectionFont(12,wxSWISS,wxFONTSTYLE_NORMAL,wxBOLD,false,_T("Stencil"),wxFONTENCODING_DEFAULT);
+	SS_CCWiceDirection->SetFont(SS_CCWiceDirectionFont);
+	SS_CCWiceDirection->SetToolTip(_("Напрям обертання при зйомці"));
+	FlexGridSizer2->Add(SS_CCWiceDirection, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	SS_CurrentAngle = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL10, _T("0"), wxDefaultPosition, wxSize(80,-1), 0, -99999, 99999, 0, _T("ID_SPINCTRL10"));
+	SS_CurrentAngle->SetValue(_T("0"));
+	SS_CurrentAngle->SetToolTip(_("Поточний кут"));
+	FlexGridSizer2->Add(SS_CurrentAngle, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	m_meter_channel = new wxChoice(m_stepper_panel, ID_CHOICE1, wxDefaultPosition, wxSize(50,-1), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE1"));
 	m_meter_channel->Append(_("L"));
 	m_meter_channel->Append(_("R"));
 	m_meter_channel->Append(_("G"));
 	m_meter_channel->Append(_("B"));
 	m_meter_channel->SetToolTip(_("Select colour channel for histogram"));
-	FlexGridSizer1_1->Add(m_meter_channel);
-
-
-    SS_CurrentAngle = new wxSpinCtrlDbl(m_stepper_panel, ID_SSCURRENTANGLE, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, -999999, 999999, 0, _T("ID_SSCURRENTANGLE"));
-    FlexGridSizer1_1->Add(SS_CurrentAngle);
-	m_exposure_meter_panel = new wxPanel(m_stepper_panel, ID_PANEL3, wxDefaultPosition, wxSize(128,64), 0, _T("ID_PANEL3"));
-	m_exposure_meter_panel->SetMaxSize(wxSize(328,364));
-	m_exposure_meter_panel->SetToolTip(_("Live histogram"));
-    //StaticText1 = new wxStaticText(m_stepper_panel, ID_STATICTEXT2, _("Channel"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
-    LE_SpinCtrl1 = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL1, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 100, 0, _T("ID_SPINCTRL1"));
-	LE_SpinCtrl1->SetToolTip(_("Length of long exposure in seconds"));
-	BoxSizer14 = new wxBoxSizer(wxHORIZONTAL);
-	LE_Text = new wxStaticText(m_stepper_panel, ID_STATICTEXT1, _("[sec]"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
-
-	FlexGridSizer1_1->Add(LE_SpinCtrl1);
-	FlexGridSizer1_1->Add(LE_Text);
-
-
-	//BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-	m_activate_exposure_meter = new wxCheckBox(m_stepper_panel, ID_CHECKBOX2, _("Enable "), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
+	FlexGridSizer2->Add(m_meter_channel, 1, wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	m_activate_exposure_meter = new wxCheckBox(m_stepper_panel, ID_CHECKBOX2, _("Enable "), wxDefaultPosition, wxSize(68,20), 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
 	m_activate_exposure_meter->SetValue(false);
 	m_activate_exposure_meter->SetToolTip(_("Check to enable live histogram"));
-	m_meter_scale = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL2, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 100, 0, _T("ID_SPINCTRL2"));
+	FlexGridSizer2->Add(m_activate_exposure_meter, 0, wxTOP|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	m_meter_scale = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL2, wxEmptyString, wxDefaultPosition, wxSize(40,-1), 0, 0, 100, 0, _T("ID_SPINCTRL2"));
 	m_meter_scale->SetToolTip(_("Scale factor for histogram"));
-	FlexGridSizer1_1->Add(m_meter_scale);
-	FlexGridSizer1_1->Add(m_activate_exposure_meter);
-
-    //FlexGridSizer1_1->Add(m_exposure_meter_panel);
-
-    //FlexGridSizer1_1->SetVGap(0);
-    BoxSizer4 = new wxBoxSizer(wxVERTICAL);
-    BoxSizer4->Add(FlexGridSizer1_1);
-
-    //BoxSizer4->Add(m_activate_exposure_meter);
-    BoxSizer4->Add(m_exposure_meter_panel,  1, wxTOP|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 2);
-    m_stepper_panel->SetSizer(BoxSizer4);
-	FlexGridSizer1_1->Fit(m_stepper_panel);
-	FlexGridSizer1_1->SetSizeHints(m_stepper_panel);
-
-/////////sTEPPER
+	FlexGridSizer2->Add(m_meter_scale, 1, wxTOP|wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	LE_CheckBox = new wxCheckBox(m_stepper_panel, ID_CHECKBOX1, _("Long exposure"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
+	LE_CheckBox->SetValue(false);
+	LE_CheckBox->SetToolTip(_("Check to enable webcam long exposure"));
+	FlexGridSizer2->Add(LE_CheckBox, 1, wxTOP|wxLEFT|wxRIGHT|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	LE_SpinCtrl1 = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL1, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 100, 0, _T("ID_SPINCTRL1"));
+	LE_SpinCtrl1->SetToolTip(_("Length of long exposure in seconds"));
+	FlexGridSizer2->Add(LE_SpinCtrl1, 0, wxTOP|wxLEFT|wxEXPAND|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 4);
+	m_exposure_meter_panel = new wxPanel(m_stepper_panel, ID_PANEL3, wxDefaultPosition, wxSize(58,64), 0, _T("ID_PANEL3"));
+	m_exposure_meter_panel->SetMaxSize(wxSize(128,64));
+	m_exposure_meter_panel->SetToolTip(_("Live histogram"));
+	FlexGridSizer2->Add(m_exposure_meter_panel, 2, wxTOP|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 3);
+	m_stepper_panel->SetSizer(FlexGridSizer2);
+	FlexGridSizer2->Fit(m_stepper_panel);
+	FlexGridSizer2->SetSizeHints(m_stepper_panel);
 	Notebook1->AddPage(m_record_panel, _("Rec"), false);
-	Notebook1->AddPage(m_guide_panel, _("Guide"), false);
-	Notebook1->AddPage(m_batch_panel, _("Batch"), false);
 	Notebook1->AddPage(m_stepper_panel, _("Stepper"), false);
 	BoxSizer1->Add(Notebook1, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
@@ -576,8 +412,9 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	Menu3 = new wxMenu();
 	MenuItem7 = new wxMenuItem(Menu3, ID_MENUITEM_SETTINGS, _("Settings..."), wxEmptyString, wxITEM_NORMAL);
 	Menu3->Append(MenuItem7);
-	MenuItemGuiding = new wxMenuItem(Menu3, ID_MENUITEM_GUIDING2, _("Guiding..."), wxEmptyString, wxITEM_NORMAL);
-	Menu3->Append(MenuItemGuiding);
+//	MenuItemGuiding = new wxMenuItem(Menu3, ID_MENUITEM_GUIDING2, _("Guiding..."), wxEmptyString, wxITEM_NORMAL);
+//	Menu3->Append(MenuItemGuiding);
+//	MenuItemGuiding->Enable(false);
 	MenuItem9 = new wxMenuItem(Menu3, ID_MENUITEM_HEADER, _("FITS Header..."), wxEmptyString, wxITEM_NORMAL);
 	Menu3->Append(MenuItem9);
 	MenuBar1->Append(Menu3, _("Options"));
@@ -601,45 +438,29 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	Connect(ID_BUTTON3,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnPauseClick);
 	Connect(ID_TEXTCTRL1,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnIncrementText);
 	Connect(ID_CHECKBOX7,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMaxFrames_CheckBoxClick);
-	Connect(ID_CHECKBOX1,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnLE_CheckBoxClick);
-	Connect(ID_SPINCTRL1,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnLE_SpinCtrl1Change);
+	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnOpenStepperCOMPortClick);
+	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnSetStepperParamClick);
+//	Connect(ID_SPINCTRL3,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnSS_PortNSpinChange);
+	Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnResetStepperCounterClick);
+	Connect(ID_BUTTON5,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnResetSHDClick);
+	Connect(ID_BITMAPBUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperMoveCCWiceClick);
+	Connect(ID_BITMAPBUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperMoveCWiceClick);
+	Connect(ID_BUTTON6,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperCaptureClick);
+	Connect(ID_BUTTON7,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnCWStepperDirectionClick);
+	Connect(ID_BUTTON8,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnCCWStepperDirectionClick);
 	Connect(ID_CHOICE1,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMeterChannelSelect);
 	Connect(ID_CHECKBOX2,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnActivateExposureMeterClick);
 	Connect(ID_SPINCTRL2,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnExposureMeteScaleChange);
-	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnPickGuideStarClick);
-	Connect(ID_CHECKBOX3,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnGuideTelescopeClick);
-	Connect(ID_CHECKBOX4,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnReverseRAClick);
-	Connect(ID_CHECKBOX6,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnReverseDECClick);
-	Connect(ID_CHOICE2,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnDecNSChoiceSelect);
-	Connect(ID_SPINCTRL3,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnRaAggrSpinChange);
-	Connect(ID_SPINCTRL5,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnDecAggrSpinChange);
-	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnAdvancedGuideParamsClick);
-	Connect(ID_BATCH_CAPTURE_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStartBatchButtonClick);
-	Connect(ID_BUTTON5,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnPauseBatchButtonClick);
+	Connect(ID_CHECKBOX1,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnLE_CheckBoxClick);
+	Connect(ID_SPINCTRL1,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnLE_SpinCtrl1Change);
 	Connect(ID_NOTEBOOK1,wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED,(wxObjectEventFunction)&wxWebcamDBFrame::OnNotebook1PageChanged);
-	video_panel->Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&wxWebcamDBFrame::OnvideoPanelLeftDown,0,this);
 	Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnQuit);
 	Connect(ID_MENUITEM_CONNECT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMenuItemConnect);
 	Connect(ID_MENUITEM_DISCONNECT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMenuItemDisconnect);
 	Connect(ID_MENUITEM_SETTINGS,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMenuItemSettings);
-	Connect(ID_MENUITEM_GUIDING2,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMenuItemOptionsGuiding);
 	Connect(ID_MENUITEM_HEADER,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMenuItemImageHeader);
 	Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnAbout);
 	Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&wxWebcamDBFrame::OnClose);
-	///Stepper
-	Connect(ID_SET_STEPPER_PARAM_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnSetStepperParamClick);
-	Connect(ID_OPEN_STEPPER_COM_PORT_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnOpenStepperCOMPortClick);
-	Connect(ID_MOVE_STEPPER_CWICE_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperMoveCWiceClick);
-	Connect(ID_MOVE_STEPPER_CCWICE_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperMoveCCWiceClick);
-	Connect(ID_RESET_STEPPER_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnResetSHDClick);
-	Connect(ID_RESET_STEPPER_COUNTER_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnResetStepperCounterClick);
-    Connect(ID_STEPPER_CAPTURE_BTN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperCaptureClick);
-    Connect(ID_SSCWICE_DIRECTION,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)& wxWebcamDBFrame::OnCWStepperDirectionClick);
-    Connect(ID_SSCCWICE_DIRECTION,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)& wxWebcamDBFrame::OnCCWStepperDirectionClick);
-    Connect(ID_SSCURRENTANGLE,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)& wxWebcamDBFrame::OnSpinCurrentAngleChanged);
-
-//ID_SSCURRENTANGLE
-	///sTEPPER
 	//*)
 
     /* ======================================================================== */
@@ -820,38 +641,38 @@ for (int i=0; i<filtersArray.size(); i++){
 
    m_exposure_meter_scale = m_meter_scale->GetValue();
 
-   m_guide_active = true;
+//   m_guide_active = true;
 
-   bool reverseRA,reverseDEC;
-   wxGuidingConfig::DECguiding dec;
-   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
+////   bool reverseRA,reverseDEC;
+////   wxGuidingConfig::DECguiding dec;
+//////   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
 
-   m_reverseRA->SetValue(reverseRA);
-   m_reverseDEC->SetValue(reverseDEC);
-   m_decNSChoice->SetSelection(dec);
+//   m_reverseRA->SetValue(reverseRA);
+//   m_reverseDEC->SetValue(reverseDEC);
+//   m_decNSChoice->SetSelection(dec);
 
-   m_RaAggrSpin->SetRange(0.0,100.0);
-   m_RaAggrSpin->SetIncrement(0.5);
+//   m_RaAggrSpin->SetRange(0.0,100.0);
+//   m_RaAggrSpin->SetIncrement(0.5);
 
-   m_DecAggrSpin->SetRange(0.0,100.0);
-   m_DecAggrSpin->SetIncrement(0.5);
+//   m_DecAggrSpin->SetRange(0.0,100.0);
+//   m_DecAggrSpin->SetIncrement(0.5);
 
-   UpdateGuiderTuning();
+//   UpdateGuiderTuning();
    ATrtAddr = 255;
    isStepperConnected = false;
 }
 
-void wxWebcamDBFrame::UpdateGuiderTuning()
+/*void wxWebcamDBFrame::UpdateGuiderTuning()
 {
    // skip this update if camera is artemis
    wxArtcam* artcam = wxF()->artcam();
    if(artcam)return;
 
-   if(wxGuider* guider = wxF()->guider()) {
-      m_RaAggrSpin->SetValue(guider->raK());
-      m_DecAggrSpin->SetValue(guider->decK());
+//   if(wxGuider* guider = wxF()->guider()) {
+//      m_RaAggrSpin->SetValue(guider->raK());
+//      m_DecAggrSpin->SetValue(guider->decK());
    }
-}
+}*/
 
 void wxWebcamDBFrame::UpdateIncrement()
 {
@@ -1169,7 +990,7 @@ void wxWebcamDBFrame::OnMenuItemConnect(wxCommandEvent& WXUNUSED(event))
             }
          }
 
-         bool enable_guiding = true;
+//         bool enable_guiding = true;
 
          // connect to the selected instance
          bool camOK = false;
@@ -1191,8 +1012,8 @@ void wxWebcamDBFrame::OnMenuItemConnect(wxCommandEvent& WXUNUSED(event))
 
             //  ToolBar1->CamEnable();
             ToolBar1->InitToolBar();
-            // disable guide tab when camera does not support it
-            enable_guiding = new_camera->SupportsGuiding();
+//            // disable guide tab when camera does not support it
+//            enable_guiding = new_camera->SupportsGuiding();
          }
 
          #if defined(_WXMSW_)
@@ -1201,15 +1022,15 @@ void wxWebcamDBFrame::OnMenuItemConnect(wxCommandEvent& WXUNUSED(event))
             Menu2->Enable(ID_MENUITEM_DD,new_camera->HasDriverDialogs());
          #endif
 
-         m_batch_setup->Init();
+//         m_batch_setup->Init();
 
-         m_guide_panel->Enable(enable_guiding);
+//         m_guide_panel->Enable(enable_guiding);
       }
 
       // always start in short exposure mode
       LE_CheckBox->SetValue(false);
       UpdateLEcontrols();
-      UpdateBatchControls();
+//      UpdateBatchControls();
 
       ClearExposureMeter();
    }
@@ -1226,8 +1047,8 @@ void wxWebcamDBFrame::OnMenuItemDisconnect(wxCommandEvent& WXUNUSED(event))
   // ToolBar1->CamEnable();
    ToolBar1->InitToolBar();
 
-   // re-enable guide panel on disconnect in case it was disabled
-   m_guide_panel->Enable(true);
+//   // re-enable guide panel on disconnect in case it was disabled
+//   m_guide_panel->Enable(true);
 
    // we can close the LE port here
    wxF()->lePortRelease(true);
@@ -1277,11 +1098,11 @@ void wxWebcamDBFrame::OnUpdateCamData(wxCommandEvent& event)
 {
    if (event.GetEventType()==wxEVT_WXAC_TIMER) {
       UpdateStatusBar();
-      UpdateBatchControls();
+//      UpdateBatchControls();
    }
    else if (event.GetEventType()==wxEVT_WXAC_FRAME) {
       UpdateStatusBar();
-      UpdateBatchControls();
+//      UpdateBatchControls();
    }
    else {
       event.Skip();
@@ -1293,7 +1114,7 @@ void wxWebcamDBFrame::OnIdle(wxIdleEvent& WXUNUSED(event))
 {
    UpdateStatusBar();
    UpdateExposureMeter();
-   UpdateGuiderTuning();
+//   UpdateGuiderTuning();
    UpdateIncrement();
    ToolBar1->UpdateToolBar();
 }
@@ -1339,10 +1160,11 @@ void wxWebcamDBFrame::UpdateLEcontrols()
 
    if (!leCheckBox) LE_CheckBox->SetValue(leCheckBox);
    LE_CheckBox->Enable(leCheckBox);
-   LE_Text->Enable(leSpinText);
+//   LE_Text->Enable(leSpinText);
    LE_SpinCtrl1->Enable(leSpinText);
 }
 
+/*
 void wxWebcamDBFrame::UpdateBatchControls()
 {
    BatchJobManager* bjm = wxF()->batchJobManager();
@@ -1400,7 +1222,7 @@ void wxWebcamDBFrame::UpdateBatchControls()
       }
       m_batch_status3->SetLabel(_T(" "));
    }
-}
+}*/
 
 void wxWebcamDBFrame::OnVideoDeviceProperties(wxCommandEvent& WXUNUSED(event))
 {
@@ -1413,26 +1235,26 @@ void wxWebcamDBFrame::OnVideoDeviceProperties(wxCommandEvent& WXUNUSED(event))
 }
 
 
-void wxWebcamDBFrame::OnMenuItemGuidingSelected(wxCommandEvent& WXUNUSED(event))
-{
-   /// THIS IS THE OLD DIALOG, no longer used
+//void wxWebcamDBFrame::OnMenuItemGuidingSelected(wxCommandEvent& WXUNUSED(event))
+//{
+//   /// THIS IS THE OLD DIALOG, no longer used
 /*
-    OptionsGuiding* dialog = OptionsGuiding::singleton();
+//    OptionsGuiding* dialog = OptionsGuiding::singleton();
     if(!dialog) {
-       dialog = new OptionsGuiding(m_record_panel);
+//       dialog = new OptionsGuiding(m_record_panel);
     }
     dialog->Show();
 */
-}
+//}
 
-void wxWebcamDBFrame::OnMenuItemOptionsGuiding(wxCommandEvent& WXUNUSED(event))
+/*void wxWebcamDBFrame::OnMenuItemOptionsGuiding(wxCommandEvent& WXUNUSED(event))
 {
-   wxGuidingOptions* dialog = wxGuidingOptions::singleton();
+//   wxGuidingOptions* dialog = wxGuidingOptions::singleton();
    if(!dialog) {
-      dialog = new wxGuidingOptions(m_record_panel);
+//      dialog = new wxGuidingOptions(m_record_panel);
    }
    dialog->Show();
-}
+}*/
 
 void wxWebcamDBFrame::OnShowReticleClick(wxCommandEvent& event)
 {
@@ -1508,7 +1330,7 @@ void wxWebcamDBFrame::StartCapture(bool batch)
          }
 
          if(batch) {
-
+/*
             // prepare and start batch capture
             BatchJobManager::BatchList batch_list;
             m_batch_setup->GetValue(batch_list);
@@ -1526,7 +1348,7 @@ void wxWebcamDBFrame::StartCapture(bool batch)
                 if(wxCamera* cam = wxF()->cam()) {
                    cam->SetLEduration((unsigned long)(exposure*1000.0) );
                 }
-            }
+            }*/
          }
          else {
             // ordinary capture
@@ -1547,7 +1369,7 @@ void wxWebcamDBFrame::StartCapture(bool batch)
                m_capture_btn->SetLabel(_T("Stop"));
                m_pause_btn->Enable(true);
                m_increment->Enable(false);
-               m_batchCapture_btn->Enable(false);  // CA 20090331: disable batch capture during normal capture
+//               m_batchCapture_btn->Enable(false);  // CA 20090331: disable batch capture during normal capture
                m_gauge1->SetValue(0);
                m_gdir = 1;
 
@@ -1569,10 +1391,10 @@ void wxWebcamDBFrame::StopCapture()
             cam->StopCapture();
 
             // batch job
-            wxF()->batchJobManager()->setActive(false);
-            m_batchCapture_btn->Enable(true); // CA 20090331: re-enable batch capture
-            PauseBatchButton->Enable(false);
-            m_batchCapture_btn->SetLabel(_T("Start Batch"));
+//            wxF()->batchJobManager()->setActive(false);
+//            m_batchCapture_btn->Enable(true); // CA 20090331: re-enable batch capture
+ //           PauseBatchButton->Enable(false);
+   //         m_batchCapture_btn->SetLabel(_T("Start Batch"));
 
             m_capture_btn->Enable(true); // CA 20090331: re-enable normal capture
             m_capture_btn->SetLabel(_T("Capture"));
@@ -1596,7 +1418,7 @@ void wxWebcamDBFrame::ContinueCapture(bool batch)
          if(cam->IsCapturePausing()) {
             cam->ContinueCapture();
             if(batch){
-               PauseBatchButton->SetLabel(_T("Pause Batch"));
+ //              PauseBatchButton->SetLabel(_T("Pause Batch"));
             }
             else {
                m_pause_btn->SetLabel(_T("Pause"));
@@ -1616,7 +1438,7 @@ void wxWebcamDBFrame::PauseCapture(bool batch)
          if(!cam->IsCapturePausing()) {
             cam->PauseCapture();
             if(batch){
-               PauseBatchButton->SetLabel(_T("Continue Batch"));
+ //              PauseBatchButton->SetLabel(_T("Continue Batch"));
             }
             else {
                m_pause_btn->SetLabel(_T("Continue"));
@@ -1662,39 +1484,39 @@ void wxWebcamDBFrame::OnLE_SpinCtrl1Change(wxSpinEvent& WXUNUSED(event))
 
 
 
-void wxWebcamDBFrame::OnPickGuideStarClick(wxCommandEvent& WXUNUSED(event))
+/*void wxWebcamDBFrame::OnPickGuideStarClick(wxCommandEvent& WXUNUSED(event))
 {
-   // stop any ongoing guiding
-   m_guide_timer.Stop();
+//   // stop any ongoing guiding
+//   m_guide_timer.Stop();
 
    // set up the event to handle the mouse click in the video frame
    if (!wxF()->cam()->IsWebcam()) return;
 
-   wxGuider* guider = wxF()->guider();
+//   wxGuider* guider = wxF()->guider();
 
-   // Make sure there is a valid guideport
-   wxGuiderPort*  guideport = wxF()->guidePort();
+//   // Make sure there is a valid guideport
+//   wxGuiderPort*  guideport = wxF()->guidePort();
 
-   if(guider->interface_type() == wxGuider::PORT_INTERFACE) {
-      if(!guideport || !guideport->IsInitialised() ) {
-         wxMessageBox(wxT("Guide port is not available or not usable."));
+//   if(guider->interface_type() == wxGuider::PORT_INTERFACE) {
+//      if(!guideport || !guideport->IsInitialised() ) {
+//         wxMessageBox(wxT("Guide port is not available or not usable."));
          return;
       }
    }
 
-   //20080825:CA Zoomed guiding not supported
-   //20080826:CA Subframed guiding not supported
+//   //20080825:CA Zoomed guiding not supported
+//   //20080826:CA Subframed guiding not supported
    if(wxCamera* camera = wxF()->cam()) {
       camera->unZoom();
       camera->SetFullFrame();
    }
       // make sure the on/off flag reflects the gui setting
-   m_guide_active = GuideTelescope->GetValue();
+//   m_guide_active = GuideTelescope->GetValue();
 
    wxWebcam* camera =  wxF()->webcam();
    wxImage* image = camera->liveImage();
 
-   if(!camera->isGuiding() && image->IsOk()) {
+//   if(!camera->isGuiding() && image->IsOk()) {
       camera->Connect(ID_CAMERA_PANEL,wxEVT_LEFT_DOWN,wxMouseEventHandler(wxWebcamDBFrame::OnvideoPanelLeftDown),0,this);
 
       // make a white 32x32 cross hair cursor with centereed hot spot
@@ -1708,35 +1530,35 @@ void wxWebcamDBFrame::OnPickGuideStarClick(wxCommandEvent& WXUNUSED(event))
       camera->wxWindow::SetCursor(wxCursor(wxCURSOR_BULLSEYE));
 #endif
 
-      // make sure guide port is open
-      if(guider->interface_type() == wxGuider::PORT_INTERFACE) {
-         if(guideport)guideport->ReopenPort();
+//      // make sure guide port is open
+//      if(guider->interface_type() == wxGuider::PORT_INTERFACE) {
+//         if(guideport)guideport->ReopenPort();
       }
 
-      // make sure guide sequence is started
-      if(guider) guider->guideStart();
+//      // make sure guide sequence is started
+//      if(guider) guider->guideStart();
 
    }
    else {
-      // cancel the guiding
-      camera->cancelGuideBox();
-      PickGuideStar->SetLabel(wxT("Pick Guide Star"));
+//      // cancel the guiding
+//      camera->cancelGuideBox();
+//      PickGuideStar->SetLabel(wxT("Pick Guide Star"));
 
-      m_guide_dx->SetLabel(wxT("N/A"));
-      m_guide_dy->SetLabel(wxT("N/A"));
-      m_guide_mag->SetLabel(wxT("N/A"));
+//      m_guide_dx->SetLabel(wxT("N/A"));
+//      m_guide_dy->SetLabel(wxT("N/A"));
+//      m_guide_mag->SetLabel(wxT("N/A"));
 
-      // terminate the guider also, even if the m_guide_active is false
-      if(wxGuider* guider = wxF()->guider()) guider->guideEnd();
+//      // terminate the guider also, even if the m_guide_active is false
+//      if(wxGuider* guider = wxF()->guider()) guider->guideEnd();
 
       // release the port again
-      guideport->ReleasePort();
+//      guideport->ReleasePort();
    }
 
    // this will handle enbling and disabling of zooming in toolbar
    ToolBar1->InitToolBar();
-}
-
+}*/
+/*
 void wxWebcamDBFrame::OnvideoPanelLeftDown(wxMouseEvent& event)
 {
    wxWebcam* camera =  wxF()->webcam();
@@ -1745,44 +1567,44 @@ void wxWebcamDBFrame::OnvideoPanelLeftDown(wxMouseEvent& event)
    wxImage* image = camera->liveImage();
    if(!image->IsOk())return;
 
-   int guideBoxSize,bacgroundCutoff,guideInterval;
+//   int guideBoxSize,bacgroundCutoff,guideInterval;
    double imageScale, cameraAngle;
-   wxGuidingConfig::getGuidingConfig(guideBoxSize,bacgroundCutoff,guideInterval,imageScale,cameraAngle);
+//   wxGuidingConfig::getGuidingConfig(guideBoxSize,bacgroundCutoff,guideInterval,imageScale,cameraAngle);
 
-   m_guide_subframe.setCameraAngle(cameraAngle);
-   m_guide_subframe.setImageScale(imageScale);
-   m_guide_subframe.setCutoffLimit(bacgroundCutoff);
+//   m_guide_subframe.setCameraAngle(cameraAngle);
+//   m_guide_subframe.setImageScale(imageScale);
+//   m_guide_subframe.setCutoffLimit(bacgroundCutoff);
 
-   // get position and guide box size
+//   // get position and guide box size
    wxPoint DC_point = event.GetPosition();
-   wxSize subsiz(guideBoxSize,guideBoxSize);
+//   wxSize subsiz(guideBoxSize,guideBoxSize);
 
-   // convert to image coordinates and enable the guide box display
+//   // convert to image coordinates and enable the guide box display
    wxRealPoint imagePoint(DC_point.x,DC_point.y);
-  // camera->imagePointfromDC(DC_point,imagePoint);  //20080825:CA Zoomed guiding not supported
-   camera->setGuideBox(imagePoint,imagePoint,subsiz);
-   PickGuideStar->SetLabel(wxT("Stop Tracking"));
+//  // camera->imagePointfromDC(DC_point,imagePoint);  //20080825:CA Zoomed guiding not supported
+//   camera->setGuideBox(imagePoint,imagePoint,subsiz);
+//   PickGuideStar->SetLabel(wxT("Stop Tracking"));
 
    // init the subframe
    wxSize fullsize(image->GetWidth(),image->GetHeight());
-   m_guide_subframe.setFrameInfo(fullsize,subsiz,imagePoint);
+//   m_guide_subframe.setFrameInfo(fullsize,subsiz,imagePoint);
    bool inverted = camera->liveImageInverted();
 
-   // lock onto the guidestar
+//   // lock onto the guidestar
    bool locked = false;
-   if(image && m_guide_subframe.copySubFrame(*image,inverted)) {
+//   if(image && m_guide_subframe.copySubFrame(*image,inverted)) {
 
-      // lock on the selected guide star
+//      // lock on the selected guide star
       wxStar offset_star;
-      if(m_guide_subframe.guide(offset_star)) {
+//      if(m_guide_subframe.guide(offset_star)) {
 
-         // just a simple timer loop for now to drive the guiding
+//         // just a simple timer loop for now to drive the guiding
          // maybe a thread with a timer later
-         m_guide_timer.Start(guideInterval);
+//         m_guide_timer.Start(guideInterval);
 
-         if(wxGuider* guider =  wxF()->guider()) {
-            // set actual guider interval
-            guider->setGuideInterval(guideInterval);
+//         if(wxGuider* guider =  wxF()->guider()) {
+//            // set actual guider interval
+//            guider->setGuideInterval(guideInterval);
          }
          locked = true;
       }
@@ -1793,12 +1615,12 @@ void wxWebcamDBFrame::OnvideoPanelLeftDown(wxMouseEvent& event)
  	camera->wxWindow::SetCursor(*wxSTANDARD_CURSOR);
 
  	if(!locked) {
- 	   wxMessageBox(wxT("Could not lock onto the selected guide star"));
+// 	   wxMessageBox(wxT("Could not lock onto the selected guide star"));
  	}
 }
+*/
 
-
-void wxWebcamDBFrame::OnGuideTimer(wxTimerEvent& WXUNUSED(event))
+/*void wxWebcamDBFrame::OnGuideTimer(wxTimerEvent& WXUNUSED(event))
 {
    if (!wxF()->cam()->IsWebcam()) return;
 
@@ -1806,109 +1628,109 @@ void wxWebcamDBFrame::OnGuideTimer(wxTimerEvent& WXUNUSED(event))
    wxImage* image = camera->liveImage();
    bool inverted = camera->liveImageInverted();
 
-   // extract guiding subframe from fullframe
-   if(image && m_guide_subframe.copySubFrame(*image,inverted)) {
+//   // extract guiding subframe from fullframe
+//   if(image && m_guide_subframe.copySubFrame(*image,inverted)) {
 
       // compute the star offset
       wxStar offset_star;
-      if(m_guide_subframe.guide(offset_star)) {
+//      if(m_guide_subframe.guide(offset_star)) {
 
-         bool reverseRA,reverseDEC;
-         wxGuidingConfig::DECguiding dec_opt;
-         wxGuidingConfig::getCachedGuidingOptions(reverseRA,reverseDEC,dec_opt);
+////         bool reverseRA,reverseDEC;
+////         wxGuidingConfig::DECguiding dec_opt;
+//////         wxGuidingConfig::getCachedGuidingOptions(reverseRA,reverseDEC,dec_opt);
 
-         double ra  = (reverseRA)?  -offset_star.x() : offset_star.x();
-         double dec = (reverseDEC)? -offset_star.y() : offset_star.y();
+//         double ra  = (reverseRA)?  -offset_star.x() : offset_star.x();
+//         double dec = (reverseDEC)? -offset_star.y() : offset_star.y();
 
          double realdec = dec;
          bool   decupd = false;
          switch(dec_opt) {
-            case wxGuidingConfig::NoDecGuiding: { dec = 0.0;             decupd=true; break; }
-            case wxGuidingConfig::NorthOnly:    { if(dec<0.0) dec = 0.0; decupd=true; break; }
-            case wxGuidingConfig::SouthOnly:    { if(dec>0.0) dec = 0.0; decupd=true; break; }
+//            case wxGuidingConfig::NoDecGuiding: { dec = 0.0;             decupd=true; break; }
+//            case wxGuidingConfig::NorthOnly:    { if(dec<0.0) dec = 0.0; decupd=true; break; }
+//            case wxGuidingConfig::SouthOnly:    { if(dec>0.0) dec = 0.0; decupd=true; break; }
             default: {}
          };
 
-         // do not send guider commands unless it has been enabled
-         if(m_guide_active) {
-            if(wxGuider* guider = wxF()->guider()) {
+//         // do not send guider commands unless it has been enabled
+//         if(m_guide_active) {
+//            if(wxGuider* guider = wxF()->guider()) {
                // wxBell();
-               guider->guideError(m_guide_subframe.timestamp_ms(),ra,dec);
+//               guider->guideError(m_guide_subframe.timestamp_ms(),ra,dec);
             }
          }
 
         // update numbers in GUI
-         m_guide_dx->SetLabel(wxString::Format(wxT("%.1f"),ra));
-         if(decupd)m_guide_dy->SetLabel(wxString::Format(wxT("%.1f  (%.1f)"),dec,realdec));
-         else      m_guide_dy->SetLabel(wxString::Format(wxT("%.1f"),dec));
-         m_guide_mag->SetLabel(wxString::Format(wxT("%.0f"),offset_star.mag()));
+//         m_guide_dx->SetLabel(wxString::Format(wxT("%.1f"),ra));
+//         if(decupd)m_guide_dy->SetLabel(wxString::Format(wxT("%.1f  (%.1f)"),dec,realdec));
+//         else      m_guide_dy->SetLabel(wxString::Format(wxT("%.1f"),dec));
+//         m_guide_mag->SetLabel(wxString::Format(wxT("%.0f"),offset_star.mag()));
 
-         // update camera guide box overlay
-         wxRealPoint curcen = m_guide_subframe.centre();
-         camera->setGuideBox(m_guide_subframe.lockpos(),curcen,m_guide_subframe.size());
+//         // update camera guide box overlay
+//         wxRealPoint curcen = m_guide_subframe.centre();
+//         camera->setGuideBox(m_guide_subframe.lockpos(),curcen,m_guide_subframe.size());
        }
    }
 }
 
+*/
 
-
-void wxWebcamDBFrame::OnGuideTelescopeClick(wxCommandEvent& event)
+/*void wxWebcamDBFrame::OnGuideTelescopeClick(wxCommandEvent& event)
 {
    // Just set the flag here, nothing else
-   m_guide_active = event.IsChecked();
-}
+//   m_guide_active = event.IsChecked();
+}*/
 
-void wxWebcamDBFrame::OnReverseRAClick(wxCommandEvent& event)
+/*void wxWebcamDBFrame::OnReverseRAClick(wxCommandEvent& event)
 {
-   bool reverseRA,reverseDEC;
-   wxGuidingConfig::DECguiding dec;
-   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
-   reverseRA = event.IsChecked();
-   wxGuidingConfig::saveGuidingOptions(reverseRA,reverseDEC,dec);
+////   bool reverseRA,reverseDEC;
+////   wxGuidingConfig::DECguiding dec;
+//////   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
+//   reverseRA = event.IsChecked();
+//////   wxGuidingConfig::saveGuidingOptions(reverseRA,reverseDEC,dec);
 }
-
-void wxWebcamDBFrame::OnReverseDECClick(wxCommandEvent& event)
+*/
+/*void wxWebcamDBFrame::OnReverseDECClick(wxCommandEvent& event)
 {
-   bool reverseRA,reverseDEC;
-   wxGuidingConfig::DECguiding dec;
-   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
-   reverseDEC = event.IsChecked();
-   wxGuidingConfig::saveGuidingOptions(reverseRA,reverseDEC,dec);
-}
-
+////   bool reverseRA,reverseDEC;
+////   wxGuidingConfig::DECguiding dec;
+//////   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
+//   reverseDEC = event.IsChecked();
+//////   wxGuidingConfig::saveGuidingOptions(reverseRA,reverseDEC,dec);
+}*/
+/*
 void wxWebcamDBFrame::OnDecNSChoiceSelect(wxCommandEvent& event)
 {
-   bool reverseRA,reverseDEC;
-   wxGuidingConfig::DECguiding dec;
-   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
-   dec = (wxGuidingConfig::DECguiding )event.GetInt();
-   wxGuidingConfig::saveGuidingOptions(reverseRA,reverseDEC,dec);
-}
+////   bool reverseRA,reverseDEC;
+////   wxGuidingConfig::DECguiding dec;
+//////   wxGuidingConfig::getGuidingOptions(reverseRA,reverseDEC,dec);
+////   dec = (wxGuidingConfig::DECguiding )event.GetInt();
+//////   wxGuidingConfig::saveGuidingOptions(reverseRA,reverseDEC,dec);
+}*/
 
 
-
+/*
 void wxWebcamDBFrame::OnRaAggrSpinChange(wxSpinEvent& WXUNUSED(event))
 {
    double ra_k = m_RaAggrSpin->GetValue();
-   if(wxGuider* guider = wxF()->guider()) {
-      guider->setRaK(ra_k);
+//   if(wxGuider* guider = wxF()->guider()) {
+//      guider->setRaK(ra_k);
    }
-}
-
+}*/
+/*
 void wxWebcamDBFrame::OnDecAggrSpinChange(wxSpinEvent& WXUNUSED(event))
 {
    double dec_k = m_DecAggrSpin->GetValue();
-   if(wxGuider* guider = wxF()->guider()) {
-      guider->setDecK(dec_k);
+//   if(wxGuider* guider = wxF()->guider()) {
+//      guider->setDecK(dec_k);
    }
-}
+}*/
 
-void wxWebcamDBFrame::OnAdvancedGuideParamsClick(wxCommandEvent& WXUNUSED(event))
+/*void wxWebcamDBFrame::OnAdvancedGuideParamsClick(wxCommandEvent& WXUNUSED(event))
 {
-   if(AdvancedGuidingParams* dlg = AdvancedGuidingParams::singleton(m_staticText_RA)) {
+//   if(AdvancedGuidingParams* dlg = AdvancedGuidingParams::singleton(m_staticText_RA)) {
       dlg->Show();
    }
-}
+}*/
 
 void wxWebcamDBFrame::OnUnZoom(wxCommandEvent& WXUNUSED(event))
 {
@@ -1972,7 +1794,7 @@ void wxWebcamDBFrame::OnPauseBatchButtonClick(wxCommandEvent& WXUNUSED(event))
 
 void wxWebcamDBFrame::OnNotebook1PageChanged(wxNotebookEvent& WXUNUSED(event))
 {
-   UpdateBatchControls();
+//   UpdateBatchControls();
 }
 
 void wxWebcamDBFrame::OnMaxFrames_CheckBoxClick(wxCommandEvent& WXUNUSED(event))
@@ -1989,7 +1811,7 @@ void wxWebcamDBFrame::OnSetStepperParamClick(wxCommandEvent&  WXUNUSED(event))
 
 if(wxWebcamDBFrame::GetStepperState()){
 BYTE ATrtAddr = (BYTE)wxWebcamDBFrame::ATrtAddr;
-INT32 ANumber = (INT32)SS_MotorNSpin->GetValue();
+INT32 ANumber = (INT32)SS_MotorN->GetCurrentSelection();
 INT32 COMPortNumber = (INT32)SS_PortNSpin->GetValue();
 
 INT32 I = m_stepperIChoice->GetCurrentSelection();
@@ -2054,7 +1876,7 @@ void wxWebcamDBFrame::OnOpenStepperCOMPortClick(wxCommandEvent&  WXUNUSED(event)
 void wxWebcamDBFrame::OnStepperMoveCWiceClick(wxCommandEvent&  WXUNUSED(event))
 {
 BYTE ATrtAddr = wxWebcamDBFrame::ATrtAddr;
-INT32 ANumber = (INT32)SS_MotorNSpin->GetValue();
+INT32 ANumber = (INT32)SS_MotorN->GetCurrentSelection();
 INT32 COMPortNumber = (INT32)SS_PortNSpin->GetValue();
 
 double angle = SS_AngSpin->GetValue();
@@ -2070,7 +1892,7 @@ void wxWebcamDBFrame::OnStepperMoveCCWiceClick(wxCommandEvent&  WXUNUSED(event))
 {
 
 //BYTE ATrtAddr = wxWebcamDBFrame::ATrtAddr;
-INT32 ANumber = (INT32)SS_MotorNSpin->GetValue();
+INT32 ANumber = (INT32)SS_MotorN->GetCurrentSelection();
 //INT32 COMPortNumber = (INT32)SS_PortNSpin->GetValue();
 
 double angle = SS_AngSpin->GetValue();
