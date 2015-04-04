@@ -71,7 +71,7 @@ SettingsGuidingCalibrateDlg::SettingsGuidingCalibrateDlg(SettingsGuiding* parent
 	wxBoxSizer* BoxSizer3;
 	wxStaticText* StaticText4;
 	wxStaticLine* StaticLine5;
-	
+
 	Create(parent, id, _("Auto Calibrate"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
@@ -127,7 +127,7 @@ SettingsGuidingCalibrateDlg::SettingsGuidingCalibrateDlg(SettingsGuiding* parent
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SettingsGuidingCalibrateDlg::OnPickStarButtonClick);
 	Connect(ID_OK_BUTTON,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SettingsGuidingCalibrateDlg::OnOKbuttonClick);
 	Connect(ID_CANCEL_BUTTON,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SettingsGuidingCalibrateDlg::OnCancelButtonClick);

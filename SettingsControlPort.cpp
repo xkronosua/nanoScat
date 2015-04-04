@@ -51,7 +51,7 @@ SettingsControlPort::SettingsControlPort(wxWindow* parent,wxWindowID id)
 	wxStaticText* StaticText5;
 	wxBoxSizer* BoxSizer1;
 	wxStaticText* StaticText4;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	Panel1 = new wxPanel(this, ID_PANEL1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
@@ -109,7 +109,7 @@ SettingsControlPort::SettingsControlPort(wxWindow* parent,wxWindowID id)
 	Panel1->SetSizer(BoxSizer1);
 	BoxSizer1->Fit(Panel1);
 	BoxSizer1->SetSizeHints(Panel1);
-	
+
 	Connect(ID_CHOICE1,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&SettingsControlPort::OnPortChoiceSelect);
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SettingsControlPort::OnDefaultsButtonClick);
 	//*)

@@ -46,7 +46,7 @@ wxGuidingOptions::wxGuidingOptions(wxWindow* parent,wxWindowID id,const wxPoint&
 	wxButton* CloseButton;
 	wxBoxSizer* BoxSizer1;
 	wxBoxSizer* BoxSizer3;
-	
+
 	Create(parent, id, _("Guiding Options"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER, _T("id"));
 	SetClientSize(wxDefaultSize);
 	Move(wxDefaultPosition);
@@ -72,7 +72,7 @@ wxGuidingOptions::wxGuidingOptions(wxWindow* parent,wxWindowID id,const wxPoint&
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_CHOICEBOOK1,wxEVT_COMMAND_CHOICEBOOK_PAGE_CHANGED,(wxObjectEventFunction)&wxGuidingOptions::OnIinterfaceChoiceBookPageChanged);
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxGuidingOptions::OnApplyButtonClick);
 	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxGuidingOptions::OnCloseButtonClick);

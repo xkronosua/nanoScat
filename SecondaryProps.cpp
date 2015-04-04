@@ -45,7 +45,7 @@ SecondaryProps::SecondaryProps(wxBookCtrlBase* parent,wxWindowID id)
 	wxStaticBoxSizer* StaticBoxSizer1;
 	wxFlexGridSizer* FlexGridSizer1;
 	wxStaticText* StaticText4;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	FlexGridSizer1 = new wxFlexGridSizer(0, 2, 0, 0);
 	FlexGridSizer2 = new wxFlexGridSizer(0, 2, 0, 0);
@@ -71,7 +71,7 @@ SecondaryProps::SecondaryProps(wxBookCtrlBase* parent,wxWindowID id)
 	FlexGridSizer2->Add(m_saturation_slider, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	FlexGridSizer1->Add(FlexGridSizer2, 1, wxALL|wxALIGN_TOP|wxALIGN_CENTER_HORIZONTAL, 2);
 	FlexGridSizer3 = new wxFlexGridSizer(0, 1, 0, 0);
-	wxString __wxRadioBoxChoices_1[5] = 
+	wxString __wxRadioBoxChoices_1[5] =
 	{
 		_("Indoor"),
 		_("Outdoor"),
@@ -93,7 +93,7 @@ SecondaryProps::SecondaryProps(wxBookCtrlBase* parent,wxWindowID id)
 	SetSizer(FlexGridSizer1);
 	FlexGridSizer1->Fit(this);
 	FlexGridSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_SLIDER1,wxEVT_SCROLL_THUMBTRACK,(wxObjectEventFunction)&SecondaryProps::OnSliderScrollThumbTrack);
 	Connect(ID_SLIDER1,wxEVT_SCROLL_THUMBRELEASE,(wxObjectEventFunction)&SecondaryProps::OnSliderScrollThumbRelease);
 	Connect(ID_SLIDER1,wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&SecondaryProps::OnWbRedScrollChanged);

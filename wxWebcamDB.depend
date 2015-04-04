@@ -10385,7 +10385,7 @@
 	"wxcustom/wxPropertyPage.h"
 	"wxIO/wxPort.h"
 
-1428176777 e:\programs\nanoscat\wxwebcamdbmain.h
+1428181119 e:\programs\nanoscat\wxwebcamdbmain.h
 	"wxWebcamDBApp.h"
 	<wx/notebook.h>
 	<wx/sizer.h>
@@ -11397,7 +11397,7 @@
 	"wxWebcamDBMain.h"
 	<wx/image.h>
 
-1428176723 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
+1428178580 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
 	"wx_pch.h"
 	"wxWebcamDBMain.h"
 	"wx/dirdlg.h"
@@ -11446,4 +11446,21 @@
 	"wx/object.h"
 	"wx/string.h"
 	"wx/arrstr.h"
+
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\animate.h
+	"wx/defs.h"
+	"wx/animdecod.h"
+	"wx/control.h"
+	"wx/timer.h"
+	"wx/bitmap.h"
+	"wx/gtk/animate.h"
+	"wx/generic/animate.h"
+
+1194617780 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\animdecod.h
+	"wx/defs.h"
+	"wx/colour.h"
+	"wx/gdicmn.h"
+
+1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\animate.h
+	"wx/bitmap.h"
 

@@ -120,21 +120,22 @@ const long wxWebcamDBFrame::ID_BUTTON6 = wxNewId();
 const long wxWebcamDBFrame::ID_SPINCTRL9 = wxNewId();
 const long wxWebcamDBFrame::ID_BUTTON7 = wxNewId();
 const long wxWebcamDBFrame::ID_BUTTON8 = wxNewId();
+const long wxWebcamDBFrame::ID_STATICTEXT1 = wxNewId();
 const long wxWebcamDBFrame::ID_SPINCTRL10 = wxNewId();
-const long wxWebcamDBFrame::ID_CHOICE1 = wxNewId();
-const long wxWebcamDBFrame::ID_CHECKBOX2 = wxNewId();
-const long wxWebcamDBFrame::ID_SPINCTRL2 = wxNewId();
 const long wxWebcamDBFrame::ID_CHECKBOX1 = wxNewId();
 const long wxWebcamDBFrame::ID_SPINCTRL1 = wxNewId();
-const long wxWebcamDBFrame::ID_PANEL3 = wxNewId();
 const long wxWebcamDBFrame::ID_PANEL2 = wxNewId();
 const long wxWebcamDBFrame::ID_NOTEBOOK1 = wxNewId();
 const long wxWebcamDBFrame::ID_CAMERA_PANEL = wxNewId();
+const long wxWebcamDBFrame::ID_CHOICE1 = wxNewId();
+const long wxWebcamDBFrame::ID_SPINCTRL2 = wxNewId();
+const long wxWebcamDBFrame::ID_CHECKBOX2 = wxNewId();
+const long wxWebcamDBFrame::ID_PANEL3 = wxNewId();
 const long wxWebcamDBFrame::idMenuQuit = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_CONNECT = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_DISCONNECT = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_SETTINGS = wxNewId();
-//const long wxWebcamDBFrame::ID_MENUITEM_GUIDING2 = wxNewId();
+const long wxWebcamDBFrame::ID_MENUITEM_GUIDING2 = wxNewId();
 const long wxWebcamDBFrame::ID_MENUITEM_HEADER = wxNewId();
 const long wxWebcamDBFrame::idMenuAbout = wxNewId();
 const long wxWebcamDBFrame::ID_STATUSBAR1 = wxNewId();
@@ -186,9 +187,9 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 {
 
 	//(*Initialize(wxWebcamDBFrame)
+	wxFlexGridSizer* FlexGridSizer4;
 	wxBoxSizer* BoxSizer15;
 	wxButton* Button1;
-	wxPanel* video_panel;
 	wxFlexGridSizer* FlexGridSizer2;
 	wxBoxSizer* BoxSizer16;
 	wxBoxSizer* BoxSizer17;
@@ -196,14 +197,14 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	wxCheckBox* ShowReticle;
 
 	Create(parent, wxID_ANY, _("wxAstroCapture - Windows linuX Astronomy Capture"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE|wxMINIMIZE_BOX, _T("wxID_ANY"));
-	SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
-	SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
+	SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_INACTIVEBORDER));
+	SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BACKGROUND));
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
 	Notebook1 = new wxNotebook(this, ID_NOTEBOOK1, wxDefaultPosition, wxSize(180,-1), wxNB_MULTILINE, _T("ID_NOTEBOOK1"));
-	Notebook1->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
+	Notebook1->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
 	Notebook1->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_GRAYTEXT));
 	m_record_panel = new wxPanel(Notebook1, ID_PANEL1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
-	m_record_panel->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_GRAYTEXT));
+	m_record_panel->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
 	m_record_panel->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOWFRAME));
 	FlexGridSizer1 = new wxFlexGridSizer(0, 1, 0, 0);
 	StaticBoxSizer1 = new wxStaticBoxSizer(wxVERTICAL, m_record_panel, _("Video Device"));
@@ -251,6 +252,8 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	FlexGridSizer1->Fit(m_record_panel);
 	FlexGridSizer1->SetSizeHints(m_record_panel);
 	m_stepper_panel = new wxPanel(Notebook1, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
+	m_stepper_panel->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
+	m_stepper_panel->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_INACTIVECAPTIONTEXT));
 	FlexGridSizer2 = new wxFlexGridSizer(20, 2, 0, 0);
 	m_openStepperCOMPort_btn = new wxButton(m_stepper_panel, ID_BUTTON1, _("Open"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
 	m_openStepperCOMPort_btn->SetBackgroundColour(wxColour(0,255,128));
@@ -310,8 +313,8 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	m_stepperIChoice->SetToolTip(_("Струм маршування"));
 	FlexGridSizer2->Add(m_stepperIChoice, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	m_stepperIStopChoice = new wxChoice(m_stepper_panel, ID_CHOICE4, wxDefaultPosition, wxSize(60,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE4"));
-	m_stepperIStopChoice->Append(_("0"));
-	m_stepperIStopChoice->SetSelection( m_stepperIStopChoice->Append(_("0.4")) );
+	m_stepperIStopChoice->SetSelection( m_stepperIStopChoice->Append(_("0")) );
+	m_stepperIStopChoice->Append(_("0.4"));
 	m_stepperIStopChoice->Append(_("0.8"));
 	m_stepperIStopChoice->Append(_("1.2"));
 	m_stepperIStopChoice->Append(_("1.6"));
@@ -340,7 +343,7 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	FlexGridSizer2->Add(SS_MultFrecSpin, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	SS_StepperCapture_btn = new wxButton(m_stepper_panel, ID_BUTTON6, _("Capture"), wxDefaultPosition, wxSize(60,23), 0, wxDefaultValidator, _T("ID_BUTTON6"));
 	FlexGridSizer2->Add(SS_StepperCapture_btn, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
-	SS_StepperInterval = new wxSpinCtrl(m_stepper_panel, ID_SPINCTRL9, _T("1000"), wxDefaultPosition, wxSize(70,21), 0, 1, 0, 1000, _T("ID_SPINCTRL9"));
+	SS_StepperInterval = new wxSpinCtrl(m_stepper_panel, ID_SPINCTRL9, _T("1000"), wxDefaultPosition, wxSize(70,21), 0, 1, 99999999, 1000, _T("ID_SPINCTRL9"));
 	SS_StepperInterval->SetValue(_T("1000"));
 	SS_StepperInterval->SetToolTip(_("Час релаксації [мс]"));
 	FlexGridSizer2->Add(SS_StepperInterval, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
@@ -355,24 +358,12 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	SS_CCWiceDirection->SetFont(SS_CCWiceDirectionFont);
 	SS_CCWiceDirection->SetToolTip(_("Напрям обертання при зйомці"));
 	FlexGridSizer2->Add(SS_CCWiceDirection, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	StaticText1 = new wxStaticText(m_stepper_panel, ID_STATICTEXT1, _("Current Angle: "), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+	FlexGridSizer2->Add(StaticText1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SS_CurrentAngle = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL10, _T("0"), wxDefaultPosition, wxSize(80,-1), 0, -99999, 99999, 0, _T("ID_SPINCTRL10"));
 	SS_CurrentAngle->SetValue(_T("0"));
 	SS_CurrentAngle->SetToolTip(_("Поточний кут"));
 	FlexGridSizer2->Add(SS_CurrentAngle, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
-	m_meter_channel = new wxChoice(m_stepper_panel, ID_CHOICE1, wxDefaultPosition, wxSize(50,-1), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE1"));
-	m_meter_channel->Append(_("L"));
-	m_meter_channel->Append(_("R"));
-	m_meter_channel->Append(_("G"));
-	m_meter_channel->Append(_("B"));
-	m_meter_channel->SetToolTip(_("Select colour channel for histogram"));
-	FlexGridSizer2->Add(m_meter_channel, 1, wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	m_activate_exposure_meter = new wxCheckBox(m_stepper_panel, ID_CHECKBOX2, _("Enable "), wxDefaultPosition, wxSize(68,20), 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
-	m_activate_exposure_meter->SetValue(false);
-	m_activate_exposure_meter->SetToolTip(_("Check to enable live histogram"));
-	FlexGridSizer2->Add(m_activate_exposure_meter, 0, wxTOP|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-	m_meter_scale = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL2, wxEmptyString, wxDefaultPosition, wxSize(40,-1), 0, 0, 100, 0, _T("ID_SPINCTRL2"));
-	m_meter_scale->SetToolTip(_("Scale factor for histogram"));
-	FlexGridSizer2->Add(m_meter_scale, 1, wxTOP|wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
 	LE_CheckBox = new wxCheckBox(m_stepper_panel, ID_CHECKBOX1, _("Long exposure"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX1"));
 	LE_CheckBox->SetValue(false);
 	LE_CheckBox->SetToolTip(_("Check to enable webcam long exposure"));
@@ -380,10 +371,6 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	LE_SpinCtrl1 = new wxSpinCtrlDbl(m_stepper_panel, ID_SPINCTRL1, wxEmptyString, wxDefaultPosition, wxSize(90,-1), 0, 0, 100, 0, _T("ID_SPINCTRL1"));
 	LE_SpinCtrl1->SetToolTip(_("Length of long exposure in seconds"));
 	FlexGridSizer2->Add(LE_SpinCtrl1, 0, wxTOP|wxLEFT|wxEXPAND|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 4);
-	m_exposure_meter_panel = new wxPanel(m_stepper_panel, ID_PANEL3, wxDefaultPosition, wxSize(58,64), 0, _T("ID_PANEL3"));
-	m_exposure_meter_panel->SetMaxSize(wxSize(128,64));
-	m_exposure_meter_panel->SetToolTip(_("Live histogram"));
-	FlexGridSizer2->Add(m_exposure_meter_panel, 2, wxTOP|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 3);
 	m_stepper_panel->SetSizer(FlexGridSizer2);
 	FlexGridSizer2->Fit(m_stepper_panel);
 	FlexGridSizer2->SetSizeHints(m_stepper_panel);
@@ -391,11 +378,38 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	Notebook1->AddPage(m_stepper_panel, _("Stepper"), false);
 	BoxSizer1->Add(Notebook1, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
-	video_panel = new wxPanel(this, ID_CAMERA_PANEL, wxDefaultPosition, wxSize(655,495), wxTAB_TRAVERSAL, _T("ID_CAMERA_PANEL"));
+	video_panel = new wxPanel(this, ID_CAMERA_PANEL, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_CAMERA_PANEL"));
 	video_panel->SetMinSize(wxSize(-1,-1));
 	video_panel->SetMaxSize(wxSize(-1,-1));
+	video_panel->Disable();
 	BoxSizer2->Add(video_panel, 1, wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
-	BoxSizer1->Add(BoxSizer2, 64, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+	BoxSizer1->Add(BoxSizer2, 5, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+	BoxSizer3 = new wxBoxSizer(wxVERTICAL);
+	FlexGridSizer4 = new wxFlexGridSizer(0, 2, 0, 0);
+	m_meter_channel = new wxChoice(this, ID_CHOICE1, wxDefaultPosition, wxSize(50,-1), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE1"));
+	m_meter_channel->Append(_("L"));
+	m_meter_channel->Append(_("R"));
+	m_meter_channel->Append(_("G"));
+	m_meter_channel->Append(_("B"));
+	m_meter_channel->SetToolTip(_("Select colour channel for histogram"));
+	FlexGridSizer4->Add(m_meter_channel, 0, wxALIGN_LEFT|wxALIGN_TOP, 0);
+	m_meter_scale = new wxSpinCtrlDbl(this, ID_SPINCTRL2, wxEmptyString, wxDefaultPosition, wxSize(40,-1), 0, 0, 100, 0, _T("ID_SPINCTRL2"));
+	m_meter_scale->SetToolTip(_("Scale factor for histogram"));
+	FlexGridSizer4->Add(m_meter_scale, 1, wxTOP|wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 4);
+	m_activate_exposure_meter = new wxCheckBox(this, ID_CHECKBOX2, _("Enable "), wxDefaultPosition, wxSize(68,20), 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
+	m_activate_exposure_meter->SetValue(false);
+	m_activate_exposure_meter->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOW));
+	m_activate_exposure_meter->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_BACKGROUND));
+	m_activate_exposure_meter->SetToolTip(_("Check to enable live histogram"));
+	FlexGridSizer4->Add(m_activate_exposure_meter, 0, wxTOP|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer3->Add(FlexGridSizer4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	m_exposure_meter_panel = new wxPanel(this, ID_PANEL3, wxDefaultPosition, wxSize(58,64), 0, _T("ID_PANEL3"));
+	m_exposure_meter_panel->SetMaxSize(wxSize(128,64));
+	m_exposure_meter_panel->SetForegroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_HIGHLIGHTTEXT));
+	m_exposure_meter_panel->SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_CAPTIONTEXT));
+	m_exposure_meter_panel->SetToolTip(_("Live histogram"));
+	BoxSizer3->Add(m_exposure_meter_panel, 2, wxTOP|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 3);
+	BoxSizer1->Add(BoxSizer3, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(BoxSizer1);
 	MenuBar1 = new wxMenuBar();
 	Menu1 = new wxMenu();
@@ -412,9 +426,9 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	Menu3 = new wxMenu();
 	MenuItem7 = new wxMenuItem(Menu3, ID_MENUITEM_SETTINGS, _("Settings..."), wxEmptyString, wxITEM_NORMAL);
 	Menu3->Append(MenuItem7);
-//	MenuItemGuiding = new wxMenuItem(Menu3, ID_MENUITEM_GUIDING2, _("Guiding..."), wxEmptyString, wxITEM_NORMAL);
-//	Menu3->Append(MenuItemGuiding);
-//	MenuItemGuiding->Enable(false);
+	MenuItemGuiding = new wxMenuItem(Menu3, ID_MENUITEM_GUIDING2, _("Guiding..."), wxEmptyString, wxITEM_NORMAL);
+	Menu3->Append(MenuItemGuiding);
+	MenuItemGuiding->Enable(false);
 	MenuItem9 = new wxMenuItem(Menu3, ID_MENUITEM_HEADER, _("FITS Header..."), wxEmptyString, wxITEM_NORMAL);
 	Menu3->Append(MenuItem9);
 	MenuBar1->Append(Menu3, _("Options"));
@@ -440,7 +454,6 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	Connect(ID_CHECKBOX7,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMaxFrames_CheckBoxClick);
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnOpenStepperCOMPortClick);
 	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnSetStepperParamClick);
-//	Connect(ID_SPINCTRL3,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnSS_PortNSpinChange);
 	Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnResetStepperCounterClick);
 	Connect(ID_BUTTON5,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnResetSHDClick);
 	Connect(ID_BITMAPBUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperMoveCCWiceClick);
@@ -448,12 +461,13 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	Connect(ID_BUTTON6,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnStepperCaptureClick);
 	Connect(ID_BUTTON7,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnCWStepperDirectionClick);
 	Connect(ID_BUTTON8,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnCCWStepperDirectionClick);
-	Connect(ID_CHOICE1,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMeterChannelSelect);
-	Connect(ID_CHECKBOX2,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnActivateExposureMeterClick);
-	Connect(ID_SPINCTRL2,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnExposureMeteScaleChange);
+	Connect(ID_SPINCTRL10,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnSS_CurrentAngleChange);
 	Connect(ID_CHECKBOX1,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnLE_CheckBoxClick);
 	Connect(ID_SPINCTRL1,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnLE_SpinCtrl1Change);
 	Connect(ID_NOTEBOOK1,wxEVT_COMMAND_NOTEBOOK_PAGE_CHANGED,(wxObjectEventFunction)&wxWebcamDBFrame::OnNotebook1PageChanged);
+	Connect(ID_CHOICE1,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMeterChannelSelect);
+	Connect(ID_SPINCTRL2,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&wxWebcamDBFrame::OnExposureMeteScaleChange);
+	Connect(ID_CHECKBOX2,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&wxWebcamDBFrame::OnActivateExposureMeterClick);
 	Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnQuit);
 	Connect(ID_MENUITEM_CONNECT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMenuItemConnect);
 	Connect(ID_MENUITEM_DISCONNECT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&wxWebcamDBFrame::OnMenuItemDisconnect);
@@ -1932,6 +1946,7 @@ void wxWebcamDBFrame::OnStepperCOMTimer(wxTimerEvent& WXUNUSED(event))
 
 void wxWebcamDBFrame::OnStepperCaptureClick(wxCommandEvent&  WXUNUSED(event))
 {
+//wxMessageBox(wxString::Format("%f\t%f", m_stepperCapture_timer.IsRunning(),m_stepperAfterCapture_timer.IsRunning()));
 if(!(m_stepperCapture_timer.IsRunning()) && !(m_stepperAfterCapture_timer.IsRunning())){
 wxCamera* cam = wxF()->cam();
        if (cam){
@@ -1940,6 +1955,7 @@ wxCamera* cam = wxF()->cam();
            m_stepperCapture_timer.Start(m_stepper_capture_interval);
            SS_StepperCapture_btn->SetLabel(_("Stop"));
            SS_CurrentAngle->Enable(false);
+
            }}
            else{
             m_stepperCapture_timer.Stop();
@@ -1952,7 +1968,7 @@ else {
      SS_StepperCapture_btn->SetLabel(_("Capture"));
      StopCapture();
      SS_CurrentAngle->Enable(true);
-      m_stepperAfterCapture_timer.Stop();
+     m_stepperAfterCapture_timer.Stop();
 }
 }
 
@@ -2213,9 +2229,12 @@ SS_CCWiceDirection->Enable(0);
 SS_CWiceDirection->Enable(1);
 }
 
-void wxWebcamDBFrame::OnSpinCurrentAngleChanged(wxCommandEvent&  WXUNUSED(event))
+void wxWebcamDBFrame::OnSS_CurrentAngleChange(wxSpinEvent& event)
 {
-SetStepperAngle(SS_CurrentAngle->GetValue());
+    SetStepperAngle(SS_CurrentAngle->GetValue());
 }
 
+
+
 ///sTEPPER
+

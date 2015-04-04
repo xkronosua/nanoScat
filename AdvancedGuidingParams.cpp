@@ -42,7 +42,7 @@ AdvancedGuidingParams::AdvancedGuidingParams(wxWindow* parent,wxWindowID id)
 	wxBoxSizer* BoxSizer1;
 	wxFlexGridSizer* FlexGridSizer1;
 	wxStaticText* StaticText4;
-	
+
 	Create(parent, id, _("Advanced"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	FlexGridSizer1 = new wxFlexGridSizer(3, 3, 0, 0);
@@ -85,7 +85,7 @@ AdvancedGuidingParams::AdvancedGuidingParams(wxWindow* parent,wxWindowID id)
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_SPINCTRL1,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&AdvancedGuidingParams::OnRA_dz_SpinCtrlChange);
 	Connect(ID_SPINCTRL2,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&AdvancedGuidingParams::OnDEC_dz_SpinCtrlChange);
 	Connect(ID_SPINCTRL3,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&AdvancedGuidingParams::OnRA_k_SpinCtrlChange);

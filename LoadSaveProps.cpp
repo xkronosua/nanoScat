@@ -69,7 +69,7 @@ LoadSaveProps::LoadSaveProps(wxWindow* parent,wxWindowID WXUNUSED(id))
 	m_SetAsDefaultButton = new wxButton(this, ID_BUTTON3, _("Set as default"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
 	m_SetAsDefaultButton->Disable();
 	StaticBoxSizer1->Add(m_SetAsDefaultButton, 0, wxTOP|wxBOTTOM|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StaticBoxSizer1->Add(0,0,1, wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticBoxSizer1->Add(-1,-1,1, wxLEFT|wxRIGHT|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer2->Add(StaticBoxSizer1, 2, wxTOP|wxBOTTOM|wxEXPAND|wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL, 5);
 	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("The slots here are \nsaved to the hard \ndisk."), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
 	BoxSizer2->Add(StaticText1, 0, wxTOP|wxBOTTOM|wxLEFT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);

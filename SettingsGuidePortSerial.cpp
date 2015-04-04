@@ -27,7 +27,7 @@ SettingsGuidePortSerial::SettingsGuidePortSerial(wxWindow* parent,wxWindowID id)
 	wxStaticText* StaticText1;
 	wxBoxSizer* BoxSizer2;
 	wxBoxSizer* BoxSizer3;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer1->Add(-1,-1,1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
