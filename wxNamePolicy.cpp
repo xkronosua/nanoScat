@@ -336,6 +336,7 @@ bool wxNamePolicyFile::SaveToConfig(wxConfig* config)
    //Then write local additions
    config->Write(_T("Increment"),(int)m_increment);
    config->Write(_T("AutoResetIncrement"),m_autoReset);
+   //config->Write(_T("SS_CalibrSpin"),(int)wxWe);
 
    return true;
 }

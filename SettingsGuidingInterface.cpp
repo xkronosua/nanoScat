@@ -31,7 +31,7 @@ SettingsGuidingInterface::SettingsGuidingInterface(wxWindow* parent,wxWindowID i
 	//(*Initialize(SettingsGuidingInterface)
 	wxStaticBoxSizer* StaticBoxSizer2;
 	wxStaticBoxSizer* StaticBoxSizer1;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	StaticBoxSizer1 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Interface type"));
@@ -48,7 +48,7 @@ SettingsGuidingInterface::SettingsGuidingInterface(wxWindow* parent,wxWindowID i
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_CHOICE1,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&SettingsGuidingInterface::OnInterfaceChoiceSelect);
 	//*)
 

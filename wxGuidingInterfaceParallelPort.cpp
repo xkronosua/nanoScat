@@ -53,7 +53,7 @@ wxGuidingInterfaceParallelPort::wxGuidingInterfaceParallelPort(wxWindow* parent,
 	wxBoxSizer* BoxSizer9;
 	wxBoxSizer* BoxSizer3;
 	wxStaticText* StaticText16;
-	
+
 	Create(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("wxID_ANY"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);

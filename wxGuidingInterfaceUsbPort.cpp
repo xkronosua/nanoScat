@@ -25,7 +25,7 @@ wxGuidingInterfaceUsbPort::wxGuidingInterfaceUsbPort(wxWindow* parent,wxWindowID
 	//(*Initialize(wxGuidingInterfaceUsbPort)
 	wxBoxSizer* BoxSizer4;
 	wxStaticText* StaticText8;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);

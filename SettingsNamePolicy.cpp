@@ -54,7 +54,7 @@ SettingsNamePolicy::SettingsNamePolicy(wxWindow* parent,wxWindowID WXUNUSED(id))
 	wxButton* RemoveButton;
 	wxBoxSizer* BoxSizer3;
 	wxStaticText* StaticText4;
-	
+
 	Create(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("wxID_ANY"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
@@ -103,7 +103,7 @@ SettingsNamePolicy::SettingsNamePolicy(wxWindow* parent,wxWindowID WXUNUSED(id))
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SettingsNamePolicy::OnAddButtonClick);
 	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SettingsNamePolicy::OnRemoveButtonClick);
 	Connect(ID_BUTTON3,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&SettingsNamePolicy::OnUpButtonClick);

@@ -27,7 +27,7 @@ wxGuidingInterfaceFile::wxGuidingInterfaceFile(wxWindow* parent,wxWindowID id,co
 	wxBoxSizer* BoxSizer2;
 	wxBoxSizer* BoxSizer1;
 	wxButton* DirButton;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("Target folder for X.DAT and Y.DAT"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
@@ -41,7 +41,7 @@ wxGuidingInterfaceFile::wxGuidingInterfaceFile(wxWindow* parent,wxWindowID id,co
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&wxGuidingInterfaceFile::OnDirButtonClick);
 	//*)
 

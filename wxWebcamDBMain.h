@@ -21,9 +21,12 @@
 #include <wx/checkbox.h>
 #include <wx/spinctrl.h>
 #include <wx/toolbar.h>
+#include <wx/slider.h>
 #include <wx/panel.h>
+#include <wx/grid.h>
 #include <wx/choice.h>
 #include <wx/bmpbuttn.h>
+#include <wx/gbsizer.h>
 #include <wx/button.h>
 #include <wx/frame.h>
 #include <wx/gauge.h>
@@ -54,16 +57,19 @@ class wxWebcamDBFrame: public wxFrame
       wxWebcamDBFrame(wxWindow* parent,wxWindowID id = -1);
       virtual ~wxWebcamDBFrame();
 
+      static wxWebcamDBFrame* singleton() { return m_self; }
       void Init();
 
       void UpdateStatusBar();
       void UpdateExposureMeter();
       void ClearExposureMeter();
+      void syncFiltersFields(int state);
+      void UpdateFWheelMap();
 //      void UpdateGuiderTuning();
       void UpdateIncrement();
 
 	private:
-
+       //static wxWebcamDBFrame* m_self;
 
 	   void ReplaceCamera(wxWindow* old_camera, wxCamera* new_camera);
 
@@ -117,6 +123,15 @@ class wxWebcamDBFrame: public wxFrame
 		void OnSpinCurrentAngleChanged(wxCommandEvent&  event);
 		void OnSS_PortNSpinChange(wxCommandEvent&  event);
 		void OnSS_CurrentAngleChange(wxSpinEvent& event);
+		void OnsetFilters_btnClick(wxCommandEvent& event);
+		void OnfWheelCheckClick(wxCommandEvent& event);
+		void OnsetFWheelList_btnClick(wxCommandEvent& event);
+		void OnListBox1Select(wxCommandEvent& event);
+		void OnfWheelFiltersGridLabelLeftClick(wxGridEvent& event);
+		void OnfWheelPrevClick(wxCommandEvent& event);
+		void OnfWheelNextClick(wxCommandEvent& event);
+		void OnstepperStopCapture_btnClick(wxCommandEvent& event);
+		void OnbacklashCheckClick(wxCommandEvent& event);
 		//*)
 
 		void OnGaugeTimer(wxTimerEvent& event);
@@ -146,6 +161,10 @@ class wxWebcamDBFrame: public wxFrame
         double UpdateStepperAngle(double ang){StepperAngle+=ang; SS_CurrentAngle->SetValue( StepperAngle); return StepperAngle;};
         double ResetStepperAngle(){StepperAngle = 0;  SS_CurrentAngle->SetValue(StepperAngle); return StepperAngle;};
         void UpdateFWheelString();
+        void setCurrentFiltersIndex(int index);
+        int GetCurrentFilterIndex(){return currentFilterIndex;}
+        void fWheelIncrease();
+        void fWheelDecrease();
 
 		int Contains(wxArrayString& cameras,const wxString& substr);
 
@@ -189,13 +208,30 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_SPINCTRL10;
 		static const long ID_CHECKBOX1;
 		static const long ID_SPINCTRL1;
+		static const long ID_CHECKBOX6;
+		static const long ID_BACKLASHSPIN;
 		static const long ID_PANEL2;
+		static const long ID_CHECKBOX3;
+		static const long ID_GRID1;
+		static const long ID_BUTTON10;
+		static const long ID_STATICTEXT2;
+		static const long ID_SPINCTRL11;
+		static const long ID_BITMAPBUTTON3;
+		static const long ID_BITMAPBUTTON4;
+		static const long ID_CHECKBOX4;
+		static const long ID_SLIDER1;
+		static const long ID_SLIDER2;
+		static const long ID_PANEL4;
 		static const long ID_NOTEBOOK1;
 		static const long ID_CAMERA_PANEL;
 		static const long ID_CHOICE1;
 		static const long ID_SPINCTRL2;
 		static const long ID_CHECKBOX2;
 		static const long ID_PANEL3;
+		static const long ID_TEXTCTRL2;
+		static const long ID_BUTTON9;
+		static const long ID_BITMAPBUTTON6;
+		static const long ID_BITMAPBUTTON5;
 		static const long idMenuQuit;
 		static const long ID_MENUITEM_CONNECT;
 		static const long ID_MENUITEM_DISCONNECT;
@@ -227,26 +263,37 @@ class wxWebcamDBFrame: public wxFrame
 		wxNotebook* Notebook1;
 		wxButton* m_openStepperCOMPort_btn;
 		wxStaticText* StaticText2;
+		wxCheckBox* backlashCheck;
 		wxMenuItem* MenuItem2;
 		wxButton* SetStepperParam;
 		wxMenu* Menu3;
+		wxGrid* fWheelFiltersGrid;
+		wxBitmapButton* fWheelNext;
+		wxStaticText* StaticText6;
 		wxChoice* m_stepperIStopChoice;
 		wxMenuItem* MenuItem1;
 		wxButton* m_capture_btn;
 		wxSpinCtrlDbl* SS_AngSpin;
+		wxButton* setFWheelList_btn;
 		wxPanel* video_panel;
 		wxStaticText* StaticText8;
 		wxSpinCtrl* SS_StepperInterval;
+		wxCheckBox* autoFWheelMode;
 		wxButton* SS_CCWiceDirection;
 		wxPanel* m_record_panel;
+		wxPanel* Panel1;
 		wxStaticText* StaticText1;
 		wxBoxSizer* BoxSizer2;
 		wxStaticText* StaticText3;
 		wxMenu* Menu1;
+		wxBitmapButton* stepperStopCapture_btn;
+		wxBitmapButton* fWheelPrev;
 		wxSpinCtrl* SS_FrecSpin;
+		wxTextCtrl* currentFiltersField;
 		wxSpinCtrlDbl* m_meter_scale;
 		wxStaticText* CalibrKLabel;
 		wxMainToolBar* ToolBar1;
+		wxCheckBox* fWheelCheck;
 		wxMenuItem* MenuItem3;
 		wxSpinCtrlDbl* SS_CalibrSpin;
 		wxBitmapButton* StepperMoveCWice;
@@ -258,10 +305,13 @@ class wxWebcamDBFrame: public wxFrame
 		wxPanel* m_stepper_panel;
 		wxButton* ResetStepperCounter;
 		wxChoice* m_stepperWModeChoice;
+		wxSlider* fWheelTopTrigger;
 		wxChoice* m_stepperIChoice;
 		wxStatusBarEx* m_statusbar;
 		wxBoxSizer* BoxSizer1;
+		wxBitmapButton* stepperCapture2_btn;
 		wxButton* m_pause_btn;
+		wxSpinCtrlDbl* backlashSpin;
 		wxMenuBar* MenuBar1;
 		wxSpinCtrlDbl* LE_SpinCtrl1;
 		wxPanel* m_exposure_meter_panel;
@@ -269,14 +319,17 @@ class wxWebcamDBFrame: public wxFrame
 		wxSpinCtrl* SS_PortNSpin;
 		wxSpinCtrl* MaxFrames_SpinCtrl;
 		wxBoxSizer* BoxSizer3;
+		wxSlider* fWheelButtomTrigger;
 		wxMenu* Menu2;
 		wxMenuItem* MenuItem9;
+		wxButton* setFilters_btn;
 		wxGauge* m_gauge1;
 		wxStaticText* StaticText4;
 		wxMenuItem* MenuItemGuiding;
 		wxButton* ResetSHD;
 		wxSpinCtrl* SS_MultFrecSpin;
 		wxMenu* Menu4;
+		wxSpinCtrlDbl* fWheelCalibrSpin;
 		//*)
 
 		DECLARE_EVENT_TABLE()

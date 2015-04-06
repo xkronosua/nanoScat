@@ -40,7 +40,7 @@ SettingsGuidePortParallel::SettingsGuidePortParallel(wxWindow* parent,wxWindowID
 	wxStaticText* StaticText3;
 	wxStaticText* StaticText5;
 	wxStaticText* StaticText4;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	FlexGridSizer1 = new wxFlexGridSizer(0, 3, 0, 0);
 	StaticText2 = new wxStaticText(this, ID_STATICTEXT1, _("Port pins"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));

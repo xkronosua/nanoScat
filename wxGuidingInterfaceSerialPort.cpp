@@ -32,7 +32,7 @@ wxGuidingInterfaceSerialPort::wxGuidingInterfaceSerialPort(wxWindow* parent,wxWi
 	wxStaticText* StaticText1;
 	wxBoxSizer* BoxSizer2;
 	wxBoxSizer* BoxSizer3;
-	
+
 	Create(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("wxID_ANY"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);

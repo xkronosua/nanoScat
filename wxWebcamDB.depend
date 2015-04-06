@@ -9965,7 +9965,7 @@
 
 1211172690 c:\wxwidgets-2.8.9\lib\vc_lib\msw\wx\setup.h
 
-1427995656 source:e:\programs\nanoscat\advancedguidingparams.cpp
+1428182529 source:e:\programs\nanoscat\advancedguidingparams.cpp
 	"AdvancedGuidingParams.h"
 	<wx/font.h>
 	<wx/intl.h>
@@ -10028,7 +10028,7 @@
 	<map>
 	<string>
 
-1427995656 source:e:\programs\nanoscat\artemiscooling.cpp
+1428305573 source:e:\programs\nanoscat\artemiscooling.cpp
 	"ArtemisCooling.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10059,7 +10059,7 @@
 	"wx/wxprec.h"
 	"wx/wx.h"
 
-1427995656 source:e:\programs\nanoscat\artemisprops.cpp
+1428305546 source:e:\programs\nanoscat\artemisprops.cpp
 	"ArtemisProps.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10229,9 +10229,10 @@
 	<string>
 	<map>
 
-1427995656 source:e:\programs\nanoscat\fitsheader.cpp
+1428306630 source:e:\programs\nanoscat\fitsheader.cpp
 	"FitsHeader.h"
 	"wxMainToolBar.h"
+	"wxWebcamDBMain.h"
 	<wx/intl.h>
 	<wx/string.h>
 	"wxFactory.h"
@@ -10268,7 +10269,7 @@
 	<list>
 	"wx/bookctrl.h"
 
-1427995656 source:e:\programs\nanoscat\loadsaveprops.cpp
+1428182554 source:e:\programs\nanoscat\loadsaveprops.cpp
 	"LoadSaveProps.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10346,7 +10347,7 @@
 	<wx/panel.h>
 	<wx/choice.h>
 
-1427995656 source:e:\programs\nanoscat\secondaryprops.cpp
+1428182552 source:e:\programs\nanoscat\secondaryprops.cpp
 	"SecondaryProps.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10364,7 +10365,7 @@
 	<wx/slider.h>
 	<wx/panel.h>
 
-1427995656 source:e:\programs\nanoscat\settingscontrolport.cpp
+1428182559 source:e:\programs\nanoscat\settingscontrolport.cpp
 	"SettingsControlPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10385,7 +10386,7 @@
 	"wxcustom/wxPropertyPage.h"
 	"wxIO/wxPort.h"
 
-1428181119 e:\programs\nanoscat\wxwebcamdbmain.h
+1428358134 e:\programs\nanoscat\wxwebcamdbmain.h
 	"wxWebcamDBApp.h"
 	<wx/notebook.h>
 	<wx/sizer.h>
@@ -10395,9 +10396,12 @@
 	<wx/checkbox.h>
 	<wx/spinctrl.h>
 	<wx/toolbar.h>
+	<wx/slider.h>
 	<wx/panel.h>
+	<wx/grid.h>
 	<wx/choice.h>
 	<wx/bmpbuttn.h>
+	<wx/gbsizer.h>
 	<wx/button.h>
 	<wx/frame.h>
 	<wx/gauge.h>
@@ -10426,7 +10430,7 @@
 1427995656 e:\programs\nanoscat\wxstar.h
 	<wx/gdicmn.h>
 
-1427995656 e:\programs\nanoscat\smddrv.h
+1428340429 e:\programs\nanoscat\smddrv.h
 	"include/PDll.h"
 
 1427995656 e:\programs\nanoscat\include\pdll.h
@@ -10468,7 +10472,7 @@
 	<wx/panel.h>
 	"wxcustom/wxPropertyPage.h"
 
-1427995656 source:e:\programs\nanoscat\settingsguideport.cpp
+1428305553 source:e:\programs\nanoscat\settingsguideport.cpp
 	"SettingsGuidePort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10504,14 +10508,14 @@
 	<wx/panel.h>
 	"wxcustom/wxIoPortCtrl.h"
 
-1427995656 source:e:\programs\nanoscat\settingsguideportparallel.cpp
+1428305560 source:e:\programs\nanoscat\settingsguideportparallel.cpp
 	"SettingsGuidePortParallel.h"
 	<wx/intl.h>
 	<wx/string.h>
 	"wxFactory.h"
 	"wxIO/wxGuiderPort.h"
 
-1427995656 source:e:\programs\nanoscat\settingsguideportserial.cpp
+1428182549 source:e:\programs\nanoscat\settingsguideportserial.cpp
 	"SettingsGuidePortSerial.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10539,7 +10543,7 @@
 	"wxSubFrame.h"
 	<wx/timer.h>
 
-1427995656 source:e:\programs\nanoscat\settingsguidingcalibratedlg.cpp
+1428182526 source:e:\programs\nanoscat\settingsguidingcalibratedlg.cpp
 	"SettingsGuidingCalibrateDlg.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10551,7 +10555,7 @@
 
 1427995656 e:\programs\nanoscat\wxwebcam_icons.h
 
-1427995656 source:e:\programs\nanoscat\settingsguidinginterface.cpp
+1428305543 source:e:\programs\nanoscat\settingsguidinginterface.cpp
 	"SettingsGuidingInterface.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10581,14 +10585,14 @@
 	<wx/textctrl.h>
 	<wx/panel.h>
 
-1427995656 source:e:\programs\nanoscat\settingsguidinginterfacebridge.cpp
+1428305571 source:e:\programs\nanoscat\settingsguidinginterfacebridge.cpp
 	"SettingsGuidingInterfaceBridge.h"
 	<wx/intl.h>
 	<wx/string.h>
 	<wx/msgdlg.h>
 	"wxGuidingConfig.h"
 
-1427995656 source:e:\programs\nanoscat\settingsguidinginterfacefile.cpp
+1428305566 source:e:\programs\nanoscat\settingsguidinginterfacefile.cpp
 	"SettingsGuidingInterfaceFile.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10600,7 +10604,7 @@
 	<wx/intl.h>
 	<wx/string.h>
 
-1427995656 source:e:\programs\nanoscat\settingsnamepolicy.cpp
+1428305574 source:e:\programs\nanoscat\settingsnamepolicy.cpp
 	"SettingsNamePolicy.h"
 	<wx/sizer.h>
 	<wx/stattext.h>
@@ -10719,7 +10723,7 @@
 	"wxConfigPath.h"
 	"wxGuider.h"
 
-1427995656 source:e:\programs\nanoscat\wxguidinginterfacebridge.cpp
+1428305585 source:e:\programs\nanoscat\wxguidinginterfacebridge.cpp
 	"wxGuidingInterfaceBridge.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10737,7 +10741,7 @@
 1427995656 e:\programs\nanoscat\wxnotebookpageex.h
 	<wx/panel.h>
 
-1427995656 source:e:\programs\nanoscat\wxguidinginterfacefile.cpp
+1428305584 source:e:\programs\nanoscat\wxguidinginterfacefile.cpp
 	"wxGuidingInterfaceFile.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10753,7 +10757,7 @@
 	<wx/button.h>
 	"wxNoteBookPageEx.h"
 
-1427995656 source:e:\programs\nanoscat\wxguidinginterfaceparallelport.cpp
+1428305589 source:e:\programs\nanoscat\wxguidinginterfaceparallelport.cpp
 	"wxGuidingInterfaceParallelPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10769,7 +10773,7 @@
 	<wx/choice.h>
 	"wxNoteBookPageEx.h"
 
-1427995656 source:e:\programs\nanoscat\wxguidinginterfaceserialport.cpp
+1428305588 source:e:\programs\nanoscat\wxguidinginterfaceserialport.cpp
 	"wxGuidingInterfaceSerialPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10785,7 +10789,7 @@
 	"wxIO/wxGuiderPort.h"
 	"wxNoteBookPageEx.h"
 
-1427995656 source:e:\programs\nanoscat\wxguidinginterfaceusbport.cpp
+1428305591 source:e:\programs\nanoscat\wxguidinginterfaceusbport.cpp
 	"wxGuidingInterfaceUsbPort.h"
 	<wx/intl.h>
 	<wx/string.h>
@@ -10801,7 +10805,7 @@
 	"wxIO/wxGuiderPort.h"
 	"wxNoteBookPageEx.h"
 
-1427995656 source:e:\programs\nanoscat\wxguidingoptions.cpp
+1428182540 source:e:\programs\nanoscat\wxguidingoptions.cpp
 	"wxGuidingOptions.h"
 	"wxGuidingInterfaceFile.h"
 	"wxGuidingInterfaceBridge.h"
@@ -11014,7 +11018,7 @@
 	"wxWebcam/wxArtcam.h"
 	"wxWebcam_icons.h"
 
-1427995656 source:e:\programs\nanoscat\wxmessagearea.cpp
+1428182537 source:e:\programs\nanoscat\wxmessagearea.cpp
 	"wxMessageArea.h"
 	<wx/listctrl.h>
 	<wx/artprov.h>
@@ -11028,7 +11032,7 @@
 	<wx/app.h>
 	<wx/listctrl.h>
 
-1427995656 source:e:\programs\nanoscat\wxnamepolicy.cpp
+1428335965 source:e:\programs\nanoscat\wxnamepolicy.cpp
 	"wxNamePolicy.h"
 	"wxFactory.h"
 	"wxWebcam/wxWebcam.h"
@@ -11397,7 +11401,7 @@
 	"wxWebcamDBMain.h"
 	<wx/image.h>
 
-1428178580 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
+1428342760 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
 	"wx_pch.h"
 	"wxWebcamDBMain.h"
 	"wx/dirdlg.h"
@@ -11463,4 +11467,7 @@
 
 1186411286 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\generic\animate.h
 	"wx/bitmap.h"
+
+1211179896 e:\wxwidgets_dev\components\wxwidgets-2.8.9\include\wx\gbsizer.h
+	"wx/sizer.h"
 

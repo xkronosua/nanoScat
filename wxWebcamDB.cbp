@@ -96,7 +96,7 @@
 				</ExtraCommands>
 				<Environment>
 					<Variable name="DScap" value="E:\programs\wxAstroCapture-master1\wxAstroCapture-master" />
-					<Variable name="WX" value="C:\wxWidgets-2.8.9" />
+					<Variable name="WX" value="E:\wx\wxWidgets-3.0.2" />
 				</Environment>
 			</Target>
 			<Target title="W32_Release">
@@ -183,7 +183,7 @@
 				</ExtraCommands>
 				<Environment>
 					<Variable name="DScap" value="E:\programs\wxAstroCapture-master1\wxAstroCapture-master" />
-					<Variable name="WX" value="C:\wxWidgets-2.8.9" />
+					<Variable name="WX" value="E:\wxWidgets-3.0.2" />
 				</Environment>
 			</Target>
 			<Target title="UX_Debug">

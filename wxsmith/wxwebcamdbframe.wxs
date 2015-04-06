@@ -164,7 +164,7 @@
 					</object>
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL2" variable="m_stepper_panel" member="yes">
-							<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
+							<fg>wxSYS_COLOUR_BTNHIGHLIGHT</fg>
 							<bg>wxSYS_COLOUR_INACTIVECAPTIONTEXT</bg>
 							<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
 								<cols>2</cols>
@@ -267,7 +267,7 @@
 								</object>
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT5" variable="CalibrKLabel" member="yes">
-										<label>CalibrK:</label>
+										<label>Calibr. Coef.:</label>
 										<tooltip>Calibration coef</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
@@ -276,6 +276,7 @@
 								<object class="sizeritem">
 									<object class="wxSpinCtrl" name="ID_SPINCTRL5" subclass="wxSpinCtrlDbl" variable="SS_CalibrSpin" member="yes">
 										<value>127.4</value>
+										<min>1</min>
 										<max>9999</max>
 										<size>90,-1</size>
 										<tooltip>Коефіцієнт калібровки для кроків</tooltip>
@@ -486,9 +487,158 @@
 									<flag>wxTOP|wxLEFT|wxEXPAND|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
 									<border>4</border>
 								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_CHECKBOX6" variable="backlashCheck" member="yes">
+										<label>Backlash</label>
+										<tooltip>Компенсація люфтів</tooltip>
+										<handler function="OnbacklashCheckClick" entry="EVT_CHECKBOX" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxSpinCtrl" name="ID_BACKLASHSPIN" subclass="wxSpinCtrlDbl" variable="backlashSpin" member="yes">
+										<value>0</value>
+										<min>-1000</min>
+										<max>1000</max>
+										<size>70,-1</size>
+										<enabled>0</enabled>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
 							</object>
 						</object>
 						<label>Stepper</label>
+					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_PANEL4" variable="Panel1" member="yes">
+							<object class="wxBoxSizer" variable="BoxSizer4" member="no">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_CHECKBOX3" variable="fWheelCheck" member="yes">
+										<label>Filters Wheel</label>
+										<checked>1</checked>
+										<handler function="OnfWheelCheckClick" entry="EVT_CHECKBOX" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxGridBagSizer" variable="fWheelSettingsBox" member="no">
+										<growablecols>3</growablecols>
+										<object class="sizeritem">
+											<object class="wxGrid" name="ID_GRID1" variable="fWheelFiltersGrid" member="yes">
+												<cols>1</cols>
+												<rows>6</rows>
+												<labelcolwidth>30</labelcolwidth>
+												<defaultcolsize>105</defaultcolsize>
+												<collabels>
+													<item>filters</item>
+												</collabels>
+												<size>138,152</size>
+												<minsize>-1,-1</minsize>
+												<handler function="OnfWheelFiltersGridLabelLeftClick" entry="EVT_CMD_GRID_LABEL_LEFT_DCLICK" />
+											</object>
+											<colspan>3</colspan>
+											<col>0</col>
+											<row>0</row>
+											<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										</object>
+										<object class="sizeritem">
+											<object class="wxButton" name="ID_BUTTON10" variable="setFWheelList_btn" member="yes">
+												<label>Set</label>
+												<handler function="OnsetFWheelList_btnClick" entry="EVT_BUTTON" />
+											</object>
+											<colspan>3</colspan>
+											<col>0</col>
+											<row>1</row>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+										<object class="sizeritem">
+											<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText6" member="yes">
+												<label>Calibr.Coef</label>
+											</object>
+											<col>0</col>
+											<row>2</row>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+										<object class="sizeritem">
+											<object class="wxSpinCtrl" name="ID_SPINCTRL11" subclass="wxSpinCtrlDbl" variable="fWheelCalibrSpin" member="yes">
+												<value>1</value>
+												<min>1</min>
+												<max>99999</max>
+												<size>80,-1</size>
+											</object>
+											<colspan>2</colspan>
+											<col>1</col>
+											<row>2</row>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										</object>
+										<object class="sizeritem">
+											<object class="wxBitmapButton" name="ID_BITMAPBUTTON3" variable="fWheelPrev" member="yes">
+												<bitmap stock_id="wxART_GO_BACK" />
+												<size>50,-1</size>
+												<handler function="OnfWheelPrevClick" entry="EVT_BUTTON" />
+											</object>
+											<col>0</col>
+											<row>3</row>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+										<object class="sizeritem">
+											<object class="wxBitmapButton" name="ID_BITMAPBUTTON4" variable="fWheelNext" member="yes">
+												<bitmap stock_id="wxART_GO_FORWARD" />
+												<size>50,-1</size>
+												<handler function="OnfWheelNextClick" entry="EVT_BUTTON" />
+											</object>
+											<colspan>2</colspan>
+											<col>1</col>
+											<row>3</row>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+										<object class="sizeritem">
+											<object class="wxCheckBox" name="ID_CHECKBOX4" variable="autoFWheelMode" member="yes">
+												<label>Auto Mode</label>
+											</object>
+											<col>0</col>
+											<row>4</row>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+										<object class="sizeritem">
+											<object class="wxSlider" name="ID_SLIDER1" variable="fWheelButtomTrigger" member="yes">
+												<min>-1</min>
+												<max>63000</max>
+												<style>wxSL_LABELS|wxSL_SELRANGE</style>
+											</object>
+											<colspan>3</colspan>
+											<col>0</col>
+											<row>5</row>
+											<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<option>1</option>
+										</object>
+										<object class="sizeritem">
+											<object class="wxSlider" name="ID_SLIDER2" variable="fWheelTopTrigger" member="yes">
+												<value>63000</value>
+												<max>63000</max>
+												<style>wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
+											</object>
+											<colspan>3</colspan>
+											<col>0</col>
+											<row>6</row>
+											<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										</object>
+									</object>
+									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+							</object>
+						</object>
+						<label>fWheel</label>
 					</object>
 				</object>
 				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
@@ -497,6 +647,7 @@
 				<object class="wxBoxSizer" variable="BoxSizer2" member="yes">
 					<object class="sizeritem">
 						<object class="wxPanel" name="ID_CAMERA_PANEL" variable="video_panel" member="yes">
+							<size>500,440</size>
 							<enabled>0</enabled>
 							<minsize>-1,-1</minsize>
 							<maxsize>-1,-1</maxsize>
@@ -507,7 +658,7 @@
 				</object>
 				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>1</border>
-				<option>5</option>
+				<option>1</option>
 			</object>
 			<object class="sizeritem">
 				<object class="wxBoxSizer" variable="BoxSizer3" member="yes">
@@ -555,7 +706,6 @@
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
-						<option>1</option>
 					</object>
 					<object class="sizeritem">
 						<object class="wxPanel" name="ID_PANEL3" variable="m_exposure_meter_panel" member="yes">
@@ -568,12 +718,71 @@
 						</object>
 						<flag>wxTOP|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>3</border>
-						<option>2</option>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxGridBagSizer" variable="GridBagSizer1" member="no">
+							<growablecols>3</growablecols>
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="currentFiltersField" member="yes">
+									<value>1</value>
+									<size>90,55</size>
+									<tooltip>Список поточних фільтрів (через &apos;,&apos; чи &apos;;&apos;)</tooltip>
+								</object>
+								<colspan>3</colspan>
+								<col>0</col>
+								<row>0</row>
+								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxButton" name="ID_BUTTON9" variable="setFilters_btn" member="yes">
+									<label>Set</label>
+									<handler function="OnsetFilters_btnClick" entry="EVT_BUTTON" />
+								</object>
+								<col>2</col>
+								<row>1</row>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxBitmapButton" name="ID_BITMAPBUTTON6" variable="stepperStopCapture_btn" member="yes">
+									<bitmap stock_id="wxART_ERROR" />
+									<disabled stock_id="wxART_CROSS_MARK" />
+									<enabled>0</enabled>
+									<bg>#111111</bg>
+									<style>0</style>
+									<handler function="OnStepperCaptureClick" entry="EVT_BUTTON" />
+								</object>
+								<col>2</col>
+								<row>2</row>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxBitmapButton" name="ID_BITMAPBUTTON5" variable="stepperCapture2_btn" member="yes">
+									<bitmap>E:\programs\nanoScat\button_green_play.png</bitmap>
+									<disabled stock_id="wxART_WARNING" />
+									<bg>#CFD260</bg>
+									<style>0</style>
+									<handler function="OnStepperCaptureClick" entry="EVT_BUTTON" />
+								</object>
+								<colspan>2</colspan>
+								<col>0</col>
+								<row>2</row>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
 					</object>
 				</object>
 				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>
-				<option>1</option>
 			</object>
 		</object>
 		<object class="wxMenuBar" variable="MenuBar1" member="yes">
@@ -624,9 +833,9 @@
 			</object>
 		</object>
 		<object class="wxStatusBar" name="ID_STATUSBAR1" subclass="wxStatusBarEx" variable="m_statusbar" member="yes">
-			<fields>3</fields>
-			<widths>-30,-40,-50</widths>
-			<styles>wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL</styles>
+			<fields>4</fields>
+			<widths>-30,-40,-50,-10</widths>
+			<styles>wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL,wxSB_FLAT</styles>
 		</object>
 		<object class="wxToolBar" name="ID_TOOLBAR1" subclass="wxMainToolBar" variable="ToolBar1" member="yes" />
 	</object>

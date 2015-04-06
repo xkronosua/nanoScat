@@ -45,7 +45,7 @@ ArtemisCooling::ArtemisCooling(wxWindow* parent,wxWindowID WXUNUSED(id),const wx
 	wxBoxSizer* BoxSizer3;
 	wxStaticText* StaticText4;
 	wxButton* SetTarget;
-	
+
 	Create(parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("wxID_ANY"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
@@ -76,7 +76,7 @@ ArtemisCooling::ArtemisCooling(wxWindow* parent,wxWindowID WXUNUSED(id),const wx
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&ArtemisCooling::OnStartWarmupClick);
 	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&ArtemisCooling::OnSetTargetClick);
 	//*)

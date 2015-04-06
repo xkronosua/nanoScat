@@ -43,7 +43,7 @@ ArtemisProps::ArtemisProps(wxWindow* parent,wxWindowID id)
 	wxStaticText* StaticText5;
 	wxBoxSizer* BoxSizer1;
 	wxBoxSizer* BoxSizer3;
-	
+
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
@@ -92,7 +92,7 @@ ArtemisProps::ArtemisProps(wxWindow* parent,wxWindowID id)
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
-	
+
 	Connect(ID_SPINCTRL_BLACK,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&ArtemisProps::OnSpinCtrl_blackChange);
 	Connect(ID_SLIDER_BLACK,wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&ArtemisProps::OnSlider_blackCmdScrollChanged);
 	Connect(ID_SPINCTRL_WHITE,wxEVT_COMMAND_SPINCTRL_UPDATED,(wxObjectEventFunction)&ArtemisProps::OnSpinCtrl_whiteChange1);

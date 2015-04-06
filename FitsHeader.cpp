@@ -1,5 +1,6 @@
 #include "FitsHeader.h"
 #include "wxMainToolBar.h"
+#include "wxWebcamDBMain.h"
 //(*InternalHeaders(FitsHeader)
 #include <wx/intl.h>
 #include <wx/string.h>
@@ -25,7 +26,8 @@ FitsHeader::FitsHeader(wxWindow* parent,wxWindowID id)
 	grid = new wxPropGrid(this, ID_GRID1, wxDefaultPosition, wxSize(500,300), wxSIMPLE_BORDER, _T("ID_GRID1"));
 	BoxSizer1->Add(grid, 1, wxALL|wxEXPAND|wxALIGN_TOP|wxALIGN_CENTER_HORIZONTAL, 5);
 	SetSizer(BoxSizer1);
-	BoxSizer1->SetSizeHints(this);
+	SetSizer(BoxSizer1);
+	Layout();
 	//*)
 
 	Init();
@@ -73,6 +75,6 @@ bool FitsHeader::OnApply()
 
    wxMainToolBar::singleton()->UpdateType();
    wxMainToolBar::singleton()->UpdateObject();
-
+   wxWebcamDBFrame::singleton()->syncFiltersFields(0);
    return true;
 }
