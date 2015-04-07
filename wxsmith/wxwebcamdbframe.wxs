@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxFrame" name="wxWebcamDBFrame">
-		<title>wxAstroCapture - Windows linuX Astronomy Capture</title>
+		<title>nanoScat</title>
 		<fg>wxSYS_COLOUR_INACTIVEBORDER</fg>
 		<bg>wxSYS_COLOUR_BACKGROUND</bg>
 		<id_arg>0</id_arg>
@@ -10,7 +10,7 @@
 		<object class="wxBoxSizer" variable="BoxSizer1" member="yes">
 			<object class="sizeritem">
 				<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
-					<size>180,-1</size>
+					<size>200,-1</size>
 					<fg>wxSYS_COLOUR_BTNFACE</fg>
 					<bg>wxSYS_COLOUR_GRAYTEXT</bg>
 					<style>wxNB_MULTILINE</style>
@@ -176,6 +176,7 @@
 										<handler function="OnOpenStepperCOMPortClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -184,6 +185,7 @@
 										<handler function="OnSetStepperParamClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -200,6 +202,7 @@
 										<tooltip>COM-порт драйверу крокового двигуна</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -220,6 +223,7 @@
 										<tooltip>Номер двигуна</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -242,6 +246,7 @@
 										<handler function="OnResetSHDClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -253,6 +258,7 @@
 										<handler function="OnStepperMoveCCWiceClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -263,6 +269,7 @@
 										<handler function="OnStepperMoveCWiceClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -282,6 +289,7 @@
 										<tooltip>Коефіцієнт калібровки для кроків</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -299,6 +307,7 @@
 										<tooltip>Кут повороту</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -316,6 +325,7 @@
 										<tooltip>Струм маршування</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -333,6 +343,7 @@
 										<tooltip>Струм стримування</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -354,6 +365,7 @@
 										<tooltip>Режим збудження фаз</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -372,6 +384,7 @@
 										<tooltip>Тактова частота обертання</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -390,6 +403,7 @@
 										<tooltip>Множник напівперіоду тактової частоти</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -399,6 +413,7 @@
 										<handler function="OnStepperCaptureClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -410,6 +425,7 @@
 										<tooltip>Час релаксації [мс]</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -427,6 +443,7 @@
 										<handler function="OnCWStepperDirectionClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>4</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -445,6 +462,7 @@
 										<handler function="OnCCWStepperDirectionClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>4</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -465,6 +483,7 @@
 										<handler function="OnSS_CurrentAngleChange" entry="EVT_SPINCTRL" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>1</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
@@ -485,7 +504,7 @@
 										<handler function="OnLE_SpinCtrl1Change" entry="EVT_SPINCTRL" />
 									</object>
 									<flag>wxTOP|wxLEFT|wxEXPAND|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL</flag>
-									<border>4</border>
+									<border>5</border>
 								</object>
 								<object class="sizeritem">
 									<object class="wxCheckBox" name="ID_CHECKBOX6" variable="backlashCheck" member="yes">
@@ -506,6 +525,7 @@
 										<enabled>0</enabled>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>3</border>
 								</object>
 							</object>
 						</object>
@@ -513,6 +533,8 @@
 					</object>
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL4" variable="Panel1" member="yes">
+							<fg>wxSYS_COLOUR_WINDOW</fg>
+							<bg>wxSYS_COLOUR_GRAYTEXT</bg>
 							<object class="wxBoxSizer" variable="BoxSizer4" member="no">
 								<orient>wxVERTICAL</orient>
 								<object class="sizeritem">
@@ -531,7 +553,7 @@
 											<object class="wxGrid" name="ID_GRID1" variable="fWheelFiltersGrid" member="yes">
 												<cols>1</cols>
 												<rows>6</rows>
-												<labelcolwidth>30</labelcolwidth>
+												<labelcolwidth>56</labelcolwidth>
 												<defaultcolsize>105</defaultcolsize>
 												<collabels>
 													<item>filters</item>
@@ -632,6 +654,18 @@
 											<row>6</row>
 											<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										</object>
+										<object class="sizeritem">
+											<object class="wxCheckBox" name="ID_CHECKBOX8" variable="LockFWheel" member="yes">
+												<label>Lock</label>
+												<handler function="OnLockFWheelClick1" entry="EVT_CHECKBOX" />
+											</object>
+											<colspan>3</colspan>
+											<col>0</col>
+											<row>7</row>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<option>1</option>
+										</object>
 									</object>
 									<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>5</border>
@@ -649,6 +683,8 @@
 						<object class="wxPanel" name="ID_CAMERA_PANEL" variable="video_panel" member="yes">
 							<size>500,440</size>
 							<enabled>0</enabled>
+							<fg>wxSYS_COLOUR_HIGHLIGHT</fg>
+							<bg>wxSYS_COLOUR_BTNTEXT</bg>
 							<minsize>-1,-1</minsize>
 							<maxsize>-1,-1</maxsize>
 						</object>
@@ -833,9 +869,9 @@
 			</object>
 		</object>
 		<object class="wxStatusBar" name="ID_STATUSBAR1" subclass="wxStatusBarEx" variable="m_statusbar" member="yes">
-			<fields>4</fields>
-			<widths>-30,-40,-50,-10</widths>
-			<styles>wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL,wxSB_FLAT</styles>
+			<fields>5</fields>
+			<widths>-30,-40,-50,-10,-30</widths>
+			<styles>wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL,wxSB_FLAT,wxSB_NORMAL</styles>
 		</object>
 		<object class="wxToolBar" name="ID_TOOLBAR1" subclass="wxMainToolBar" variable="ToolBar1" member="yes" />
 	</object>

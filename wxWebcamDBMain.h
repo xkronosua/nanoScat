@@ -132,6 +132,8 @@ class wxWebcamDBFrame: public wxFrame
 		void OnfWheelNextClick(wxCommandEvent& event);
 		void OnstepperStopCapture_btnClick(wxCommandEvent& event);
 		void OnbacklashCheckClick(wxCommandEvent& event);
+		void OnLockFWheelClick(wxCommandEvent& event);
+		void OnLockFWheelClick1(wxCommandEvent& event);
 		//*)
 
 		void OnGaugeTimer(wxTimerEvent& event);
@@ -221,6 +223,7 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_CHECKBOX4;
 		static const long ID_SLIDER1;
 		static const long ID_SLIDER2;
+		static const long ID_CHECKBOX8;
 		static const long ID_PANEL4;
 		static const long ID_NOTEBOOK1;
 		static const long ID_CAMERA_PANEL;
@@ -293,6 +296,7 @@ class wxWebcamDBFrame: public wxFrame
 		wxSpinCtrlDbl* m_meter_scale;
 		wxStaticText* CalibrKLabel;
 		wxMainToolBar* ToolBar1;
+		wxCheckBox* LockFWheel;
 		wxCheckBox* fWheelCheck;
 		wxMenuItem* MenuItem3;
 		wxSpinCtrlDbl* SS_CalibrSpin;
@@ -362,6 +366,7 @@ class wxWebcamDBFrame: public wxFrame
       int steps;// = 0;
       double StepperAngle;
       bool isStepperConnected;
+      int stepperDirection;
       double fWheelCalibration;// = 360/4;
       int currentFilterIndex;// = 0;
       bool fWheelDirection;// = 0;

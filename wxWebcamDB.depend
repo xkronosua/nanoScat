@@ -10386,7 +10386,7 @@
 	"wxcustom/wxPropertyPage.h"
 	"wxIO/wxPort.h"
 
-1428358134 e:\programs\nanoscat\wxwebcamdbmain.h
+1428396602 e:\programs\nanoscat\wxwebcamdbmain.h
 	"wxWebcamDBApp.h"
 	<wx/notebook.h>
 	<wx/sizer.h>
@@ -11401,7 +11401,7 @@
 	"wxWebcamDBMain.h"
 	<wx/image.h>
 
-1428342760 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
+1428395686 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
 	"wx_pch.h"
 	"wxWebcamDBMain.h"
 	"wx/dirdlg.h"
