@@ -57,8 +57,8 @@ public:
       EF_FILTMAP,    // FILTMAP String - Optical Filters MAP used to take image
       EF_EXPOSURE,   // exposure
       EF_ANGLE,      // stepper angle
-      EF_CALIBR,     // stepper calibr
-      EF_WAVELENGTH, // laser wavelength
+      EF_STEPPERC,   // stepper calibr
+      EF_WAVELENG,   // laser wavelength
       EF_DISTANCE,   // Sample-Matrix distance
       EF_POWER,      // Laser power
 

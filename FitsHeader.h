@@ -5,6 +5,7 @@
 #include <wx/sizer.h>
 #include <wx/panel.h>
 #include <wx/grid.h>
+#include <wx/button.h>
 //*)
 
 #include "wxcustom/wxPropGrid.h"
@@ -22,15 +23,18 @@ class FitsHeader: public wxPropertyPage
 
 		//(*Identifiers(FitsHeader)
 		static const long ID_GRID1;
+		static const long ID_BUTTON1;
 		//*)
 
 	protected:
 
 		//(*Handlers(FitsHeader)
+		void OnEnptyFitsClick(wxCommandEvent& event);
 		//*)
 
 		//(*Declarations(FitsHeader)
 		wxPropGrid* grid;
+		wxButton* enptyFits;
 		wxBoxSizer* BoxSizer1;
 		//*)
 

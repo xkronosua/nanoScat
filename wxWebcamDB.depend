@@ -10229,7 +10229,7 @@
 	<string>
 	<map>
 
-1428306630 source:e:\programs\nanoscat\fitsheader.cpp
+1429015581 source:e:\programs\nanoscat\fitsheader.cpp
 	"FitsHeader.h"
 	"wxMainToolBar.h"
 	"wxWebcamDBMain.h"
@@ -10237,10 +10237,11 @@
 	<wx/string.h>
 	"wxFactory.h"
 
-1427995656 e:\programs\nanoscat\fitsheader.h
+1429013810 e:\programs\nanoscat\fitsheader.h
 	<wx/sizer.h>
 	<wx/panel.h>
 	<wx/grid.h>
+	<wx/button.h>
 	"wxcustom/wxPropGrid.h"
 	"wxcustom/wxPropertyPage.h"
 
@@ -10386,7 +10387,7 @@
 	"wxcustom/wxPropertyPage.h"
 	"wxIO/wxPort.h"
 
-1428396602 e:\programs\nanoscat\wxwebcamdbmain.h
+1429027139 e:\programs\nanoscat\wxwebcamdbmain.h
 	"wxWebcamDBApp.h"
 	<wx/notebook.h>
 	<wx/sizer.h>
@@ -10652,7 +10653,7 @@
 	<wx/wx.h>
 	<wx/dcclient.h>
 
-1427995656 source:e:\programs\nanoscat\wxfactory.cpp
+1429019787 source:e:\programs\nanoscat\wxfactory.cpp
 	"wxFactory.h"
 	"wxIO/wxPortManager.h"
 	"wxIO/wxLongExpoPort.h"
@@ -10670,7 +10671,7 @@
 	"wxWebcam/wxArtcam.h"
 	"BatchJobManager.h"
 
-1427995656 e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.h
+1429019588 e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.h
 	"wx/wxprec.h"
 	"wx/wx.h"
 	<vector>
@@ -11216,10 +11217,10 @@
 	"capturebase.h"
 	<dscaplib.h>
 
-1427995656 source:e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.cpp
+1429019345 source:e:\programs\nanoscat\wxwebcam\fits\wxfitskeyword.cpp
 	"wxFitsKeyword.h"
 
-1427995656 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsout.cpp
+1429019347 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsout.cpp
 	"wxFitsOut.h"
 	"../../version.h"
 
@@ -11228,7 +11229,7 @@
 	"wx/wx.h"
 	"wxFitsKeyword.h"
 
-1427995656 e:\programs\nanoscat\version.h
+1429018694 e:\programs\nanoscat\version.h
 
 1427995656 source:e:\programs\nanoscat\wxwebcam\fits\wxfitsoutputstream.cpp
 	"wxFitsOutputStream.h"
@@ -11401,7 +11402,7 @@
 	"wxWebcamDBMain.h"
 	<wx/image.h>
 
-1428395686 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
+1429027512 source:e:\programs\nanoscat\wxwebcamdbmain.cpp
 	"wx_pch.h"
 	"wxWebcamDBMain.h"
 	"wx/dirdlg.h"

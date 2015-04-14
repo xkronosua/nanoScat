@@ -2,7 +2,7 @@
 #define __VERSION_H__
 
 
-#define MyAppVer "1.9-1"
+#define MyAppVer "0.1.4"
 
 
 // the debian changelog policy is used here so make sure:

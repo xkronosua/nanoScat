@@ -64,7 +64,7 @@ class wxWebcamDBFrame: public wxFrame
       void UpdateExposureMeter();
       void ClearExposureMeter();
       void syncFiltersFields(int state);
-      void UpdateFWheelMap();
+      //void UpdateFWheelMap();
 //      void UpdateGuiderTuning();
       void UpdateIncrement();
 
@@ -153,10 +153,12 @@ class wxWebcamDBFrame: public wxFrame
 		void PauseCapture(bool batch);
 
 		void UpdateLEcontrols();
+		void updateExposure();
 //		void UpdateBatchControls();
 		void ShutdownAll();
         void SetStepperState(bool state){ wxWebcamDBFrame::isStepperConnected = state;};
-        bool GetStepperState(){ return wxWebcamDBFrame::isStepperConnected;};
+        //int GetStepperState();{ return Stepper.SMD;};
+        bool IsStepperConnected();
 
         double GetStepperAngle(){return StepperAngle;}
         double SetStepperAngle(double ang){return StepperAngle=ang;}
@@ -212,6 +214,7 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_SPINCTRL1;
 		static const long ID_CHECKBOX6;
 		static const long ID_BACKLASHSPIN;
+		static const long ID_CHECKBOX9;
 		static const long ID_PANEL2;
 		static const long ID_CHECKBOX3;
 		static const long ID_GRID1;
@@ -233,7 +236,6 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_PANEL3;
 		static const long ID_TEXTCTRL2;
 		static const long ID_BUTTON9;
-		static const long ID_BITMAPBUTTON6;
 		static const long ID_BITMAPBUTTON5;
 		static const long idMenuQuit;
 		static const long ID_MENUITEM_CONNECT;
@@ -289,7 +291,6 @@ class wxWebcamDBFrame: public wxFrame
 		wxBoxSizer* BoxSizer2;
 		wxStaticText* StaticText3;
 		wxMenu* Menu1;
-		wxBitmapButton* stepperStopCapture_btn;
 		wxBitmapButton* fWheelPrev;
 		wxSpinCtrl* SS_FrecSpin;
 		wxTextCtrl* currentFiltersField;
@@ -322,6 +323,7 @@ class wxWebcamDBFrame: public wxFrame
 		wxStaticBoxSizer* StaticBoxSizer1;
 		wxSpinCtrl* SS_PortNSpin;
 		wxSpinCtrl* MaxFrames_SpinCtrl;
+		wxCheckBox* AutoExposure;
 		wxBoxSizer* BoxSizer3;
 		wxSlider* fWheelButtomTrigger;
 		wxMenu* Menu2;

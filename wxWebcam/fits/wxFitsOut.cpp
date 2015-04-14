@@ -108,9 +108,31 @@ void fitsHeaderCls::CreateBasicHeader(const wxSize& frameSize, size_t nAxis)
 
 
    wxString swVersion;
-   swVersion << wxT("wxAstroCapture V ") << wxT(MyAppVer);
+   swVersion << wxT("nanoScat V ") << wxT(MyAppVer);
    k.SetKeyword(wxFitsKeyword::EF_SWCREATE, swVersion);
    m_hRecords += k;
+/*
+   k.SetKeyword(wxFitsKeyword::EF_ANGLE, (double)0.0, wxT("Angle from Stepper"));
+   m_hRecords += k;
+
+   k.SetKeyword(wxFitsKeyword::EF_STEPPERC, (double)1.0, wxT("Angle Calibration"));
+   m_hRecords += k;
+
+   k.SetKeyword(wxFitsKeyword::EF_WAVELENG, (double)532, wxT("Angle Calibration"));
+   m_hRecords += k;
+
+   k.SetKeyword(wxFitsKeyword::EF_STEPPERC, (double)1.0, wxT("Laser wavelength"));
+   m_hRecords += k;
+
+   k.SetKeyword(wxFitsKeyword::EF_DISTANCE, (double)1.0, wxT("Sample-Matrix Distance"));
+   m_hRecords += k;
+
+   k.SetKeyword(wxFitsKeyword::EF_POWER, (double)1.0, wxT("Laser power"));
+   m_hRecords += k;
+
+   k.SetKeyword(wxFitsKeyword::EF_EXPOSURE, (float)1.0, wxT("Cam exposure (s)"));
+   m_hRecords += k;
+   */
 }
 
 

@@ -2,6 +2,7 @@
 <wxsmith>
 	<object class="wxFrame" name="wxWebcamDBFrame">
 		<title>nanoScat</title>
+		<size>40,40</size>
 		<fg>wxSYS_COLOUR_INACTIVEBORDER</fg>
 		<bg>wxSYS_COLOUR_BACKGROUND</bg>
 		<id_arg>0</id_arg>
@@ -197,7 +198,7 @@
 								</object>
 								<object class="sizeritem">
 									<object class="wxSpinCtrl" name="ID_SPINCTRL3" variable="SS_PortNSpin" member="yes">
-										<value>1</value>
+										<value>0</value>
 										<size>60,21</size>
 										<tooltip>COM-порт драйверу крокового двигуна</tooltip>
 									</object>
@@ -250,7 +251,7 @@
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
-									<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="StepperMoveCWice" member="yes">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="StepperMoveCCWice" member="yes">
 										<bitmap stock_id="wxART_GO_BACK" />
 										<size>40,30</size>
 										<fg>wxSYS_COLOUR_HIGHLIGHT</fg>
@@ -262,7 +263,7 @@
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
-									<object class="wxBitmapButton" name="ID_BITMAPBUTTON2" variable="StepperMoveCCWice" member="yes">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON2" variable="StepperMoveCWice" member="yes">
 										<bitmap stock_id="wxART_GO_FORWARD" />
 										<size>40,30</size>
 										<bg>#D5D500</bg>
@@ -429,26 +430,8 @@
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
-									<object class="wxButton" name="ID_BUTTON7" variable="SS_CWiceDirection" member="yes">
+									<object class="wxButton" name="ID_BUTTON7" variable="SS_CCWiceDirection" member="yes">
 										<label>&lt;&lt;&lt;</label>
-										<font>
-											<size>12</size>
-											<style>normal</style>
-											<weight>bold</weight>
-											<underlined>0</underlined>
-											<family>swiss</family>
-											<face>Stencil</face>
-										</font>
-										<tooltip>Напрям обертання при зйомці</tooltip>
-										<handler function="OnCWStepperDirectionClick" entry="EVT_BUTTON" />
-									</object>
-									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-									<border>4</border>
-									<option>1</option>
-								</object>
-								<object class="sizeritem">
-									<object class="wxButton" name="ID_BUTTON8" variable="SS_CCWiceDirection" member="yes">
-										<label>&gt;&gt;&gt;</label>
 										<enabled>0</enabled>
 										<font>
 											<size>12</size>
@@ -460,6 +443,24 @@
 										</font>
 										<tooltip>Напрям обертання при зйомці</tooltip>
 										<handler function="OnCCWStepperDirectionClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>4</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxButton" name="ID_BUTTON8" variable="SS_CWiceDirection" member="yes">
+										<label>&gt;&gt;&gt;</label>
+										<font>
+											<size>12</size>
+											<style>normal</style>
+											<weight>bold</weight>
+											<underlined>0</underlined>
+											<family>swiss</family>
+											<face>Stencil</face>
+										</font>
+										<tooltip>Напрям обертання при зйомці</tooltip>
+										<handler function="OnCWStepperDirectionClick" entry="EVT_BUTTON" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>4</border>
@@ -526,6 +527,14 @@
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>3</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxCheckBox" name="ID_CHECKBOX9" variable="AutoExposure" member="yes">
+										<label>Auto Exposure</label>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
 								</object>
 							</object>
 						</object>
@@ -784,23 +793,10 @@
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxBitmapButton" name="ID_BITMAPBUTTON6" variable="stepperStopCapture_btn" member="yes">
-									<bitmap stock_id="wxART_ERROR" />
-									<disabled stock_id="wxART_CROSS_MARK" />
-									<enabled>0</enabled>
-									<bg>#111111</bg>
-									<style>0</style>
-									<handler function="OnStepperCaptureClick" entry="EVT_BUTTON" />
-								</object>
-								<col>2</col>
-								<row>2</row>
-								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<option>1</option>
-							</object>
-							<object class="sizeritem">
 								<object class="wxBitmapButton" name="ID_BITMAPBUTTON5" variable="stepperCapture2_btn" member="yes">
-									<bitmap>E:\programs\nanoScat\button_green_play.png</bitmap>
-									<disabled stock_id="wxART_WARNING" />
+									<bitmap stock_id="wxART_TIP" stock_client="wxART_MESSAGE_BOX" />
+									<disabled stock_id="wxART_ERROR" />
+									<size>40,40</size>
 									<bg>#CFD260</bg>
 									<style>0</style>
 									<handler function="OnStepperCaptureClick" entry="EVT_BUTTON" />

@@ -28,14 +28,14 @@ wxFactory* wxFactory::singleton()
 /// the config file is named wxAstroCapture.conf per default?!
 /// so make sure the old one is reallocated in the next setup !!!
 wxFactory::wxFactory()
-:m_config(_T("wxAstroCapture"),_T("Rustadgrenda"), wxEmptyString, wxEmptyString,
+:m_config(_T("nanoScat"),_T("Rustadgrenda"), wxEmptyString, wxEmptyString,
             wxCONFIG_USE_LOCAL_FILE | wxCONFIG_USE_SUBDIR)
 ,m_camera(0)
 ,m_portManager(0)
 ,m_lePort(0)
 ,m_guidePort(0)
 ,m_index_port_entry(-1)
-,m_capture_prefix(_T("wxAC"))
+,m_capture_prefix(_T("nS"))
 ,m_guider(0)
 ,m_cntPointSize(CNT_HUGE)
 ,m_ftsSize(FTS_OFF)
@@ -72,7 +72,7 @@ void wxFactory::Init()
    wxStandardPaths std_paths;
    wxString userDataDir = std_paths.GetUserDataDir();
    wxString appname = m_config.GetAppName();
-   userDataDir.Replace(wxT("wxastrocapture"),appname);
+   userDataDir.Replace(wxT("nanoScat"),appname);
    if(!::wxDirExists(userDataDir)) {
       ::wxMkdir(userDataDir);
    }
@@ -356,6 +356,8 @@ bool wxFactory::saveFitsHeaderEntries(wxPropGrid::Entries& entries)
    return true;
 }
 
+
+
 bool wxFactory::getFitsHeaderValue(const wxString& kw, wxString& value)
 {
    wxPropGrid::Entries entries;
@@ -426,6 +428,7 @@ bool wxFactory::getFitsHeaderEntries(wxPropGrid::Entries& entries)
       }
    }
    else {
+
       // nothing in configuration, push empty entries
       entries.push_back(wxPropGrid::Entry(wxT("INSTRUME"),wxT(""),wxT("Name of instrument (camera)")));
       entries.push_back(wxPropGrid::Entry(wxT("PSZX"),wxT(""),wxT("Size of a pixel in X direction [m]")));
@@ -436,10 +439,10 @@ bool wxFactory::getFitsHeaderEntries(wxPropGrid::Entries& entries)
       entries.push_back(wxPropGrid::Entry(wxT("OBJECT"),wxT("Object"),wxT("Object of observation")));
       entries.push_back(wxPropGrid::Entry(wxT("ANGLE"),wxT(""),wxT("Angle from Stepper")));
       entries.push_back(wxPropGrid::Entry(wxT("STEPPERC"),wxT(""),wxT("Angle Calibration")));
-      entries.push_back(wxPropGrid::Entry(wxT("WAVELANG"),wxT(""),wxT("Laser wavelength")));
+      entries.push_back(wxPropGrid::Entry(wxT("WAVELENG"),wxT(""),wxT("Laser wavelength")));
       entries.push_back(wxPropGrid::Entry(wxT("DISTANCE"),wxT(""),wxT("Sample-Matrix Distance")));
       entries.push_back(wxPropGrid::Entry(wxT("POWER"),wxT(""),wxT("Laser power")));
-      entries.push_back(wxPropGrid::Entry(wxT("FILTMAP"),wxT("1"),wxT("List of filters in wheel (from MAX to MIN) [F11,F12,F13;F21,F22;...;1]")));
+      //entries.push_back(wxPropGrid::Entry(wxT("FILTMAP"),wxT("1"),wxT("List of filters in wheel (from MAX to MIN) [F11,F12,F13;F21,F22;...;1]")));
       entries.push_back(wxPropGrid::Entry(wxT("EXPOSURE"),wxT("0.00"),wxT("Cam exposure (s)")));
 
 

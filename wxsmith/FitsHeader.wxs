@@ -4,14 +4,24 @@
 		<size>400,400</size>
 		<maxsize>-1,400</maxsize>
 		<object class="wxBoxSizer" variable="BoxSizer1" member="yes">
+			<orient>wxVERTICAL</orient>
 			<object class="sizeritem">
 				<object class="wxGrid" name="ID_GRID1" subclass="wxPropGrid" variable="grid" member="yes">
-					<style>wxSIMPLE_BORDER</style>
 					<size>500,300</size>
+					<style>wxSIMPLE_BORDER</style>
 				</object>
 				<flag>wxALL|wxEXPAND|wxALIGN_TOP|wxALIGN_CENTER_HORIZONTAL</flag>
 				<border>5</border>
 				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxButton" name="ID_BUTTON1" variable="enptyFits" member="yes">
+					<label>empty</label>
+					<size>80,20</size>
+					<handler function="OnEnptyFitsClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
 			</object>
 		</object>
 	</object>

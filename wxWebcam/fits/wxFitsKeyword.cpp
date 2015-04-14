@@ -14,12 +14,48 @@
 
 // NOTE the strings must match the enums
 static const wxChar* s_kwdString[] = {
-   wxT("SIMPLE  "),    wxT("BITPIX  "),    wxT("NAXIS   "),    wxT("NAXIS1  "),    wxT("NAXIS2  "),    wxT("NAXIS3  "),    wxT("EXPOSURE"),
-   wxT("BSCALE  "),    wxT("BZERO   "),    wxT("DATE-OBS"),    wxT("TIMESYS "),    wxT("TELESCOP"),    wxT("INSTRUME"),    wxT("OBSERVER"),
-   wxT("OBJECT  "),    wxT("EXPTIME "),    wxT("CCD_TEMP"),    wxT("PSZX    "),    wxT("PSZY    "),    wxT("XBINNING"),    wxT("YBINNING"),
-   wxT("CAMSETUP"),    wxT("EGAIN   "),    wxT("FOCALLEN"),    wxT("APTDIA  "),    wxT("SWCREATE"),    wxT("FILTER  "),    wxT("FILTMAP "),
-   wxT("IMAGETYP"),    wxT("OBJCTRA "),    wxT("OBJCTDEC"),    wxT("SITELAT "),    wxT("SITELONG"),    wxT("FRAMENO "),    wxT("COMMENT "),
-   wxT("HISTORY "),    wxT("ANGLE   "),    wxT("POWER   "),    wxT("STEPPERC"),    wxT("DISTANCE"),    wxT("WAVELANG"),    wxT("END     "),
+      wxT("SIMPLE  "),
+      wxT("BITPIX  "),
+      wxT("NAXIS   "),
+      wxT("NAXIS1  "),
+      wxT("NAXIS2  "),
+      wxT("NAXIS3  "),
+      wxT("BSCALE  "),
+      wxT("BZERO   "),
+      wxT("DATE_OBS"),
+      wxT("TIMESYS "),
+      wxT("TELESCOP"),
+      wxT("INSTRUME"),
+      wxT("OBSERVER"),
+      wxT("OBJECT  "),
+      wxT("EXPTIME "),
+      wxT("CCD_TEMP"),
+      wxT("PSZX    "),
+      wxT("PSZY    "),
+      wxT("XBINNING"),
+      wxT("YBINNING"),
+      wxT("CAMSETUP"),
+      wxT("EGAIN   "),
+      wxT("FOCALLEN"),
+      wxT("APTDIA  "),
+      wxT("SWCREATE"),
+      wxT("FILTER  "),
+      wxT("FILTMAP "),
+      wxT("EXPOSURE"),
+      wxT("ANGLE   "),
+      wxT("STEPPERC"),
+      wxT("WAVELENG"),
+      wxT("DISTANCE"),
+      wxT("POWER   "),
+      wxT("IMAGETYP"),
+      wxT("OBJCTRA "),
+      wxT("OBJCTDEC"),
+      wxT("SITELAT "),
+      wxT("SITELONG"),
+      wxT("FRAMENO "),
+      wxT("COMMENT "),
+      wxT("HISTORY "),
+      wxT("END     "),
 };
 
 // the static lookup map from keyword string to enum
@@ -261,12 +297,12 @@ void wxFitsKeywordEx::StepperAngleKwd(float angle)
 
 void wxFitsKeywordEx::StepperCalibrKwd(float calibr)
 {
-   SetKeyword(wxFitsKeyword::EF_CALIBR, calibr);
+   SetKeyword(wxFitsKeyword::EF_STEPPERC, calibr);
 }
 
 void wxFitsKeywordEx::WavelengthKwd(float wavelength)
 {
-   SetKeyword(wxFitsKeyword::EF_WAVELENGTH, wavelength);
+   SetKeyword(wxFitsKeyword::EF_WAVELENG, wavelength);
 }
 
 void wxFitsKeywordEx::ExposureKwd(float exposure)
