@@ -3,8 +3,6 @@
 	<object class="wxFrame" name="wxWebcamDBFrame">
 		<title>nanoScat</title>
 		<size>40,40</size>
-		<fg>wxSYS_COLOUR_INACTIVEBORDER</fg>
-		<bg>wxSYS_COLOUR_BACKGROUND</bg>
 		<id_arg>0</id_arg>
 		<style>wxDEFAULT_FRAME_STYLE|wxMINIMIZE_BOX</style>
 		<handler function="OnClose" entry="EVT_CLOSE" />
@@ -12,14 +10,10 @@
 			<object class="sizeritem">
 				<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
 					<size>200,-1</size>
-					<fg>wxSYS_COLOUR_BTNFACE</fg>
-					<bg>wxSYS_COLOUR_GRAYTEXT</bg>
 					<style>wxNB_MULTILINE</style>
 					<handler function="OnNotebook1PageChanged" entry="EVT_NOTEBOOK_PAGE_CHANGED" />
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL1" variable="m_record_panel" member="yes">
-							<fg>wxSYS_COLOUR_BTNFACE</fg>
-							<bg>wxSYS_COLOUR_WINDOWFRAME</bg>
 							<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
 								<cols>1</cols>
 								<object class="sizeritem">
@@ -165,8 +159,6 @@
 					</object>
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL2" variable="m_stepper_panel" member="yes">
-							<fg>wxSYS_COLOUR_BTNHIGHLIGHT</fg>
-							<bg>wxSYS_COLOUR_INACTIVECAPTIONTEXT</bg>
 							<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
 								<cols>2</cols>
 								<rows>20</rows>
@@ -542,8 +534,6 @@
 					</object>
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL4" variable="Panel1" member="yes">
-							<fg>wxSYS_COLOUR_WINDOW</fg>
-							<bg>wxSYS_COLOUR_GRAYTEXT</bg>
 							<object class="wxBoxSizer" variable="BoxSizer4" member="no">
 								<orient>wxVERTICAL</orient>
 								<object class="sizeritem">
@@ -641,29 +631,6 @@
 											<border>5</border>
 										</object>
 										<object class="sizeritem">
-											<object class="wxSlider" name="ID_SLIDER1" variable="fWheelButtomTrigger" member="yes">
-												<min>-1</min>
-												<max>63000</max>
-												<style>wxSL_LABELS|wxSL_SELRANGE</style>
-											</object>
-											<colspan>3</colspan>
-											<col>0</col>
-											<row>5</row>
-											<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-											<option>1</option>
-										</object>
-										<object class="sizeritem">
-											<object class="wxSlider" name="ID_SLIDER2" variable="fWheelTopTrigger" member="yes">
-												<value>63000</value>
-												<max>63000</max>
-												<style>wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
-											</object>
-											<colspan>3</colspan>
-											<col>0</col>
-											<row>6</row>
-											<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										</object>
-										<object class="sizeritem">
 											<object class="wxCheckBox" name="ID_CHECKBOX8" variable="LockFWheel" member="yes">
 												<label>Lock</label>
 												<handler function="OnLockFWheelClick1" entry="EVT_CHECKBOX" />
@@ -692,8 +659,6 @@
 						<object class="wxPanel" name="ID_CAMERA_PANEL" variable="video_panel" member="yes">
 							<size>500,440</size>
 							<enabled>0</enabled>
-							<fg>wxSYS_COLOUR_HIGHLIGHT</fg>
-							<bg>wxSYS_COLOUR_BTNTEXT</bg>
 							<minsize>-1,-1</minsize>
 							<maxsize>-1,-1</maxsize>
 						</object>
@@ -755,8 +720,6 @@
 					<object class="sizeritem">
 						<object class="wxPanel" name="ID_PANEL3" variable="m_exposure_meter_panel" member="yes">
 							<size>58,64</size>
-							<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
-							<bg>wxSYS_COLOUR_CAPTIONTEXT</bg>
 							<tooltip>Live histogram</tooltip>
 							<maxsize>128,64</maxsize>
 							<style>0</style>
@@ -769,6 +732,43 @@
 						<object class="wxGridBagSizer" variable="GridBagSizer1" member="no">
 							<growablecols>3</growablecols>
 							<object class="sizeritem">
+								<object class="wxSlider" name="ID_SLIDER1" variable="fWheelButtomTrigger" member="yes">
+									<value>-1</value>
+									<min>-1</min>
+									<max>65536</max>
+									<style>wxSL_LABELS|wxSL_SELRANGE</style>
+								</object>
+								<colspan>3</colspan>
+								<col>0</col>
+								<row>0</row>
+								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxSlider" name="ID_SLIDER3" variable="fWheelPIVOTTrigger" member="yes">
+									<value>65536</value>
+									<max>65536</max>
+									<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
+								</object>
+								<colspan>3</colspan>
+								<col>0</col>
+								<row>1</row>
+								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxSlider" name="ID_SLIDER2" variable="fWheelTopTrigger" member="yes">
+									<value>65536</value>
+									<max>65536</max>
+									<style>wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
+								</object>
+								<colspan>3</colspan>
+								<col>0</col>
+								<row>2</row>
+								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+							</object>
+							<object class="sizeritem">
 								<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="currentFiltersField" member="yes">
 									<value>1</value>
 									<size>90,55</size>
@@ -776,7 +776,7 @@
 								</object>
 								<colspan>3</colspan>
 								<col>0</col>
-								<row>0</row>
+								<row>3</row>
 								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
@@ -787,7 +787,7 @@
 									<handler function="OnsetFilters_btnClick" entry="EVT_BUTTON" />
 								</object>
 								<col>2</col>
-								<row>1</row>
+								<row>4</row>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
@@ -803,7 +803,7 @@
 								</object>
 								<colspan>2</colspan>
 								<col>0</col>
-								<row>2</row>
+								<row>5</row>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>

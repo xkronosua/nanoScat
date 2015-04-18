@@ -136,8 +136,6 @@ const long wxWebcamDBFrame::ID_SPINCTRL11 = wxNewId();
 const long wxWebcamDBFrame::ID_BITMAPBUTTON3 = wxNewId();
 const long wxWebcamDBFrame::ID_BITMAPBUTTON4 = wxNewId();
 const long wxWebcamDBFrame::ID_CHECKBOX4 = wxNewId();
-const long wxWebcamDBFrame::ID_SLIDER1 = wxNewId();
-const long wxWebcamDBFrame::ID_SLIDER2 = wxNewId();
 const long wxWebcamDBFrame::ID_CHECKBOX8 = wxNewId();
 const long wxWebcamDBFrame::ID_PANEL4 = wxNewId();
 const long wxWebcamDBFrame::ID_NOTEBOOK1 = wxNewId();
@@ -146,6 +144,9 @@ const long wxWebcamDBFrame::ID_CHOICE1 = wxNewId();
 const long wxWebcamDBFrame::ID_SPINCTRL2 = wxNewId();
 const long wxWebcamDBFrame::ID_CHECKBOX2 = wxNewId();
 const long wxWebcamDBFrame::ID_PANEL3 = wxNewId();
+const long wxWebcamDBFrame::ID_SLIDER1 = wxNewId();
+const long wxWebcamDBFrame::ID_SLIDER3 = wxNewId();
+const long wxWebcamDBFrame::ID_SLIDER2 = wxNewId();
 const long wxWebcamDBFrame::ID_TEXTCTRL2 = wxNewId();
 const long wxWebcamDBFrame::ID_BUTTON9 = wxNewId();
 const long wxWebcamDBFrame::ID_BITMAPBUTTON5 = wxNewId();
@@ -431,10 +432,6 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	autoFWheelMode = new wxCheckBox(Panel1, ID_CHECKBOX4, _("Auto Mode"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX4"));
 	autoFWheelMode->SetValue(false);
 	fWheelSettingsBox->Add(autoFWheelMode, wxGBPosition(4, 0), wxDefaultSpan, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	fWheelButtomTrigger = new wxSlider(Panel1, ID_SLIDER1, 0, -1, 63000, wxDefaultPosition, wxDefaultSize, wxSL_LABELS|wxSL_SELRANGE, wxDefaultValidator, _T("ID_SLIDER1"));
-	fWheelSettingsBox->Add(fWheelButtomTrigger, wxGBPosition(5, 0), wxGBSpan(1, 3), wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
-	fWheelTopTrigger = new wxSlider(Panel1, ID_SLIDER2, 63000, 0, 63000, wxDefaultPosition, wxDefaultSize, wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE, wxDefaultValidator, _T("ID_SLIDER2"));
-	fWheelSettingsBox->Add(fWheelTopTrigger, wxGBPosition(6, 0), wxGBSpan(1, 3), wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	LockFWheel = new wxCheckBox(Panel1, ID_CHECKBOX8, _("Lock"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX8"));
 	LockFWheel->SetValue(false);
 	fWheelSettingsBox->Add(LockFWheel, wxGBPosition(7, 0), wxGBSpan(1, 3), wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
@@ -478,15 +475,21 @@ wxWebcamDBFrame::wxWebcamDBFrame(wxWindow* parent,wxWindowID WXUNUSED(id))
 	BoxSizer3->Add(m_exposure_meter_panel, 1, wxTOP|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 3);
 	GridBagSizer1 = new wxGridBagSizer(0, 0);
 	GridBagSizer1->AddGrowableCol(3);
+	fWheelButtomTrigger = new wxSlider(this, ID_SLIDER1, -1, -1, 65536, wxDefaultPosition, wxDefaultSize, wxSL_LABELS|wxSL_SELRANGE, wxDefaultValidator, _T("ID_SLIDER1"));
+	GridBagSizer1->Add(fWheelButtomTrigger, wxGBPosition(0, 0), wxGBSpan(1, 3), wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	fWheelPIVOTTrigger = new wxSlider(this, ID_SLIDER3, 65536, 0, 65536, wxDefaultPosition, wxDefaultSize, wxSL_HORIZONTAL|wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE, wxDefaultValidator, _T("ID_SLIDER3"));
+	GridBagSizer1->Add(fWheelPIVOTTrigger, wxGBPosition(1, 0), wxGBSpan(1, 3), wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	fWheelTopTrigger = new wxSlider(this, ID_SLIDER2, 65536, 0, 65536, wxDefaultPosition, wxDefaultSize, wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE, wxDefaultValidator, _T("ID_SLIDER2"));
+	GridBagSizer1->Add(fWheelTopTrigger, wxGBPosition(2, 0), wxGBSpan(1, 3), wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
 	currentFiltersField = new wxTextCtrl(this, ID_TEXTCTRL2, _("1"), wxDefaultPosition, wxSize(90,55), 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
 	currentFiltersField->SetToolTip(_("Список поточних фільтрів (через \',\' чи \';\')"));
-	GridBagSizer1->Add(currentFiltersField, wxGBPosition(0, 0), wxGBSpan(1, 3), wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	GridBagSizer1->Add(currentFiltersField, wxGBPosition(3, 0), wxGBSpan(1, 3), wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	setFilters_btn = new wxButton(this, ID_BUTTON9, _("Set"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON9"));
-	GridBagSizer1->Add(setFilters_btn, wxGBPosition(1, 2), wxDefaultSpan, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	GridBagSizer1->Add(setFilters_btn, wxGBPosition(4, 2), wxDefaultSpan, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	stepperCapture2_btn = new wxBitmapButton(this, ID_BITMAPBUTTON5, wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_TIP")),wxART_MAKE_CLIENT_ID_FROM_STR(wxString(_T("wxART_MESSAGE_BOX")))), wxDefaultPosition, wxSize(40,40), 0, wxDefaultValidator, _T("ID_BITMAPBUTTON5"));
 	stepperCapture2_btn->SetBitmapDisabled(wxArtProvider::GetBitmap(wxART_MAKE_ART_ID_FROM_STR(_T("wxART_ERROR")),wxART_BUTTON));
 	stepperCapture2_btn->SetBackgroundColour(wxColour(207,210,96));
-	GridBagSizer1->Add(stepperCapture2_btn, wxGBPosition(2, 0), wxGBSpan(1, 2), wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	GridBagSizer1->Add(stepperCapture2_btn, wxGBPosition(5, 0), wxGBSpan(1, 2), wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer3->Add(GridBagSizer1, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(BoxSizer3, 0, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(BoxSizer1);
@@ -2016,7 +2019,10 @@ void wxWebcamDBFrame::OnOpenStepperCOMPortClick(wxCommandEvent&  WXUNUSED(event)
 	if (COMPortNumber==0){
             for (int i=1; i<10; i++)
             {
-                if(Stepper.SMD_OpenComPort(i)) COMPortNumber = i;
+                if(Stepper.SMD_OpenComPort(i)) {
+                        COMPortNumber = i;
+                        SS_PortNSpin->SetValue(i);
+                }
             }
     }
 	bool b = Stepper.SMD_OpenComPort(COMPortNumber);
@@ -2027,12 +2033,13 @@ void wxWebcamDBFrame::OnOpenStepperCOMPortClick(wxCommandEvent&  WXUNUSED(event)
 			m_openStepperCOMPort_btn->SetBackgroundColour(wxColor("red"));
 			SS_PortNSpin->Enable(false);
 			 m_openStepperCOMPort_btn->SetLabel("Close");
-			 m_stepperCOM_timer.Start(5000);
+			 m_stepperCOM_timer.Start(3000);
 	}
 	else         {
 			wxMessageBox(wxString::Format("Stepper error %d", b));
 			m_openStepperCOMPort_btn->SetBackgroundColour(wxColor("green"));
 			m_openStepperCOMPort_btn->SetLabel("Open");
+			m_stepperCOM_timer.Stop();
 	}
 	}
 	else{
@@ -2043,6 +2050,7 @@ void wxWebcamDBFrame::OnOpenStepperCOMPortClick(wxCommandEvent&  WXUNUSED(event)
 			m_openStepperCOMPort_btn->SetBackgroundColour(wxColor("green"));
 			m_openStepperCOMPort_btn->SetLabel("Open");
 			SS_PortNSpin->Enable(true);
+			m_stepperCOM_timer.Stop();
 	}
 	//wxMessageBox(wxString::Format("State: %d", IsStepperConnected()));
 }
@@ -2119,13 +2127,14 @@ Stepper.SMD_ResetSHD(255,true,true);
 void wxWebcamDBFrame::OnStepperCOMTimer(wxTimerEvent& WXUNUSED(event))
 {
 	if(!IsStepperConnected() ) {
-	 //  Stepper.SMD_OpenComPort((unsigned int)SS_PortNSpin->GetValue());
+
+	   Stepper.SMD_OpenComPort((unsigned int)SS_PortNSpin->GetValue());
 	 //char p;
 	 //Stepper.SMD_GetInform(p);
 
 	}
 	else {
-	   m_stepperCOM_timer.Stop();
+	   //m_stepperCOM_timer.Stop();
 }
 }
 
@@ -2210,6 +2219,21 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
                     m_stepperCapture_timer.Start(LE_SpinCtrl1->GetValue()*1000+1000);
                 }
             }
+            if (pivot_ > fWheelPIVOTTrigger->GetValue()){
+                double exposure = LE_SpinCtrl1->GetValue();
+                if(AutoExposure->IsChecked() && exposure>0.001){
+                    exposure *= 0.9;
+                    LE_SpinCtrl1->SetValue(exposure);
+                    updateExposure();
+                    m_stepperCapture_timer.Start(LE_SpinCtrl1->GetValue()*1000+1000);
+                }
+
+                if( autoFWheelMode->IsChecked() &&
+                    GetCurrentFilterIndex()>0){
+                    fWheelIncrease();
+                    m_stepperCapture_timer.Start(LE_SpinCtrl1->GetValue()*1000+1000);
+                }
+            }
             else if (vlow_ < fWheelButtomTrigger->GetValue()){
                 double exposure = LE_SpinCtrl1->GetValue();
                 if(AutoExposure->IsChecked() && exposure<10){
@@ -2244,6 +2268,7 @@ void wxWebcamDBFrame::OnStepperCaptureTimer(wxTimerEvent& WXUNUSED(event))
 	else {
 
 	 SS_StepperCapture_btn->SetLabel(_("Capture"));
+	 stepperCapture2_btn->SetBackgroundColour("green");
 	 //stepperCapture2_btn->Enable(true);
 	 //stepperStopCapture_btn->Enable(false);
 	 StopCapture();

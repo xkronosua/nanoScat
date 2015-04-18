@@ -224,8 +224,6 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_BITMAPBUTTON3;
 		static const long ID_BITMAPBUTTON4;
 		static const long ID_CHECKBOX4;
-		static const long ID_SLIDER1;
-		static const long ID_SLIDER2;
 		static const long ID_CHECKBOX8;
 		static const long ID_PANEL4;
 		static const long ID_NOTEBOOK1;
@@ -234,6 +232,9 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_SPINCTRL2;
 		static const long ID_CHECKBOX2;
 		static const long ID_PANEL3;
+		static const long ID_SLIDER1;
+		static const long ID_SLIDER3;
+		static const long ID_SLIDER2;
 		static const long ID_TEXTCTRL2;
 		static const long ID_BUTTON9;
 		static const long ID_BITMAPBUTTON5;
@@ -312,6 +313,7 @@ class wxWebcamDBFrame: public wxFrame
 		wxChoice* m_stepperWModeChoice;
 		wxSlider* fWheelTopTrigger;
 		wxChoice* m_stepperIChoice;
+		wxSlider* fWheelPIVOTTrigger;
 		wxStatusBarEx* m_statusbar;
 		wxBoxSizer* BoxSizer1;
 		wxBitmapButton* stepperCapture2_btn;
