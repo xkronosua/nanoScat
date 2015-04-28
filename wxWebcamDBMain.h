@@ -134,6 +134,8 @@ class wxWebcamDBFrame: public wxFrame
 		void OnbacklashCheckClick(wxCommandEvent& event);
 		void OnLockFWheelClick(wxCommandEvent& event);
 		void OnLockFWheelClick1(wxCommandEvent& event);
+		void OnSS_CalibrSpinChange(wxSpinEvent& event);
+		void OnSS_AngSpinChange(wxSpinEvent& event);
 		//*)
 
 		void OnGaugeTimer(wxTimerEvent& event);
@@ -159,6 +161,7 @@ class wxWebcamDBFrame: public wxFrame
         void SetStepperState(bool state){ wxWebcamDBFrame::isStepperConnected = state;};
         //int GetStepperState();{ return Stepper.SMD;};
         bool IsStepperConnected();
+        double GetSingleStepAngle();
 
         double GetStepperAngle(){return StepperAngle;}
         double SetStepperAngle(double ang){return StepperAngle=ang;}
@@ -235,6 +238,7 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_SLIDER1;
 		static const long ID_SLIDER3;
 		static const long ID_SLIDER2;
+		static const long ID_SLIDER4;
 		static const long ID_TEXTCTRL2;
 		static const long ID_BUTTON9;
 		static const long ID_BITMAPBUTTON5;
@@ -317,6 +321,7 @@ class wxWebcamDBFrame: public wxFrame
 		wxStatusBarEx* m_statusbar;
 		wxBoxSizer* BoxSizer1;
 		wxBitmapButton* stepperCapture2_btn;
+		wxSlider* HistMinNaxBalance;
 		wxButton* m_pause_btn;
 		wxSpinCtrlDbl* backlashSpin;
 		wxMenuBar* MenuBar1;

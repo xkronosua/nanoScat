@@ -191,6 +191,7 @@
 								<object class="sizeritem">
 									<object class="wxSpinCtrl" name="ID_SPINCTRL3" variable="SS_PortNSpin" member="yes">
 										<value>0</value>
+										<min>-1</min>
 										<size>60,21</size>
 										<tooltip>COM-порт драйверу крокового двигуна</tooltip>
 									</object>
@@ -280,6 +281,7 @@
 										<max>9999</max>
 										<size>90,-1</size>
 										<tooltip>Коефіцієнт калібровки для кроків</tooltip>
+										<handler function="OnSS_CalibrSpinChange" entry="EVT_SPINCTRL" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>1</border>
@@ -298,6 +300,8 @@
 										<max>99999</max>
 										<size>90,-1</size>
 										<tooltip>Кут повороту</tooltip>
+										<exstyle>wxWS_EX_BLOCK_EVENTS|wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
+										<handler function="OnSS_AngSpinChange" entry="EVT_SPINCTRL" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>1</border>
@@ -719,7 +723,7 @@
 					</object>
 					<object class="sizeritem">
 						<object class="wxPanel" name="ID_PANEL3" variable="m_exposure_meter_panel" member="yes">
-							<size>58,64</size>
+							<size>130,64</size>
 							<tooltip>Live histogram</tooltip>
 							<maxsize>128,64</maxsize>
 							<style>0</style>
@@ -735,7 +739,7 @@
 								<object class="wxSlider" name="ID_SLIDER1" variable="fWheelButtomTrigger" member="yes">
 									<value>-1</value>
 									<min>-1</min>
-									<max>65536</max>
+									<max>40000</max>
 									<style>wxSL_LABELS|wxSL_SELRANGE</style>
 								</object>
 								<colspan>3</colspan>
@@ -747,6 +751,7 @@
 							<object class="sizeritem">
 								<object class="wxSlider" name="ID_SLIDER3" variable="fWheelPIVOTTrigger" member="yes">
 									<value>65536</value>
+									<min>10000</min>
 									<max>65536</max>
 									<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
 								</object>
@@ -760,6 +765,7 @@
 							<object class="sizeritem">
 								<object class="wxSlider" name="ID_SLIDER2" variable="fWheelTopTrigger" member="yes">
 									<value>65536</value>
+									<min>10000</min>
 									<max>65536</max>
 									<style>wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
 								</object>
@@ -769,14 +775,28 @@
 								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 							</object>
 							<object class="sizeritem">
-								<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="currentFiltersField" member="yes">
-									<value>1</value>
-									<size>90,55</size>
-									<tooltip>Список поточних фільтрів (через &apos;,&apos; чи &apos;;&apos;)</tooltip>
+								<object class="wxSlider" name="ID_SLIDER4" variable="HistMinNaxBalance" member="yes">
+									<value>50</value>
+									<min>1</min>
+									<style>wxSL_LABELS|wxSL_TOP</style>
 								</object>
 								<colspan>3</colspan>
 								<col>0</col>
 								<row>3</row>
+								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="currentFiltersField" member="yes">
+									<value>1</value>
+									<size>90,55</size>
+									<tooltip>Список поточних фільтрів (через &apos;,&apos; чи &apos;;&apos;)</tooltip>
+									<style>wxTE_MULTILINE</style>
+								</object>
+								<colspan>3</colspan>
+								<col>0</col>
+								<row>4</row>
 								<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
@@ -787,7 +807,7 @@
 									<handler function="OnsetFilters_btnClick" entry="EVT_BUTTON" />
 								</object>
 								<col>2</col>
-								<row>4</row>
+								<row>5</row>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
