@@ -397,6 +397,11 @@
 		</Unit>
 		<Unit filename="debtools.h" />
 		<Unit filename="doc/html/notes.html" />
+		<Unit filename="et1255.cpp" />
+		<Unit filename="et1255.cpp" />
+		<Unit filename="et1255.h" />
+		<Unit filename="mathplot.cpp" />
+		<Unit filename="mathplot.h" />
 		<Unit filename="version.h" />
 		<Unit filename="w32res/resource.rc">
 			<Option compilerVar="WINDRES" />

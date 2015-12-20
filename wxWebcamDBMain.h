@@ -13,6 +13,7 @@
 #include "wxWebcamDBApp.h"
 
 //(*Headers(wxWebcamDBFrame)
+#include <mathplot.h>
 #include <wx/notebook.h>
 #include <wx/sizer.h>
 #include <wx/stattext.h>
@@ -38,9 +39,11 @@
 #include "wxcustom/wxStatusBarEx.h"
 #include <wx/listimpl.cpp>
 
+#include "et1255.h"
 #include "wxSubFrame.h"
 #include "wxFactory.h"
 #include "SMDDrv.h"
+
 
 class wxPort;
 class wxSubFrame;
@@ -67,7 +70,15 @@ class wxWebcamDBFrame: public wxFrame
       //void UpdateFWheelMap();
 //      void UpdateGuiderTuning();
       void UpdateIncrement();
-
+      void ClearIndPlot();
+      ET1255 et1255;
+      wxClientDC  *dc;
+      wxCoord PowerPointPrevX[4], PowerPointPrevY[4];
+      std::vector<double> PD0_yb, PD1_yb, PD2_yb, PD3_yb, PD_xb,
+                Ind_p, Ind_vh, Ind_vl, Ind_angle;
+      double c_pivot, c_vlow,  c_vhig;
+      LONGLONG PowerPointsN;
+      wxColour ADCLineColors[4];
 	private:
        //static wxWebcamDBFrame* m_self;
 
@@ -136,6 +147,15 @@ class wxWebcamDBFrame: public wxFrame
 		void OnLockFWheelClick1(wxCommandEvent& event);
 		void OnSS_CalibrSpinChange(wxSpinEvent& event);
 		void OnSS_AngSpinChange(wxSpinEvent& event);
+		void OnStartADCClick(wxCommandEvent& event);
+		void OnsetADCDataPathClick(wxCommandEvent& event);
+		void OnSS_FrecSliderCmdScroll(wxScrollEvent& event);
+		void Ongraph_plotResize(wxSizeEvent& event);
+		void OnSS_FrecSpinChange(wxSpinEvent& event);
+		void OnReal_PlotResize(wxSizeEvent& event);
+		void OnButton2Click(wxCommandEvent& event);
+
+		void OnADC_Int_FrecSelect(wxCommandEvent& event);
 		//*)
 
 		void OnGaugeTimer(wxTimerEvent& event);
@@ -143,10 +163,12 @@ class wxWebcamDBFrame: public wxFrame
 		void OnStepperCOMTimer(wxTimerEvent& event);
 		void OnStepperCaptureTimer(wxTimerEvent& event);
 		void OnStepperAfterCaptureTimer(wxTimerEvent& event);
+		void OnADCTimer(wxTimerEvent& event);
 
+        void OnStartADC();
 
 		void OnIdle(wxIdleEvent& event);
-      void OnUpdateCamData(wxCommandEvent& event); //BM:20090104 added
+        void OnUpdateCamData(wxCommandEvent& event); //BM:20090104 added
 
 		// non-event helper functions
 		void StartCapture(bool batch);
@@ -165,7 +187,7 @@ class wxWebcamDBFrame: public wxFrame
 
         double GetStepperAngle(){return StepperAngle;}
         double SetStepperAngle(double ang){return StepperAngle=ang;}
-        double UpdateStepperAngle(double ang){StepperAngle+=ang; SS_CurrentAngle->SetValue( StepperAngle); return StepperAngle;};
+        double UpdateStepperAngle(double ang);
         double ResetStepperAngle(){StepperAngle = 0;  SS_CurrentAngle->SetValue(StepperAngle); return StepperAngle;};
         void UpdateFWheelString();
         void setCurrentFiltersIndex(int index);
@@ -203,7 +225,7 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_CHOICE4;
 		static const long ID_STATICTEXT9;
 		static const long ID_CHOICE5;
-		static const long ID_STATICTEXT10;
+		static const long ID_SLIDER5;
 		static const long ID_SPINCTRL7;
 		static const long ID_STATICTEXT11;
 		static const long ID_SPINCTRL8;
@@ -229,8 +251,37 @@ class wxWebcamDBFrame: public wxFrame
 		static const long ID_CHECKBOX4;
 		static const long ID_CHECKBOX8;
 		static const long ID_PANEL4;
+		static const long ID_BUTTON11;
+		static const long ID_SPINCTRL12;
+		static const long ID_SPINCTRL13;
+		static const long ID_TEXTCTRL3;
+		static const long ID_BUTTON12;
+		static const long ID_CHECKBOX10;
+		static const long ID_BUTTON13;
+		static const long ID_CHOICE6;
+		static const long ID_STATICTEXT7;
+		static const long ID_STATICTEXT8;
+		static const long ID_STATICTEXT12;
+		static const long ID_STATICTEXT13;
+		static const long ID_PANEL6;
 		static const long ID_NOTEBOOK1;
 		static const long ID_CAMERA_PANEL;
+		static const long ID_AXIS1;
+		static const long ID_AXIS2;
+		static const long ID_VECTOR1;
+		static const long ID_VECTOR2;
+		static const long ID_VECTOR3;
+		static const long ID_VECTOR4;
+		static const long ID_VECTOR8;
+		static const long ID_MATHPLOT1;
+		static const long ID_PANEL5;
+		static const long ID_AXIS3;
+		static const long ID_AXIS4;
+		static const long ID_VECTOR5;
+		static const long ID_VECTOR6;
+		static const long ID_VECTOR7;
+		static const long ID_MATHPLOT2;
+		static const long ID_PANEL7;
 		static const long ID_CHOICE1;
 		static const long ID_SPINCTRL2;
 		static const long ID_CHECKBOX2;
@@ -258,6 +309,7 @@ class wxWebcamDBFrame: public wxFrame
       static const long ID_STEPPER_COM_TIMER;
       static const long ID_STEPPER_CAPTURE_TIMER;
       static const long ID_STEPPER_AFTER_CAPTURE_TIMER;
+      static const long ID_ADC_TIMER;
 
 
 		//(*Declarations(wxWebcamDBFrame)
@@ -265,50 +317,84 @@ class wxWebcamDBFrame: public wxFrame
 		wxButton* SS_CWiceDirection;
 		wxButton* SS_StepperCapture_btn;
 		wxBitmapButton* StepperMoveCCWice;
+		mpWindow* PowerPlot;
+		wxPanel* graph_plot;
 		wxMenuItem* MenuItem8;
+		wxStaticText* ADCChnl1Val;
+		std::vector<float>  PD0_Y;
 		wxCheckBox* LE_CheckBox;
 		wxMenuItem* MenuItem7;
 		wxCheckBox* MaxFrames_CheckBox;
 		wxTextCtrl* m_increment;
+		std::vector<float>  PD3_X;
 		wxNotebook* Notebook1;
 		wxButton* m_openStepperCOMPort_btn;
+		mpScaleY   *Y_Axis;
+		std::vector<float>  PD3_Y;
+		std::vector<float>  PD0_X;
 		wxStaticText* StaticText2;
 		wxCheckBox* backlashCheck;
 		wxMenuItem* MenuItem2;
+		std::vector<float>  Ind_low_Y;
 		wxButton* SetStepperParam;
 		wxMenu* Menu3;
+		wxChoice* ADC_Int_Frec;
 		wxGrid* fWheelFiltersGrid;
 		wxBitmapButton* fWheelNext;
 		wxStaticText* StaticText6;
 		wxChoice* m_stepperIStopChoice;
+		mpFXYVector   *Ind_pivot;
+		mpFXYVector   *PD1;
 		wxMenuItem* MenuItem1;
+		std::vector<float>  Ind_high_X;
 		wxButton* m_capture_btn;
 		wxSpinCtrlDbl* SS_AngSpin;
 		wxButton* setFWheelList_btn;
 		wxPanel* video_panel;
 		wxStaticText* StaticText8;
+		std::vector<float>  Ind_pivot_X;
+		wxStaticText* ADCChnl2Val;
+		std::vector<float>  PD2_X;
 		wxSpinCtrl* SS_StepperInterval;
 		wxCheckBox* autoFWheelMode;
 		wxButton* SS_CCWiceDirection;
 		wxPanel* m_record_panel;
+		mpScaleY   *Signal_axis;
+		wxSpinCtrl* ADCFrec;
+		wxSlider* SS_FrecSlider;
 		wxPanel* Panel1;
 		wxStaticText* StaticText1;
+		std::vector<float>  PD1_X;
+		wxStaticText* ADCChnl3Val;
 		wxBoxSizer* BoxSizer2;
+		std::vector<float>  PD4_Y;
 		wxStaticText* StaticText3;
 		wxMenu* Menu1;
+		std::vector<float>  Ind_pivot_Y;
 		wxBitmapButton* fWheelPrev;
 		wxSpinCtrl* SS_FrecSpin;
+		wxButton* Button2;
+		wxTextCtrl* ADCDataPath;
 		wxTextCtrl* currentFiltersField;
+		std::vector<float>  PD4_X;
+		std::vector<float>  Ind_high_Y;
 		wxSpinCtrlDbl* m_meter_scale;
 		wxStaticText* CalibrKLabel;
 		wxMainToolBar* ToolBar1;
 		wxCheckBox* LockFWheel;
+		mpFXYVector   *PD3;
 		wxCheckBox* fWheelCheck;
 		wxMenuItem* MenuItem3;
+		mpFXYVector   *Ind_high;
+		wxSpinCtrl* ADCAmplif;
+		wxButton* StartADC;
 		wxSpinCtrlDbl* SS_CalibrSpin;
+		std::vector<float>  PD2_Y;
 		wxBitmapButton* StepperMoveCWice;
 		wxCheckBox* m_activate_exposure_meter;
+		std::vector<float>  Ind_low_X;
 		wxStaticText* StaticText5;
+		mpFXYVector   *PD2;
 		wxSpinCtrlDbl* SS_CurrentAngle;
 		wxChoice* SS_MotorN;
 		wxChoice* m_meter_channel;
@@ -320,13 +406,20 @@ class wxWebcamDBFrame: public wxFrame
 		wxSlider* fWheelPIVOTTrigger;
 		wxStatusBarEx* m_statusbar;
 		wxBoxSizer* BoxSizer1;
+		mpWindow* Ind_Plot;
 		wxBitmapButton* stepperCapture2_btn;
 		wxSlider* HistMinNaxBalance;
 		wxButton* m_pause_btn;
+		wxPanel* Real_Plot;
 		wxSpinCtrlDbl* backlashSpin;
 		wxMenuBar* MenuBar1;
+		mpScaleX   *Ang_Axis;
 		wxSpinCtrlDbl* LE_SpinCtrl1;
 		wxPanel* m_exposure_meter_panel;
+		mpFXYVector   *Ind_low;
+		mpFXYVector   *PD4;
+		wxPanel* Panel2;
+		mpFXYVector   *PD0;
 		wxStaticBoxSizer* StaticBoxSizer1;
 		wxSpinCtrl* SS_PortNSpin;
 		wxSpinCtrl* MaxFrames_SpinCtrl;
@@ -337,17 +430,22 @@ class wxWebcamDBFrame: public wxFrame
 		wxMenuItem* MenuItem9;
 		wxButton* setFilters_btn;
 		wxGauge* m_gauge1;
-		wxStaticText* StaticText4;
 		wxMenuItem* MenuItemGuiding;
+		mpScaleX   *X_Axis;
 		wxButton* ResetSHD;
+		wxStaticText* ADCChnl4Val;
+		std::vector<float>  PD1_Y;
 		wxSpinCtrl* SS_MultFrecSpin;
+		wxCheckBox* SyncCapture;
 		wxMenu* Menu4;
 		wxSpinCtrlDbl* fWheelCalibrSpin;
+		wxButton* setADCDataPath;
 		//*)
 
 		DECLARE_EVENT_TABLE()
     private:
       SMDDll Stepper;//(_T("C:\\Windows\\SMD004.dll"));
+
       wxLocale   m_locale;
       wxFactory  m_factory;
 
@@ -384,10 +482,12 @@ class wxWebcamDBFrame: public wxFrame
       wxTimer     m_stepperCOM_timer;
       wxTimer     m_stepperCapture_timer;
       wxTimer     m_stepperAfterCapture_timer;
+      wxTimer     m_ADC_timer;
       filtersMap fBaseMap;
       wxArrayString filtersArray;
       filtersMap fMap;
       bool StepperExposurePause;
+
 };
 
 

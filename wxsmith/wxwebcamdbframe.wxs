@@ -2,7 +2,9 @@
 <wxsmith>
 	<object class="wxFrame" name="wxWebcamDBFrame">
 		<title>nanoScat</title>
-		<size>40,40</size>
+		<size>866,673</size>
+		<fg>wxSYS_COLOUR_ACTIVEBORDER</fg>
+		<bg>wxSYS_COLOUR_BTNTEXT</bg>
 		<id_arg>0</id_arg>
 		<style>wxDEFAULT_FRAME_STYLE|wxMINIMIZE_BOX</style>
 		<handler function="OnClose" entry="EVT_CLOSE" />
@@ -10,10 +12,14 @@
 			<object class="sizeritem">
 				<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
 					<size>200,-1</size>
+					<fg>wxSYS_COLOUR_CAPTIONTEXT</fg>
+					<bg>wxSYS_COLOUR_BTNTEXT</bg>
 					<style>wxNB_MULTILINE</style>
 					<handler function="OnNotebook1PageChanged" entry="EVT_NOTEBOOK_PAGE_CHANGED" />
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL1" variable="m_record_panel" member="yes">
+							<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
+							<bg>wxSYS_COLOUR_BTNTEXT</bg>
 							<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
 								<cols>1</cols>
 								<object class="sizeritem">
@@ -159,6 +165,8 @@
 					</object>
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL2" variable="m_stepper_panel" member="yes">
+							<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
+							<bg>wxSYS_COLOUR_BTNTEXT</bg>
 							<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
 								<cols>2</cols>
 								<rows>20</rows>
@@ -184,6 +192,7 @@
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText2" member="yes">
 										<label>Port:</label>
+										<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<option>1</option>
@@ -202,6 +211,7 @@
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText3" member="yes">
 										<label>Motor:</label>
+										<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<option>1</option>
@@ -269,6 +279,7 @@
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT5" variable="CalibrKLabel" member="yes">
 										<label>Calibr. Coef.:</label>
+										<fg>wxSYS_COLOUR_CAPTIONTEXT</fg>
 										<tooltip>Calibration coef</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
@@ -276,7 +287,7 @@
 								</object>
 								<object class="sizeritem">
 									<object class="wxSpinCtrl" name="ID_SPINCTRL5" subclass="wxSpinCtrlDbl" variable="SS_CalibrSpin" member="yes">
-										<value>127.4</value>
+										<value>126.2</value>
 										<min>1</min>
 										<max>9999</max>
 										<size>90,-1</size>
@@ -290,6 +301,7 @@
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText5" member="yes">
 										<label>Ang.[deg]:</label>
+										<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<option>1</option>
@@ -300,7 +312,6 @@
 										<max>99999</max>
 										<size>90,-1</size>
 										<tooltip>Кут повороту</tooltip>
-										<exstyle>wxWS_EX_BLOCK_EVENTS|wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
 										<handler function="OnSS_AngSpinChange" entry="EVT_SPINCTRL" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
@@ -346,6 +357,7 @@
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText8" member="yes">
 										<label>W__Mode:</label>
+										<fg>wxSYS_COLOUR_CAPTIONTEXT</fg>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<option>1</option>
@@ -357,7 +369,7 @@
 											<item>Full</item>
 											<item>1/2</item>
 										</content>
-										<selection>0</selection>
+										<selection>1</selection>
 										<size>60,21</size>
 										<tooltip>Режим збудження фаз</tooltip>
 									</object>
@@ -366,19 +378,25 @@
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
-									<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText4" member="yes">
-										<label>Frec:</label>
+									<object class="wxSlider" name="ID_SLIDER5" variable="SS_FrecSlider" member="yes">
+										<value>180</value>
+										<min>1</min>
+										<max>255</max>
+										<tick>1</tick>
+										<handler function="OnSS_FrecSliderCmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
 									<option>1</option>
 								</object>
 								<object class="sizeritem">
 									<object class="wxSpinCtrl" name="ID_SPINCTRL7" variable="SS_FrecSpin" member="yes">
-										<value>200</value>
+										<value>230</value>
 										<min>1</min>
 										<max>255</max>
 										<size>90,-1</size>
 										<tooltip>Тактова частота обертання</tooltip>
+										<handler function="OnSS_FrecSpinChange" entry="EVT_SPINCTRL" />
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>1</border>
@@ -387,6 +405,7 @@
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText9" member="yes">
 										<label>MultF:</label>
+										<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<option>1</option>
@@ -419,6 +438,7 @@
 										<min>1</min>
 										<max>99999999</max>
 										<size>70,21</size>
+										<focused>1</focused>
 										<tooltip>Час релаксації [мс]</tooltip>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
@@ -465,6 +485,7 @@
 								<object class="sizeritem">
 									<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
 										<label>Current Angle: </label>
+										<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>5</border>
@@ -476,6 +497,7 @@
 										<min>-99999</min>
 										<max>99999</max>
 										<size>80,-1</size>
+										<focused>1</focused>
 										<tooltip>Поточний кут</tooltip>
 										<handler function="OnSS_CurrentAngleChange" entry="EVT_SPINCTRL" />
 									</object>
@@ -486,6 +508,7 @@
 								<object class="sizeritem">
 									<object class="wxCheckBox" name="ID_CHECKBOX1" variable="LE_CheckBox" member="yes">
 										<label>Long exposure</label>
+										<fg>wxSYS_COLOUR_BTNHIGHLIGHT</fg>
 										<tooltip>Check to enable webcam long exposure</tooltip>
 										<handler function="OnLE_CheckBoxClick" entry="EVT_CHECKBOX" />
 									</object>
@@ -497,6 +520,7 @@
 									<object class="wxSpinCtrl" name="ID_SPINCTRL1" subclass="wxSpinCtrlDbl" variable="LE_SpinCtrl1" member="yes">
 										<value></value>
 										<size>90,-1</size>
+										<focused>1</focused>
 										<tooltip>Length of long exposure in seconds</tooltip>
 										<handler function="OnLE_SpinCtrl1Change" entry="EVT_SPINCTRL" />
 									</object>
@@ -506,6 +530,7 @@
 								<object class="sizeritem">
 									<object class="wxCheckBox" name="ID_CHECKBOX6" variable="backlashCheck" member="yes">
 										<label>Backlash</label>
+										<fg>wxSYS_COLOUR_BTNHIGHLIGHT</fg>
 										<tooltip>Компенсація люфтів</tooltip>
 										<handler function="OnbacklashCheckClick" entry="EVT_CHECKBOX" />
 									</object>
@@ -527,6 +552,7 @@
 								<object class="sizeritem">
 									<object class="wxCheckBox" name="ID_CHECKBOX9" variable="AutoExposure" member="yes">
 										<label>Auto Exposure</label>
+										<fg>wxSYS_COLOUR_BTNHIGHLIGHT</fg>
 									</object>
 									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 									<border>5</border>
@@ -538,6 +564,8 @@
 					</object>
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL4" variable="Panel1" member="yes">
+							<fg>wxSYS_COLOUR_BTNFACE</fg>
+							<bg>wxSYS_COLOUR_BTNTEXT</bg>
 							<object class="wxBoxSizer" variable="BoxSizer4" member="no">
 								<orient>wxVERTICAL</orient>
 								<object class="sizeritem">
@@ -628,6 +656,7 @@
 										<object class="sizeritem">
 											<object class="wxCheckBox" name="ID_CHECKBOX4" variable="autoFWheelMode" member="yes">
 												<label>Auto Mode</label>
+												<fg>wxSYS_COLOUR_CAPTIONTEXT</fg>
 											</object>
 											<col>0</col>
 											<row>4</row>
@@ -637,6 +666,7 @@
 										<object class="sizeritem">
 											<object class="wxCheckBox" name="ID_CHECKBOX8" variable="LockFWheel" member="yes">
 												<label>Lock</label>
+												<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 												<handler function="OnLockFWheelClick1" entry="EVT_CHECKBOX" />
 											</object>
 											<colspan>3</colspan>
@@ -654,20 +684,347 @@
 						</object>
 						<label>fWheel</label>
 					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_PANEL6" variable="Panel2" member="yes">
+							<object class="wxBoxSizer" variable="BoxSizer5" member="no">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<object class="wxBoxSizer" variable="BoxSizer6" member="no">
+										<object class="sizeritem">
+											<object class="wxButton" name="ID_BUTTON11" variable="StartADC" member="yes">
+												<label>Start</label>
+												<size>40,-1</size>
+												<handler function="OnStartADCClick" entry="EVT_BUTTON" />
+											</object>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<option>1</option>
+										</object>
+										<object class="sizeritem">
+											<object class="wxSpinCtrl" name="ID_SPINCTRL12" variable="ADCAmplif" member="yes">
+												<value>15</value>
+												<max>15</max>
+												<size>50,-1</size>
+											</object>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+										<object class="sizeritem">
+											<object class="wxSpinCtrl" name="ID_SPINCTRL13" variable="ADCFrec" member="yes">
+												<value>100</value>
+												<min>1</min>
+												<max>10000</max>
+												<size>70,-1</size>
+											</object>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBoxSizer" variable="BoxSizer7" member="no">
+										<orient>wxVERTICAL</orient>
+										<object class="sizeritem">
+											<object class="wxTextCtrl" name="ID_TEXTCTRL3" variable="ADCDataPath" member="yes">
+												<value>./test.dat</value>
+												<style>wxTE_MULTILINE</style>
+											</object>
+											<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<option>1</option>
+										</object>
+										<object class="sizeritem">
+											<object class="wxButton" name="ID_BUTTON12" variable="setADCDataPath" member="yes">
+												<label>set</label>
+												<size>50,-1</size>
+												<maxsize>-1,50</maxsize>
+												<handler function="OnsetADCDataPathClick" entry="EVT_BUTTON" />
+											</object>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+										</object>
+										<object class="sizeritem">
+											<object class="wxCheckBox" name="ID_CHECKBOX10" variable="SyncCapture" member="yes">
+												<label>SyncCapture</label>
+												<checked>1</checked>
+											</object>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<option>1</option>
+										</object>
+										<object class="sizeritem">
+											<object class="wxButton" name="ID_BUTTON13" variable="Button2" member="yes">
+												<label>Clean</label>
+												<handler function="OnButton2Click" entry="EVT_BUTTON" />
+											</object>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<option>1</option>
+										</object>
+										<object class="sizeritem">
+											<object class="wxChoice" name="ID_CHOICE6" variable="ADC_Int_Frec" member="yes">
+												<content>
+													<item>8,33 </item>
+													<item>4,17</item>
+													<item>2,08</item>
+													<item>1,04</item>
+												</content>
+												<selection>0</selection>
+												<handler function="OnADC_Int_FrecSelect" entry="EVT_CHOICE" />
+											</object>
+											<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<option>1</option>
+										</object>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT7" variable="ADCChnl1Val" member="yes">
+										<label>0</label>
+										<fg>#FF0000</fg>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT8" variable="ADCChnl2Val" member="yes">
+										<label>0</label>
+										<fg>#00FF00</fg>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT12" variable="ADCChnl3Val" member="yes">
+										<label>0</label>
+										<fg>#0000FF</fg>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxStaticText" name="ID_STATICTEXT13" variable="ADCChnl4Val" member="yes">
+										<label>0</label>
+										<fg>#17B4FF</fg>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+							</object>
+						</object>
+						<label>Power</label>
+					</object>
 				</object>
 				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 			</object>
 			<object class="sizeritem">
 				<object class="wxBoxSizer" variable="BoxSizer2" member="yes">
+					<orient>wxVERTICAL</orient>
 					<object class="sizeritem">
 						<object class="wxPanel" name="ID_CAMERA_PANEL" variable="video_panel" member="yes">
-							<size>500,440</size>
+							<size>500,300</size>
 							<enabled>0</enabled>
+							<fg>wxSYS_COLOUR_BTNHIGHLIGHT</fg>
+							<bg>wxSYS_COLOUR_BTNTEXT</bg>
 							<minsize>-1,-1</minsize>
-							<maxsize>-1,-1</maxsize>
 						</object>
 						<flag>wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxPanel" name="ID_PANEL5" variable="graph_plot" member="yes">
+							<size>490,300</size>
+							<fg>wxSYS_COLOUR_CAPTIONTEXT</fg>
+							<bg>wxSYS_COLOUR_BTNTEXT</bg>
+							<minsize>-1,100</minsize>
+							<maxsize>-1,300d</maxsize>
+							<style>wxTAB_TRAVERSAL|wxNO_FULL_REPAINT_ON_RESIZE|wxCLIP_CHILDREN</style>
+							<handler function="Ongraph_plotResize" entry="EVT_SIZE" />
+							<object class="mpWindow" name="ID_MATHPLOT1" variable="PowerPlot" member="yes">
+								<pos>0,0</pos>
+								<size>488,300</size>
+								<fg>wxSYS_COLOUR_WINDOW</fg>
+								<bg>#2C2C2C</bg>
+								<maxsize>-1,300</maxsize>
+								<object class="mpAxis" name="ID_AXIS1" variable="X_Axis" member="yes">
+									<mLabel>X</mLabel>
+									<mAlign>mpALIGN_BORDER_LEFT</mAlign>
+									<mPenColour>#CAB70F</mPenColour>
+									<pos>25,34</pos>
+									<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
+									<bg>wxSYS_COLOUR_MENUTEXT</bg>
+								</object>
+								<object class="mpAxis" name="ID_AXIS2" variable="Y_Axis" member="yes">
+									<mType>Y-Axis</mType>
+									<mLabel>Y</mLabel>
+									<mAlign>mpALIGN_BORDER_TOP</mAlign>
+									<mPenColour>#CF740E</mPenColour>
+									<pos>3,33</pos>
+									<fg>wxSYS_COLOUR_CAPTIONTEXT</fg>
+									<bg>wxSYS_COLOUR_BTNTEXT</bg>
+								</object>
+								<object class="mpVector" name="ID_VECTOR1" variable="PD0" member="yes">
+									<mLabelText>PD0</mLabelText>
+									<mAlign>mpALIGN_NW</mAlign>
+									<mContinuous>0</mContinuous>
+									<mPenColour>#FF0000</mPenColour>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>268,10</pos>
+								</object>
+								<object class="mpVector" name="ID_VECTOR2" variable="PD1" member="yes">
+									<mLabelText>PD1</mLabelText>
+									<mContinuous>0</mContinuous>
+									<mPenColour>#00FF00</mPenColour>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>269,29</pos>
+								</object>
+								<object class="mpVector" name="ID_VECTOR3" variable="PD2" member="yes">
+									<mLabelText>PD2</mLabelText>
+									<mAlign>mpALIGN_SW</mAlign>
+									<mContinuous>0</mContinuous>
+									<mPenColour>#6F6FFF</mPenColour>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>322,11</pos>
+								</object>
+								<object class="mpVector" name="ID_VECTOR4" variable="PD3" member="yes">
+									<mLabelText>PD3</mLabelText>
+									<mAlign>mpALIGN_SE</mAlign>
+									<mContinuous>0</mContinuous>
+									<mPenColour>#00FFFF</mPenColour>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>338,59</pos>
+								</object>
+								<object class="mpVector" name="ID_VECTOR8" variable="PD4" member="yes">
+									<mLabelText>PD4</mLabelText>
+									<mContinuous>0</mContinuous>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>268,119</pos>
+								</object>
+							</object>
+						</object>
+						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxPanel" name="ID_PANEL7" variable="Real_Plot" member="yes">
+							<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
+							<bg>wxSYS_COLOUR_MENUTEXT</bg>
+							<handler function="OnReal_PlotResize" entry="EVT_SIZE" />
+							<object class="mpWindow" name="ID_MATHPLOT2" variable="Ind_Plot" member="yes">
+								<size>488,192</size>
+								<fg>wxSYS_COLOUR_CAPTIONTEXT</fg>
+								<bg>#343129</bg>
+								<object class="mpAxis" name="ID_AXIS3" variable="Ang_Axis" member="yes">
+									<mLabel>Angle</mLabel>
+									<mAlign>mpALIGN_BORDER_LEFT</mAlign>
+									<mPenColour>#E1E2A9</mPenColour>
+									<pos>196,51</pos>
+									<fg>wxSYS_COLOUR_INACTIVECAPTIONTEXT</fg>
+									<bg>wxSYS_COLOUR_BTNTEXT</bg>
+								</object>
+								<object class="mpAxis" name="ID_AXIS4" variable="Signal_axis" member="yes">
+									<mType>Y-Axis</mType>
+									<mLabel>Signal</mLabel>
+									<mAlign>mpALIGN_BORDER_TOP</mAlign>
+									<mPenColour>#ABF1F1</mPenColour>
+									<pos>124,29</pos>
+									<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
+									<bg>wxSYS_COLOUR_BTNTEXT</bg>
+								</object>
+								<object class="mpVector" name="ID_VECTOR5" variable="Ind_high" member="yes">
+									<mLabelText>high</mLabelText>
+									<mPenColour>#80FF00</mPenColour>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>329,37</pos>
+								</object>
+								<object class="mpVector" name="ID_VECTOR6" variable="Ind_low" member="yes">
+									<mLabelText>low</mLabelText>
+									<mAlign>mpALIGN_SW</mAlign>
+									<mPenColour>#8080FF</mPenColour>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>333,62</pos>
+								</object>
+								<object class="mpVector" name="ID_VECTOR7" variable="Ind_pivot" member="yes">
+									<mLabelText>pivot</mLabelText>
+									<mAlign>mpALIGN_NW</mAlign>
+									<mPenColour>#FF8040</mPenColour>
+									<mXYData>
+										<nums>! Enter X and Y data here, as pairs of numbers separated by commas.</nums>
+										<nums>! For example:</nums>
+										<nums>!   1.5, 2.3</nums>
+										<nums>!   100, 300</nums>
+										<nums>! Blank lines and lines starting with &quot;!&quot; will be ignored.</nums>
+										<nums>! All white-space will be ignored.</nums>
+										<nums></nums>
+									</mXYData>
+									<pos>327,14</pos>
+								</object>
+							</object>
+						</object>
+						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
 					</object>
 				</object>
 				<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
@@ -740,6 +1097,7 @@
 									<value>-1</value>
 									<min>-1</min>
 									<max>40000</max>
+									<fg>wxSYS_COLOUR_BTNHIGHLIGHT</fg>
 									<style>wxSL_LABELS|wxSL_SELRANGE</style>
 								</object>
 								<colspan>3</colspan>
@@ -753,6 +1111,7 @@
 									<value>65536</value>
 									<min>10000</min>
 									<max>65536</max>
+									<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									<style>wxSL_HORIZONTAL|wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
 								</object>
 								<colspan>3</colspan>
@@ -767,6 +1126,7 @@
 									<value>65536</value>
 									<min>10000</min>
 									<max>65536</max>
+									<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									<style>wxSL_LABELS|wxSL_BOTTOM|wxSL_SELRANGE</style>
 								</object>
 								<colspan>3</colspan>
@@ -778,6 +1138,7 @@
 								<object class="wxSlider" name="ID_SLIDER4" variable="HistMinNaxBalance" member="yes">
 									<value>50</value>
 									<min>1</min>
+									<fg>wxSYS_COLOUR_HIGHLIGHTTEXT</fg>
 									<style>wxSL_LABELS|wxSL_TOP</style>
 								</object>
 								<colspan>3</colspan>
@@ -791,6 +1152,7 @@
 								<object class="wxTextCtrl" name="ID_TEXTCTRL2" variable="currentFiltersField" member="yes">
 									<value>1</value>
 									<size>90,55</size>
+									<focused>1</focused>
 									<tooltip>Список поточних фільтрів (через &apos;,&apos; чи &apos;;&apos;)</tooltip>
 									<style>wxTE_MULTILINE</style>
 								</object>
